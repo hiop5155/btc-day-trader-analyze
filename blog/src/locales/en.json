@@ -12,7 +12,8 @@
     "pnl_dashboard": "PnL Dashboard",
     "collapse": "Collapse",
     "expand": "Expand",
-    "select_report": "Select an analysis report"
+    "select_report": "Select an analysis report",
+    "thinking": "Thinking..."
   },
   "dashboard": {
     "cumulative_roi": "Cumulative ROI",

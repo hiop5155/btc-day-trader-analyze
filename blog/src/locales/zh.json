@@ -12,7 +12,8 @@
     "pnl_dashboard": "帳戶回測儀表板",
     "collapse": "收合",
     "expand": "展開",
-    "select_report": "選擇一份分析報告"
+    "select_report": "選擇一份分析報告",
+    "thinking": "分析思考中..."
   },
   "dashboard": {
     "cumulative_roi": "累積投報率",

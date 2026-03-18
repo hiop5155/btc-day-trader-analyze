@@ -14,10 +14,98 @@
       document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
+  <style>
+    /* Styling for the immediate loading splash */
+    :root,
+    [data-theme="light"] {
+      --splash-bg: #f1f5f9;
+      --splash-dot: #2563eb;
+    }
+
+    [data-theme="dark"] {
+      --splash-bg: #0d1117;
+      --splash-dot: #60a5fa;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .initial-loader {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--splash-bg);
+      z-index: 9999;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .dots {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      background: var(--splash-dot);
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: pulse 1.4s infinite ease-in-out both;
+    }
+
+    .dot:nth-child(1) {
+      animation-delay: -0.32s;
+    }
+
+    .dot:nth-child(2) {
+      animation-delay: -0.16s;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      80%,
+      100% {
+        transform: scale(0.6);
+        opacity: 0.3;
+      }
+
+      40% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .load-text {
+      font-size: 14px;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <!-- Immediate fallback content until React mounts -->
+    <div class="initial-loader">
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div class="load-text">Loading BTC Analysis...</div>
+    </div>
+  </div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

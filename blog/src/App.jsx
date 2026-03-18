@@ -118,6 +118,18 @@ function LangIcon() {
       <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
     </svg>
   )
+}function ThinkingIcon() {
+  return (
+    <div className="brain-icon-wrapper">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 21a9 9 0 1 0-9-9 9 9 0 0 0 9 9z" />
+        <path d="M12 8v5" />
+        <path d="M12 16h.01" />
+        <path d="M7 12h.01" />
+        <path d="M17 12h.01" />
+      </svg>
+    </div>
+  )
 }
 
 function App() {
@@ -140,6 +152,14 @@ function App() {
 
   const [isPnlOpen, setIsPnlOpen] = useState(true)
   const [isListOpen, setIsListOpen] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
+
+  // Simulation: Trigger thinking state when switching reports or changing language
+  useEffect(() => {
+    setIsLoading(true)
+    const timer = setTimeout(() => setIsLoading(false), 600)
+    return () => clearTimeout(timer)
+  }, [selectedTs, lang])
 
   // Dark mode: default is light ('light'), persisted in localStorage
   const [theme, setTheme] = useState(() => {
@@ -224,8 +244,20 @@ function App() {
           </div>
         </div>
 
-        {selected && (
-          <article className="card">
+        {isLoading ? (
+          <article className="card thinking-card">
+            <div className="thinking-container">
+              <ThinkingIcon />
+              <div className="thinking-dots">
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+              </div>
+              <div className="thinking-text">{t('common.thinking')}</div>
+            </div>
+          </article>
+        ) : selected ? (
+          <article className="card fade-in">
             <h2 className="article-title">{formatLabel(selected)}</h2>
             <div
               className="markdown-body"
@@ -246,9 +278,7 @@ function App() {
               </div>
             </div>
           </article>
-        )}
-
-        {!selected && (
+        ) : (
           <div className="empty">{t('common.select_report')}</div>
         )}
       </main>
