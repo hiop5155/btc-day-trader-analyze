@@ -1,0 +1,42 @@
+{
+  "common": {
+    "account_backtest": "Account Backtest",
+    "reports_list": "Reports List",
+    "exchanges": "Exchanges:",
+    "donation": "Donation (EVM):",
+    "theme_light": "Light Mode",
+    "theme_dark": "Dark Mode",
+    "lang_zh": "中文",
+    "lang_en": "English",
+    "reports_count": "{{count}} reports",
+    "pnl_dashboard": "PnL Dashboard",
+    "collapse": "Collapse",
+    "expand": "Expand",
+    "select_report": "Select an analysis report"
+  },
+  "dashboard": {
+    "cumulative_roi": "Cumulative ROI",
+    "range_roi": "Range ROI",
+    "cumulative_profit": "Total Profit",
+    "range_profit": "Range Profit",
+    "chart_cumulative_roi": "Cumulative ROI (%)",
+    "chart_range_roi": "Range ROI (%)",
+    "chart_daily_profit": "Daily Net Profit (USDT)",
+    "roi": "ROI",
+    "profit": "Profit",
+    "range_7d": "7D",
+    "range_30d": "30D",
+    "range_90d": "3M",
+    "range_all": "All Time",
+    "referral_title": "Exchange Referrals (Commission Discount / Bonus):"
+  },
+  "about": {
+    "title": "About Site",
+    "p1": "Welcome to my **BTC Trading Analysis & Account Backtest Dashboard**. This site aims to provide transparent and verifiable trading records, allowing followers to clearly understand the logic and actual execution results behind each strategy.",
+    "core_features": "Core Features:",
+    "feat1": "**Real-time Analysis**: The left list shows technical analysis and trade suggestions for BTC market conditions.",
+    "feat2": "**PnL Dashboard**: Connects to Binance API to display real-time account PnL, including 7-day, 30-day, 3-month, and all-time backtest data.",
+    "feat3": "**Transparent Performance**: Every fee, funding rate, and transfer has been reconciled to ensure the accuracy and authenticity of ROI calculations.",
+    "p2": "If you are interested in my trading strategies, feel free to register on exchanges via the referral links below. Not only can you get exclusive fee discounts, but it's also the best way to support me!"
+  }
+}

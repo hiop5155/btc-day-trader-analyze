@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import PnlDashboard from './Dashboard'
 import './App.css'
 
@@ -13,30 +14,28 @@ const mdEntries = Object.entries(mdModules)
   })
   .sort((a, b) => b.name.localeCompare(a.name))
 
-const aboutEntry = {
+const getAboutEntry = (t) => ({
   filename: 'about-me',
   name: 'about-me',
-  title: '關於網站運作',
+  title: t('about.title'),
   type: 'about',
   html: `
     <div class="about-content">
-      <p>歡迎來到我的 <strong>BTC 交易分析與帳戶回測儀表板</strong>。這個網站旨在提供透明且可檢驗的交易紀錄，讓追隨者能清楚了解每一筆策略背後的邏輯與實際執行成果。</p>
+      <p>${t('about.p1')}</p>
       
       <div style="margin: 24px 0; padding: 20px; background: var(--primary-muted); border-radius: 12px; border-left: 4px solid var(--primary);">
-        <h4 style="margin-top:0; color:var(--primary); font-size: 1.1rem;">網站核心功能：</h4>
+        <h4 style="margin-top:0; color:var(--primary); font-size: 1.1rem;">${t('about.core_features')}</h4>
         <ul style="margin-bottom:0;">
-          <li><strong>即時分析報告</strong>：左側清單展示了針對 BTC 行情所做的技術分析與持倉建議。</li>
-          <li><strong>帳戶回測儀表板</strong>：串接幣安 API 實時顯示當前帳戶的盈虧狀況 (PnL)，包含 7天、30天、3個月與全時段的回測數據。</li>
-          <li><strong>透明績效追蹤</strong>：每一筆手續費、資助費與轉帳紀錄皆已正確對帳，確保 ROI (投報率) 計算的真實性與準確度。</li>
+          <li>${t('about.feat1')}</li>
+          <li>${t('about.feat2')}</li>
+          <li>${t('about.feat3')}</li>
         </ul>
       </div>
 
-      <p>如果你對我的交易策略感興趣，歡迎透過下方的推薦連結註冊交易所，不僅可以獲得專屬的手續費折扣，也是對我最好的支持！</p>
+      <p>${t('about.p2')}</p>
     </div>
   `
-};
-
-const entries = [aboutEntry, ...mdEntries];
+});
 
 function formatLabel(entry) {
   if (entry.type === 'about') return entry.title;
@@ -74,10 +73,31 @@ function SunIcon() {
   )
 }
 
+function LangIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <line x1="2" y1="12" x2="22" y2="12" />
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    </svg>
+  )
+}
+
 function App() {
-  const [selected, setSelected] = useState(entries[0] || null)
+  const { t, i18n } = useTranslation()
+  const aboutEntry = getAboutEntry(t)
+  const entries = [aboutEntry, ...mdEntries]
+
+  const [selected, setSelected] = useState(entries[0])
   const [isPnlOpen, setIsPnlOpen] = useState(true)
   const [isListOpen, setIsListOpen] = useState(true)
+
+  // Sync selected 'About Me' when language changes
+  useEffect(() => {
+    if (selected.filename === 'about-me') {
+      setSelected(aboutEntry)
+    }
+  }, [i18n.language])
 
   // Dark mode: default is light ('light'), persisted in localStorage
   const [theme, setTheme] = useState(() => {
@@ -90,6 +110,10 @@ function App() {
   }, [theme])
 
   const toggleTheme = () => setTheme(t => t === 'light' ? 'dark' : 'light')
+  const toggleLang = () => {
+    const newLang = i18n.language.startsWith('zh') ? 'en' : 'zh'
+    i18n.changeLanguage(newLang)
+  }
 
   return (
     <div className="layout">
@@ -98,23 +122,32 @@ function App() {
           <span className="logo">📈</span>
           <div className="header-text">
             <h1>BTC Trading Analysis</h1>
-            <p className="subtitle">{entries.length} 份分析紀錄</p>
+            <p className="subtitle">{t('common.reports_count', { count: mdEntries.length })}</p>
           </div>
-          <button
-            className="theme-toggle"
-            onClick={toggleTheme}
-            title={theme === 'light' ? '切換深色模式' : '切換淺色模式'}
-            aria-label="Toggle theme"
-          >
-            {theme === 'light' ? <MoonIcon /> : <SunIcon />}
-          </button>
+          <div className="header-actions">
+            <button
+              className="action-btn lang-toggle"
+              onClick={toggleLang}
+              title={i18n.language.startsWith('zh') ? 'Switch to English' : '切換至中文'}
+            >
+              <LangIcon />
+              <span className="lang-text">{i18n.language.startsWith('zh') ? 'EN' : '中'}</span>
+            </button>
+            <button
+              className="action-btn theme-toggle"
+              onClick={toggleTheme}
+              title={theme === 'light' ? t('common.theme_dark') : t('common.theme_light')}
+            >
+              {theme === 'light' ? <MoonIcon /> : <SunIcon />}
+            </button>
+          </div>
         </div>
         <nav className="file-list">
           <button
             className="section-label-toggle"
             onClick={() => setIsListOpen(!isListOpen)}
           >
-            <span>分析報告清單</span>
+            <span>{t('common.reports_list')}</span>
             <span className="chevron" style={{ transform: isListOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>▼</span>
           </button>
 
@@ -141,8 +174,8 @@ function App() {
             onClick={() => setIsPnlOpen(!isPnlOpen)}
           >
             <span className="pnl-toggle-icon">📊</span>
-            <span className="pnl-toggle-text">帳戶回測儀表板</span>
-            <span className="chevron">{isPnlOpen ? '▲' : '▼'} 收合/展開</span>
+            <span className="pnl-toggle-text">{t('common.pnl_dashboard')}</span>
+            <span className="chevron">{isPnlOpen ? '▲' : '▼'} {isPnlOpen ? t('common.collapse') : t('common.expand')}</span>
           </button>
           <div className="pnl-collapsible-content">
             <PnlDashboard />
@@ -158,23 +191,23 @@ function App() {
             />
             {/* 推薦連結區塊 */}
             <div style={{ marginTop: '40px', paddingTop: '20px', borderTop: '1px solid var(--border)' }}>
-              <div style={{ fontSize: '0.9rem', color: 'var(--text-main)', marginBottom: '12px', fontWeight: 'bold' }}>各大交易所推薦註冊連結 (享專屬手續費折扣 / 體驗金)：</div>
+              <div style={{ fontSize: '0.9rem', color: 'var(--text-main)', marginBottom: '12px', fontWeight: 'bold' }}>{t('dashboard.referral_title')}</div>
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                <a href="https://m-max.maicoin.com/signup?r=10ba16db" target="_blank" rel="noopener noreferrer" style={{ padding: '6px 12px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-main)', textDecoration: 'none', transition: 'all 0.2s' }}>Max</a>
-                <a href="https://www.pionex.com/zh-TW/signUp?r=qsm5OlXA" target="_blank" rel="noopener noreferrer" style={{ padding: '6px 12px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-main)', textDecoration: 'none', transition: 'all 0.2s' }}>派網</a>
-                <a href="https://bingxdao.com/invite/KFSSRQ/" target="_blank" rel="noopener noreferrer" style={{ padding: '6px 12px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-main)', textDecoration: 'none', transition: 'all 0.2s' }}>BingX</a>
-                <a href="https://okx.com/join/17546814" target="_blank" rel="noopener noreferrer" style={{ padding: '6px 12px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-main)', textDecoration: 'none', transition: 'all 0.2s' }}>OKx</a>
-                <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_00WX65DDWK&utm_source=default" target="_blank" rel="noopener noreferrer" style={{ padding: '6px 12px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-main)', textDecoration: 'none', transition: 'all 0.2s' }}>幣安</a>
+                <a href="https://m-max.maicoin.com/signup?r=10ba16db" target="_blank" rel="noopener noreferrer" className="referral-btn">Max</a>
+                <a href="https://www.pionex.com/zh-TW/signUp?r=qsm5OlXA" target="_blank" rel="noopener noreferrer" className="referral-btn">派網</a>
+                <a href="https://bingxdao.com/invite/KFSSRQ/" target="_blank" rel="noopener noreferrer" className="referral-btn">BingX</a>
+                <a href="https://okx.com/join/17546814" target="_blank" rel="noopener noreferrer" className="referral-btn">OKx</a>
+                <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_00WX65DDWK&utm_source=default" target="_blank" rel="noopener noreferrer" className="referral-btn">幣安</a>
               </div>
               <div style={{ marginTop: '16px', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-                ☕ 贊助支持 (EVM): <code style={{ color: 'var(--primary)', marginLeft: '4px', background: 'var(--md-code-bg)', padding: '2px 6px', borderRadius: '4px' }}>0x63557719a40812ee964c9399d3883117d5af6ce4</code>
+                {t('common.donation')} <code style={{ color: 'var(--primary)', marginLeft: '4px', background: 'var(--md-code-bg)', padding: '2px 6px', borderRadius: '4px' }}>0x6355...6ce4</code>
               </div>
             </div>
           </article>
         )}
 
         {!selected && (
-          <div className="empty">選擇一份分析報告</div>
+          <div className="empty">{t('common.select_report')}</div>
         )}
       </main>
     </div>

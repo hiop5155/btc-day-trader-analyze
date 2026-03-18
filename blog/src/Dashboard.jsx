@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Cell } from 'recharts';
 
 export default function PnlDashboard() {
+  const { t } = useTranslation();
   const [rawData, setRawData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -27,9 +29,9 @@ export default function PnlDashboard() {
       });
   }, []);
 
-  if (loading) return <div className="pnl-loader">讀取帳戶回測資料中...</div>;
-  if (error) return <div className="pnl-error">無法載入圖表 ({error})</div>;
-  if (!rawData || !rawData.dailyData || rawData.dailyData.length === 0) return <div className="pnl-empty">尚未有 PnL 資料</div>;
+  if (loading) return <div className="pnl-loader">{t('common.loading_pnl', '讀取帳戶回測資料中...')}</div>;
+  if (error) return <div className="pnl-error">{t('common.error_pnl', '無法載入圖表')} ({error})</div>;
+  if (!rawData || !rawData.dailyData || rawData.dailyData.length === 0) return <div className="pnl-empty">{t('common.no_pnl_data', '尚未有 PnL 資料')}</div>;
 
   // 處理時間區間選擇與數字重算
   const getFilteredData = () => {
@@ -143,16 +145,16 @@ export default function PnlDashboard() {
     <div className="pnl-dashboard">
       <div className="pnl-header" style={{ marginBottom: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
         <div>
-          <h2 style={{ margin: 0, fontSize: '1.2rem', color: 'var(--md-h-color)' }}>帳戶回測</h2>
+          <h2 style={{ margin: 0, fontSize: '1.2rem', color: 'var(--md-h-color)' }}>{t('common.account_backtest')}</h2>
           <div className="range-selector" style={{ display: 'flex', gap: '8px', marginTop: '12px' }}>
-            <RangeButton value="7" label="7天" />
-            <RangeButton value="30" label="30天" />
-            <RangeButton value="90" label="3個月" />
-            <RangeButton value="all" label="永遠" />
+            <RangeButton value="7" label={t('dashboard.range_7d')} />
+            <RangeButton value="30" label={t('dashboard.range_30d')} />
+            <RangeButton value="90" label={t('dashboard.range_90d')} />
+            <RangeButton value="all" label={t('dashboard.range_all')} />
           </div>
         </div>
         <div style={{ padding: '8px 16px', background: profit >= 0 ? 'rgba(16, 185, 129, 0.1)' : 'rgba(239, 68, 68, 0.1)', borderRadius: '8px', textAlign: 'right' }}>
-          <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{range === 'all' ? '累積投報率' : '區間投報率'}</span>
+          <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{range === 'all' ? t('dashboard.cumulative_roi') : t('dashboard.range_roi')}</span>
           <div style={{ color: profit >= 0 ? '#10b981' : '#ef4444', fontWeight: 'bold', fontSize: '1.2rem' }}>
             {roi > 0 ? '+' : ''}{roi}%
           </div>
@@ -161,7 +163,7 @@ export default function PnlDashboard() {
 
       <div style={{ height: '300px', marginBottom: '50px' }}>
         <h3 style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '16px' }}>
-          {range === 'all' ? '累積獲利率曲線 (Cumulative ROI %)' : '區間獲利曲線 (Range ROI %)'}
+          {range === 'all' ? t('dashboard.chart_cumulative_roi') : t('dashboard.chart_range_roi')}
         </h3>
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={displayData} margin={{ top: 5, right: 0, left: -20, bottom: 0 }}>
@@ -177,7 +179,7 @@ export default function PnlDashboard() {
             <Tooltip content={<CustomTooltip />} />
             <Area
               type="monotone"
-              name="投報率"
+              name={t('dashboard.roi')}
               dataKey={range === 'all' ? 'pnl_percentage' : 'range_pnl_percentage'}
               stroke="var(--primary)"
               strokeWidth={2}
@@ -189,14 +191,14 @@ export default function PnlDashboard() {
       </div>
 
       <div style={{ height: '240px', marginBottom: '10px' }}>
-        <h3 style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '16px' }}>單日淨利 (Daily Net Profit USDT)</h3>
+        <h3 style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '16px' }}>{t('dashboard.chart_daily_profit')}</h3>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={displayData} margin={{ top: 5, right: 0, left: -20, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
             <XAxis dataKey="date" stroke="var(--text-muted)" fontSize={11} tickMargin={10} minTickGap={30} />
             <YAxis stroke="var(--text-muted)" fontSize={11} tickFormatter={(val) => `$${val}`} />
             <Tooltip content={<CustomTooltip />} cursor={{ fill: 'var(--active-bg)' }} />
-            <Bar name="淨利" dataKey="net_profit" radius={[4, 4, 0, 0]}>
+            <Bar name={t('dashboard.profit')} dataKey="net_profit" radius={[4, 4, 0, 0]}>
               {displayData.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={entry.net_profit >= 0 ? '#10b981' : '#ef4444'} />
               ))}
@@ -208,7 +210,7 @@ export default function PnlDashboard() {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px', marginTop: '60px', padding: '16px 10px', borderTop: '1px solid var(--border)' }}>
         <div style={{ flex: '1', minWidth: '300px' }}>
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '8px' }}>
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: '30px', marginRight: '4px' }}>交易所推薦碼：</span>
+            <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: '30px', marginRight: '4px' }}>{t('common.exchanges')}</span>
             <a href="https://m-max.maicoin.com/signup?r=10ba16db" target="_blank" rel="noopener noreferrer" style={{ padding: '6px 12px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-main)', textDecoration: 'none', transition: 'all 0.2s' }}>Max</a>
             <a href="https://www.pionex.com/zh-TW/signUp?r=qsm5OlXA" target="_blank" rel="noopener noreferrer" style={{ padding: '6px 12px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-main)', textDecoration: 'none', transition: 'all 0.2s' }}>派網</a>
             <a href="https://bingxdao.com/invite/KFSSRQ/" target="_blank" rel="noopener noreferrer" style={{ padding: '6px 12px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-main)', textDecoration: 'none', transition: 'all 0.2s' }}>BingX</a>
@@ -216,11 +218,11 @@ export default function PnlDashboard() {
             <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_00WX65DDWK&utm_source=default" target="_blank" rel="noopener noreferrer" style={{ padding: '6px 12px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-main)', textDecoration: 'none', transition: 'all 0.2s' }}>幣安</a>
           </div>
           <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-            ☕ 贊助支持 (EVM): <code style={{ color: 'var(--primary)', background: 'var(--bg)', padding: '2px 6px', borderRadius: '4px' }}>0x63557719a40812ee964c9399d3883117d5af6ce4</code>
+            {t('common.donation')} <code style={{ color: 'var(--primary)', background: 'var(--bg)', padding: '2px 6px', borderRadius: '4px' }}>0x6355...6ce4</code>
           </div>
         </div>
         <div style={{ textAlign: 'right' }}>
-          <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{range === 'all' ? '總盈虧計金' : '區間總盈虧'}：</span>
+          <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{range === 'all' ? t('dashboard.cumulative_profit') : t('dashboard.range_profit')}：</span>
           <span style={{ fontWeight: '700', color: profit >= 0 ? '#10b981' : '#ef4444', marginLeft: '6px' }}>
             {profit > 0 ? '+' : ''}{profit.toFixed(2)} USDT
           </span>

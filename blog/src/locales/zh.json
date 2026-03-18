@@ -1,0 +1,42 @@
+{
+  "common": {
+    "account_backtest": "帳戶回測",
+    "reports_list": "分析報告清單",
+    "exchanges": "交易所推薦碼：",
+    "donation": "贊助支持 (EVM):",
+    "theme_light": "切換淺色模式",
+    "theme_dark": "切換深色模式",
+    "lang_zh": "中文",
+    "lang_en": "English",
+    "reports_count": "{{count}} 份分析紀錄",
+    "pnl_dashboard": "帳戶回測儀表板",
+    "collapse": "收合",
+    "expand": "展開",
+    "select_report": "選擇一份分析報告"
+  },
+  "dashboard": {
+    "cumulative_roi": "累積投報率",
+    "range_roi": "區間投報率",
+    "cumulative_profit": "總盈虧計金",
+    "range_profit": "區間總盈虧",
+    "chart_cumulative_roi": "累積獲利率曲線 (Cumulative ROI %)",
+    "chart_range_roi": "區間獲利曲線 (Range ROI %)",
+    "chart_daily_profit": "單日淨利 (Daily Net Profit USDT)",
+    "roi": "投報率",
+    "profit": "淨利",
+    "range_7d": "7天",
+    "range_30d": "30天",
+    "range_90d": "3個月",
+    "range_all": "永遠",
+    "referral_title": "各大交易所推薦註冊連結 (享專屬手續費折扣 / 體驗金)："
+  },
+  "about": {
+    "title": "關於網站運作",
+    "p1": "歡迎來到我的 **BTC 交易分析與帳戶回測儀表板**。這個網站旨在提供透明且可檢驗的交易紀錄，讓追隨者能清楚了解每一筆策略背後的邏輯與實際執行成果。",
+    "core_features": "網站核心功能：",
+    "feat1": "**即時分析報告**：左側清單展示了針對 BTC 行情所做的技術分析與持倉建議。",
+    "feat2": "**帳戶回測儀表板**：串接幣安 API 實時顯示當前帳戶的盈虧狀況 (PnL)，包含 7天、30天、3個月與全時段的回測數據。",
+    "feat3": "**透明績效追蹤**：每一筆手續費、資助費與轉帳紀錄皆已正確對帳，確保 ROI (投報率) 計算的真實性與準確度。",
+    "p2": "如果你對我的交易策略感興趣，歡迎透過下方的推薦連結註冊交易所，不僅可以獲得專屬的手續費折扣，也是對我最好的支持！"
+  }
+}
