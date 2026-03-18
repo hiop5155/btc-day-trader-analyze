@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2026-03-10",
+    "realized_pnl": 22.18,
+    "funding_fee": 0.0,
+    "commission": 0.0,
+    "net_profit": 22.18,
+    "cumulative_profit": 22.18
+  },
+  {
+    "date": "2026-03-11",
+    "realized_pnl": 42.61,
+    "funding_fee": 0.0,
+    "commission": 0.0,
+    "net_profit": 42.61,
+    "cumulative_profit": 64.79
+  },
+  {
+    "date": "2026-03-12",
+    "realized_pnl": 13.66,
+    "funding_fee": 0.11,
+    "commission": 0.0,
+    "net_profit": 13.77,
+    "cumulative_profit": 78.56
+  },
+  {
+    "date": "2026-03-13",
+    "realized_pnl": -47.67,
+    "funding_fee": 0.0,
+    "commission": 0.0,
+    "net_profit": -609.93,
+    "cumulative_profit": -531.37
+  },
+  {
+    "date": "2026-03-14",
+    "realized_pnl": 7.84,
+    "funding_fee": -0.01,
+    "commission": 0.0,
+    "net_profit": 8.69,
+    "cumulative_profit": -522.68
+  },
+  {
+    "date": "2026-03-15",
+    "realized_pnl": 0.0,
+    "funding_fee": 0.0,
+    "commission": 0.0,
+    "net_profit": 0.13,
+    "cumulative_profit": -522.55
+  },
+  {
+    "date": "2026-03-16",
+    "realized_pnl": 35.13,
+    "funding_fee": -0.13,
+    "commission": 0.0,
+    "net_profit": 36.13,
+    "cumulative_profit": -486.42
+  },
+  {
+    "date": "2026-03-17",
+    "realized_pnl": 45.17,
+    "funding_fee": -0.02,
+    "commission": 0.0,
+    "net_profit": 61.29,
+    "cumulative_profit": -425.13
+  },
+  {
+    "date": "2026-03-18",
+    "realized_pnl": 0.0,
+    "funding_fee": 0.0,
+    "commission": 0.0,
+    "net_profit": 0.8,
+    "cumulative_profit": -424.33
+  }
+]

@@ -1,0 +1,15 @@
+# API 密鑰隔離
+.env
+*.env.local
+# 依賴與打包檔案
+node_modules/
+dist/
+build/
+.DS_Store
+# 使用者要求排除的敏感設定與內部資料
+grid/
+nginx-btc-site.conf
+# 緩存檔案
+.cache/
+.parcel-cache/
+npm-debug.log*
