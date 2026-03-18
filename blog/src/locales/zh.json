@@ -28,7 +28,12 @@
     "range_30d": "30天",
     "range_90d": "3個月",
     "range_all": "永遠",
-    "referral_title": "各大交易所推薦註冊連結 (享專屬手續費折扣 / 體驗金)："
+    "referral_title": "各大交易所推薦註冊連結 (享專屬手續費折扣 / 體驗金)：",
+    "exchange_max": "Max",
+    "exchange_pionex": "派網",
+    "exchange_bingx": "BingX",
+    "exchange_okx": "OKx",
+    "exchange_binance": "幣安"
   },
   "about": {
     "title": "關於網站運作",

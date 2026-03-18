@@ -28,7 +28,12 @@
     "range_30d": "30D",
     "range_90d": "3M",
     "range_all": "All Time",
-    "referral_title": "Exchange Referrals (Commission Discount / Bonus):"
+    "referral_title": "Exchange Referrals (Commission Discount / Bonus):",
+    "exchange_max": "Max",
+    "exchange_pionex": "Pionex",
+    "exchange_bingx": "BingX",
+    "exchange_okx": "OKx",
+    "exchange_binance": "Binance"
   },
   "about": {
     "title": "About Site",

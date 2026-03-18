@@ -1,22 +1,57 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import PnlDashboard from './Dashboard'
 import './App.css'
 
-const mdModules = import.meta.glob('@md/*.md', { eager: true })
+const mdModules = import.meta.glob('@md/**/*.md', { eager: true })
 
-// Build sorted list (newest first)
-const mdEntries = Object.entries(mdModules)
-  .map(([filePath, mod]) => {
-    const filename = filePath.split('/').pop()
-    const name = filename.replace('.md', '')
-    return { filename, name, html: mod.html, type: 'markdown' }
+// Parse files to group them by timestamp
+const parsedEntries = Object.entries(mdModules).map(([filePath, mod]) => {
+  const filename = filePath.split('/').pop()
+  const name = filename.replace('.md', '')
+  const isEn = filePath.includes('/en/')
+
+  // Match timestamp (first 12 digits)
+  const match = name.match(/^(\d{12})/)
+  const timestamp = match ? match[1] : name
+
+  // Extract tag (remove timestamp and lang suffix if present)
+  let tag = name.replace(/^(\d{12})_/, '')
+  if (isEn && tag.endsWith('_en')) {
+    tag = tag.slice(0, -3)
+  }
+
+  return {
+    filename,
+    name,
+    html: mod.html,
+    type: 'markdown',
+    timestamp,
+    tag,
+    lang: isEn ? 'en' : 'zh'
+  }
+})
+
+// Function to get entries for the current language
+function getLanguageEntries(lang) {
+  const grouped = {}
+
+  parsedEntries.forEach(entry => {
+    const ts = entry.timestamp
+    if (!grouped[ts]) grouped[ts] = {}
+    grouped[ts][entry.lang] = entry
   })
-  .sort((a, b) => b.name.localeCompare(a.name))
+
+  return Object.values(grouped).map(group => {
+    // Prefer current language, fallback to 'zh' then to first available
+    return group[lang] || group['zh'] || Object.values(group)[0]
+  }).sort((a, b) => b.timestamp.localeCompare(a.timestamp))
+}
 
 const getAboutEntry = (t) => ({
   filename: 'about-me',
   name: 'about-me',
+  timestamp: 'about',
   title: t('about.title'),
   type: 'about',
   html: `
@@ -39,14 +74,16 @@ const getAboutEntry = (t) => ({
 
 function formatLabel(entry) {
   if (entry.type === 'about') return entry.title;
-  const name = entry.name;
-  const match = name.match(/^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})_(.+)$/)
+  const ts = entry.timestamp;
+  const tag = entry.tag || entry.name;
+
+  const match = ts.match(/^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})$/)
   if (match) {
-    const [, year, month, day, hh, mm, tag] = match
+    const [, year, month, day, hh, mm] = match
     const label = tag.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
     return `${year}-${month}-${day} ${hh}:${mm} · ${label}`
   }
-  return name
+  return entry.name
 }
 
 function MoonIcon() {
@@ -85,19 +122,24 @@ function LangIcon() {
 
 function App() {
   const { t, i18n } = useTranslation()
-  const aboutEntry = getAboutEntry(t)
-  const entries = [aboutEntry, ...mdEntries]
+  const isZh = (i18n.language || '').startsWith('zh')
+  const lang = isZh ? 'zh' : 'en'
 
-  const [selected, setSelected] = useState(entries[0])
+  const entries = useMemo(() => {
+    const aboutEntry = getAboutEntry(t)
+    const mdEntries = getLanguageEntries(lang)
+    return [aboutEntry, ...mdEntries]
+  }, [t, lang])
+
+  const mdEntries = useMemo(() => entries.filter(e => e.type === 'markdown'), [entries])
+
+  const [selectedTs, setSelectedTs] = useState('about')
+  const selected = useMemo(() => {
+    return entries.find(e => e.timestamp === selectedTs) || entries[0]
+  }, [entries, selectedTs])
+
   const [isPnlOpen, setIsPnlOpen] = useState(true)
   const [isListOpen, setIsListOpen] = useState(true)
-
-  // Sync selected 'About Me' when language changes
-  useEffect(() => {
-    if (selected.filename === 'about-me') {
-      setSelected(aboutEntry)
-    }
-  }, [i18n.language])
 
   // Dark mode: default is light ('light'), persisted in localStorage
   const [theme, setTheme] = useState(() => {
@@ -111,7 +153,7 @@ function App() {
 
   const toggleTheme = () => setTheme(t => t === 'light' ? 'dark' : 'light')
   const toggleLang = () => {
-    const newLang = i18n.language.startsWith('zh') ? 'en' : 'zh'
+    const newLang = isZh ? 'en' : 'zh'
     i18n.changeLanguage(newLang)
   }
 
@@ -128,10 +170,10 @@ function App() {
             <button
               className="action-btn lang-toggle"
               onClick={toggleLang}
-              title={i18n.language.startsWith('zh') ? 'Switch to English' : '切換至中文'}
+              title={isZh ? 'Switch to English' : '切換至中文'}
             >
               <LangIcon />
-              <span className="lang-text">{i18n.language.startsWith('zh') ? 'EN' : '中'}</span>
+              <span className="lang-text">{isZh ? 'EN' : '中'}</span>
             </button>
             <button
               className="action-btn theme-toggle"
@@ -155,8 +197,8 @@ function App() {
             {entries.map((entry) => (
               <button
                 key={entry.filename}
-                className={`file-item ${selected?.filename === entry.filename ? 'active' : ''} ${entry.type === 'about' ? 'about-item' : ''}`}
-                onClick={() => setSelected(entry)}
+                className={`file-item ${selectedTs === entry.timestamp ? 'active' : ''} ${entry.type === 'about' ? 'about-item' : ''}`}
+                onClick={() => setSelectedTs(entry.timestamp)}
               >
                 <span className="file-icon">{entry.type === 'about' ? 'ℹ️' : '📄'}</span>
                 <span className="file-label">{formatLabel(entry)}</span>
@@ -193,14 +235,14 @@ function App() {
             <div style={{ marginTop: '40px', paddingTop: '20px', borderTop: '1px solid var(--border)' }}>
               <div style={{ fontSize: '0.9rem', color: 'var(--text-main)', marginBottom: '12px', fontWeight: 'bold' }}>{t('dashboard.referral_title')}</div>
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                <a href="https://m-max.maicoin.com/signup?r=10ba16db" target="_blank" rel="noopener noreferrer" className="referral-btn">Max</a>
-                <a href="https://www.pionex.com/zh-TW/signUp?r=qsm5OlXA" target="_blank" rel="noopener noreferrer" className="referral-btn">派網</a>
-                <a href="https://bingxdao.com/invite/KFSSRQ/" target="_blank" rel="noopener noreferrer" className="referral-btn">BingX</a>
-                <a href="https://okx.com/join/17546814" target="_blank" rel="noopener noreferrer" className="referral-btn">OKx</a>
-                <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_00WX65DDWK&utm_source=default" target="_blank" rel="noopener noreferrer" className="referral-btn">幣安</a>
+                <a href="https://m-max.maicoin.com/signup?r=10ba16db" target="_blank" rel="noopener noreferrer" className="referral-btn">{t('dashboard.exchange_max')}</a>
+                <a href="https://www.pionex.com/zh-TW/signUp?r=qsm5OlXA" target="_blank" rel="noopener noreferrer" className="referral-btn">{t('dashboard.exchange_pionex')}</a>
+                <a href="https://bingxdao.com/invite/KFSSRQ/" target="_blank" rel="noopener noreferrer" className="referral-btn">{t('dashboard.exchange_bingx')}</a>
+                <a href="https://okx.com/join/17546814" target="_blank" rel="noopener noreferrer" className="referral-btn">{t('dashboard.exchange_okx')}</a>
+                <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_00WX65DDWK&utm_source=default" target="_blank" rel="noopener noreferrer" className="referral-btn">{t('dashboard.exchange_binance')}</a>
               </div>
               <div style={{ marginTop: '16px', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-                {t('common.donation')} <code style={{ color: 'var(--primary)', marginLeft: '4px', background: 'var(--md-code-bg)', padding: '2px 6px', borderRadius: '4px' }}>0x6355...6ce4</code>
+                {t('common.donation')} <code style={{ color: 'var(--primary)', marginLeft: '4px', background: 'var(--md-code-bg)', padding: '2px 6px', borderRadius: '4px' }}>0x63557719a40812ee964c9399d3883117d5af6ce4</code>
               </div>
             </div>
           </article>
