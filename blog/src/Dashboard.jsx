@@ -154,19 +154,19 @@ export default function PnlDashboard() {
           </div>
         </div>
         <div style={{ padding: '8px 16px', background: profit >= 0 ? 'rgba(16, 185, 129, 0.1)' : 'rgba(239, 68, 68, 0.1)', borderRadius: '8px', textAlign: 'right' }}>
-          <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{range === 'all' ? t('dashboard.cumulative_roi') : t('dashboard.range_roi')}</span>
+          <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{range === 'all' ? t('dashboard.cumulative_profit') : t('dashboard.range_profit')}</span>
           <div style={{ color: profit >= 0 ? '#10b981' : '#ef4444', fontWeight: 'bold', fontSize: '1.2rem' }}>
-            {roi > 0 ? '+' : ''}{roi}%
+            {profit > 0 ? '+' : ''}{profit.toFixed(2)} USDT
           </div>
         </div>
       </div>
 
       <div style={{ height: '300px', marginBottom: '50px' }}>
         <h3 style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '16px' }}>
-          {range === 'all' ? t('dashboard.chart_cumulative_roi') : t('dashboard.chart_range_roi')}
+          {t('dashboard.chart_cumulative_profit', '累積盈虧 (Cumulative Net PnL USDT)')}
         </h3>
         <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={displayData} margin={{ top: 5, right: 0, left: -20, bottom: 0 }}>
+          <AreaChart data={displayData} margin={{ top: 5, right: 0, left: -10, bottom: 0 }}>
             <defs>
               <linearGradient id="colorPnL" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="var(--primary)" stopOpacity={0.3} />
@@ -175,12 +175,12 @@ export default function PnlDashboard() {
             </defs>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
             <XAxis dataKey="date" stroke="var(--text-muted)" fontSize={11} tickMargin={10} minTickGap={30} />
-            <YAxis stroke="var(--text-muted)" fontSize={11} tickFormatter={(val) => `${val.toFixed(1)}%`} />
+            <YAxis stroke="var(--text-muted)" fontSize={11} tickFormatter={(val) => `$${val}`} />
             <Tooltip content={<CustomTooltip />} />
             <Area
               type="monotone"
-              name={t('dashboard.roi')}
-              dataKey={range === 'all' ? 'pnl_percentage' : 'range_pnl_percentage'}
+              name={t('dashboard.profit', '淨盈虧')}
+              dataKey={range === 'all' ? 'cumulative_profit' : 'range_cumulative_profit'}
               stroke="var(--primary)"
               strokeWidth={2}
               fillOpacity={1}
