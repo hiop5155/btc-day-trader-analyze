@@ -18,6 +18,10 @@ app.use(cors());
 const API_KEY = process.env.BINANCE_API_KEY;
 const API_SECRET = process.env.BINANCE_API_SECRET;
 const BASE_URL = 'https://fapi.binance.com';
+// 若您知道起始投入本金，可在 .env 設置 INITIAL_CAPITAL（單位 USDT）
+// 例如：INITIAL_CAPITAL=500
+// 若未設置，則由程式自動反推（精度較低）
+const INITIAL_CAPITAL_ENV = process.env.INITIAL_CAPITAL ? parseFloat(process.env.INITIAL_CAPITAL) : null;
 
 function getSignature(queryString) {
   return crypto.createHmac('sha256', API_SECRET).update(queryString).digest('hex');
@@ -133,10 +137,15 @@ function processData(incomes, currentBalance) {
   }
 
   // 推算初始餘額 (2026-03-09 開盤前)
-  // 如果回推結果微小為負，防呆為 0
-  let initialBalanceAtStart = currentBalance - totalTradingPnL - totalTransfersSinceStart;
-  if (initialBalanceAtStart < 0) {
-    initialBalanceAtStart = 0;
+  // 優先使用 INITIAL_CAPITAL 環境變數（最準確）
+  // 否則反推：currentBalance - 所有已實現盈虧 - 所有淨轉帳
+  // 若反推結果 <= 0（說明帳戶虧損後規模縮小），至少用 1.0 防止除零
+  let initialBalanceAtStart;
+  if (INITIAL_CAPITAL_ENV && INITIAL_CAPITAL_ENV > 0) {
+    initialBalanceAtStart = INITIAL_CAPITAL_ENV;
+  } else {
+    const derived = currentBalance - totalTradingPnL - totalTransfersSinceStart;
+    initialBalanceAtStart = derived > 0 ? derived : 1.0;
   }
 
   const sortedDates = Object.keys(dailyStats).sort();
@@ -156,12 +165,13 @@ function processData(incomes, currentBalance) {
     // 該日累積總投入
     let investedBase = initialBalanceAtStart + cumulativeTransfer;
 
-    // 為了避免起初投入資金極小（例如不到 10U）導致後續獲利換算成幾千 % 的誇張投報率
-    // 我們讓分母（投入本金基準）至少不低於 10，並使用「歷史最大投入資本」的概念來稍微平滑曲線
+    // 分母 = 初始本金 + 此時間點前的累積淨轉帳
+    // 使用「歷史最大投入資本」概念避免分批入金初期分母過小
+    // 同時確保分母至少等於 initialBalanceAtStart（本金最小保護）
     if (investedBase > maxInvestedBaseSoFar) {
       maxInvestedBaseSoFar = investedBase;
     }
-    const safeDenominator = Math.max(maxInvestedBaseSoFar, 20.0);
+    const safeDenominator = Math.max(maxInvestedBaseSoFar, initialBalanceAtStart, 1.0);
 
     stat.cumulative_profit = Number(cumulativePnL.toFixed(2));
     stat.wallet_balance = Number(walletBalanceAtDayEnd.toFixed(2));
@@ -182,7 +192,7 @@ function processData(incomes, currentBalance) {
   return {
     dailyData: results,
     totalProfit: Number(totalTradingPnL.toFixed(2)),
-    totalRoi: Number(((totalTradingPnL / Math.max(initialBalanceAtStart + totalTransfersSinceStart, 1.0)) * 100).toFixed(2)),
+    totalRoi: Number(((totalTradingPnL / Math.max(initialBalanceAtStart, 1.0)) * 100).toFixed(2)),
     currentBalance: Number(currentBalance.toFixed(2)),
     initialBalanceAtStart: Number(initialBalanceAtStart.toFixed(2))
   };
