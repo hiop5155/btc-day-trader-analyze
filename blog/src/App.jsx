@@ -287,6 +287,13 @@ function App() {
             <PnlTable />
             {/* 推薦連結區塊 */}
             <div style={{ marginTop: '40px', paddingTop: '20px', borderTop: '1px solid var(--border)' }}>
+              <a href="https://t.me/btc_money_tracker" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginBottom: '20px', padding: '10px 16px', background: 'rgba(39,174,239,0.1)', border: '1px solid rgba(39,174,239,0.3)', borderRadius: '10px', textDecoration: 'none', color: '#27aeef' }}>
+                <span style={{ fontSize: '1.1rem' }}>✈️</span>
+                <span>
+                  <div style={{ fontWeight: 700, fontSize: '0.9rem' }}>{t('dashboard.telegram_channel')}</div>
+                  <div style={{ fontSize: '0.78rem', opacity: 0.8 }}>{t('dashboard.telegram_desc')}</div>
+                </span>
+              </a>
               <div style={{ fontSize: '0.9rem', color: 'var(--text-main)', marginBottom: '12px', fontWeight: 'bold' }}>{t('dashboard.referral_title')}</div>
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                 <a href="https://m-max.maicoin.com/signup?r=10ba16db" target="_blank" rel="noopener noreferrer" className="referral-btn">{t('dashboard.exchange_max')}</a>

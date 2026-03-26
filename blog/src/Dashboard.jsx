@@ -159,6 +159,9 @@ export default function PnlDashboard() {
 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px', marginTop: '60px', padding: '16px 10px', borderTop: '1px solid var(--border)' }}>
         <div style={{ flex: '1', minWidth: '300px' }}>
+          <a href="https://t.me/btc_money_tracker" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '10px', padding: '7px 14px', background: 'rgba(39,174,239,0.1)', border: '1px solid rgba(39,174,239,0.3)', borderRadius: '8px', textDecoration: 'none', color: '#27aeef', fontSize: '0.82rem', fontWeight: 600 }}>
+            ✈️ {t('dashboard.telegram_channel')}
+          </a>
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '8px' }}>
             <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: '30px', marginRight: '4px' }}>{t('common.exchanges')}</span>
             <a href="https://m-max.maicoin.com/signup?r=10ba16db" target="_blank" rel="noopener noreferrer" style={{ padding: '6px 12px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-main)', textDecoration: 'none', transition: 'all 0.2s' }}>{t('dashboard.exchange_max')}</a>
