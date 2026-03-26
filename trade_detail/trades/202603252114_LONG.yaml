@@ -1,0 +1,34 @@
+# Trade #003
+id: 3
+datetime_utc8: "202603252114"
+direction: LONG
+grade: A
+
+open:
+  entry: 71550
+  sl: 71200
+  tp1: 72250
+  contracts: 1
+  notional_usd: 715.5
+  risk_usd: 3.50
+  risk_pct: 1.73
+  order_id: "3420608636193300480"
+  algo_id: "3420608636161626112"
+
+close:
+  status: CLOSED
+  close_price: 71649.1
+  pnl_usd: 0.49         # gross +0.991 − entry_fee 0.1431 − close_fee 0.3582455 = +0.4896
+  pnl_pct: 0.24
+  exit_reason: ALGO     # Algo OCO triggered at 71,649.1 (standalone algo, before attached TP 72,250 reached)
+
+thesis: |
+  5m sweep 71,254 → MSB 71,460 → FVG 71,384–71,600 retest
+  Post_only maker entry at 71,550, attached OCO SL:71,200 TP:72,250
+  Asia session 1:3 R:R intact
+
+adjustments: []
+
+notes: |
+  Position closed at 71,649 via standalone algo order before attached TP 72,250 was reached.
+  Possibly duplicate algo race (same pattern as Trade #005).

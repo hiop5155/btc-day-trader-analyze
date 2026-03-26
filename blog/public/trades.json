@@ -1,0 +1,15 @@
+{
+  "dailyData": [
+    {
+      "date": "2026-03-25",
+      "net_profit": -1.83,
+      "cumulative_profit": -1.83
+    },
+    {
+      "date": "2026-03-26",
+      "net_profit": -0.71,
+      "cumulative_profit": -2.54
+    }
+  ],
+  "totalProfit": -2.54
+}

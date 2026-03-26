@@ -315,6 +315,16 @@ body {
   /* Large enough to hold all reports */
 }
 
+.static-nav-group {
+  padding: 8px 6px 4px;
+}
+
+.nav-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 12px 0;
+}
+
 .about-item {
   border-bottom: 1px solid var(--border);
   margin-bottom: 8px !important;
@@ -348,53 +358,6 @@ body {
   gap: 32px;
 }
 
-/* Collapsible PnL Dashboard */
-.pnl-section {
-  width: 100%;
-  max-width: 860px;
-  background: var(--card-bg);
-  border-radius: 16px;
-  box-shadow: var(--card-shadow);
-  border: 1px solid var(--border);
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.pnl-toggle-bar {
-  width: 100%;
-  padding: 16px 24px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: var(--text-main);
-  font-weight: 600;
-}
-
-.pnl-toggle-bar:hover {
-  background: var(--sidebar-item-hover);
-}
-
-.pnl-toggle-bar .chevron {
-  margin-left: auto;
-  font-size: 0.75rem;
-  color: var(--text-muted);
-}
-
-.pnl-collapsible-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.pnl-section.is-open .pnl-collapsible-content {
-  max-height: 1200px;
-  /* Large enough for dashboard */
-  border-top: 1px solid var(--border);
-  overflow-x: auto;
-}
 
 .card {
   width: 100%;
@@ -592,9 +555,6 @@ body {
   }
 }
 
-.pnl-dashboard {
-  padding: 32px 24px;
-}
 
 /* ============================================================
    Thinking Animation
@@ -704,4 +664,224 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ============================================================
+   Trade List Page
+   ============================================================ */
+.trade-list-summary {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 4px;
+}
+
+.trade-summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 80px;
+}
+
+.trade-summary-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.trade-summary-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.trade-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--card-bg);
+  transition: border-color 0.15s;
+}
+
+.trade-card:hover {
+  border-color: var(--primary);
+}
+
+.trade-card-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  gap: 12px;
+  transition: background 0.15s;
+}
+
+.trade-card-header:hover {
+  background: var(--sidebar-item-hover);
+}
+
+.trade-card-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.trade-card-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.trade-card-dt {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.trade-card-chevron {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+.trade-card-body {
+  border-top: 1px solid var(--border);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trade-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .trade-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.trade-detail-section {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.trade-detail-section-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.trade-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.trade-thesis {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+/* ============================================================
+   PnL Table Widget
+   ============================================================ */
+.pnl-table-widget {
+  margin: 28px 0 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.pnl-table-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.pnl-table-toggle:hover {
+  background: var(--sidebar-item-hover);
+}
+
+.pnl-table-toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pnl-table-chevron {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+.pnl-table-body {
+  border-top: 1px solid var(--border);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pnl-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.pnl-table th {
+  background: var(--md-table-header);
+  font-weight: 600;
+  color: var(--md-h-color);
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--md-table-border);
+  text-align: left;
+}
+
+.pnl-table td {
+  padding: 9px 16px;
+  border-bottom: 1px solid var(--md-table-border);
+  color: var(--text-body);
+}
+
+.pnl-table tr:last-child td {
+  border-bottom: none;
+}
+
+.pnl-table tr:nth-child(even) td {
+  background: var(--md-table-stripe);
 }

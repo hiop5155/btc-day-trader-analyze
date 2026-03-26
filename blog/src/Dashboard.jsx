@@ -1,105 +1,55 @@
-import { useEffect, useState } from 'react';
+import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Cell } from 'recharts';
 
+const tradeModules = import.meta.glob('../../trade_detail/trades/*.yaml', { eager: true });
+
+function buildDailyData() {
+  const daily = {};
+  for (const mod of Object.values(tradeModules)) {
+    const t = mod.default ?? mod;
+    const status = t?.close?.status;
+    const pnl = t?.close?.pnl_usd;
+    const dt = String(t?.datetime_utc8 ?? '');
+    if (status === 'CLOSED' && pnl != null && dt.length >= 8) {
+      const date = `${dt.slice(0, 4)}-${dt.slice(4, 6)}-${dt.slice(6, 8)}`;
+      daily[date] = (daily[date] ?? 0) + pnl;
+    }
+  }
+  const sorted = Object.keys(daily).sort();
+  let cum = 0;
+  return sorted.map(date => {
+    const net = Math.round(daily[date] * 100) / 100;
+    cum = Math.round((cum + net) * 100) / 100;
+    return { date, net_profit: net, cumulative_profit: cum };
+  });
+}
+
 export default function PnlDashboard() {
   const { t } = useTranslation();
-  const [rawData, setRawData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [range, setRange] = useState('all'); // '7', '30', '90', 'all'
 
-  useEffect(() => {
-    const isDev = import.meta.env.DEV;
-    const apiUrl = isDev ? 'http://localhost:5005/api/pnl' : '/api-pnl/pnl';
+  const dailyData = useMemo(() => buildDailyData(), []);
+  const totalProfit = dailyData.length > 0 ? dailyData[dailyData.length - 1].cumulative_profit : 0;
 
-    fetch(apiUrl)
-      .then(res => {
-        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-        return res.json();
-      })
-      .then(json => {
-        if (json.error) throw new Error(json.error);
-        setRawData(json);
-        setLoading(false);
-      })
-      .catch(err => {
-        setError(err.message);
-        setLoading(false);
-      });
-  }, []);
+  if (dailyData.length === 0) return <div className="pnl-empty">{t('common.no_pnl_data', '尚未有 PnL 資料')}</div>;
 
-  if (loading) return <div className="pnl-loader">{t('common.loading_pnl', '讀取帳戶回測資料中...')}</div>;
-  if (error) return <div className="pnl-error">{t('common.error_pnl', '無法載入圖表')} ({error})</div>;
-  if (!rawData || !rawData.dailyData || rawData.dailyData.length === 0) return <div className="pnl-empty">{t('common.no_pnl_data', '尚未有 PnL 資料')}</div>;
-
-  // 處理時間區間選擇與數字重算
-  const getFilteredData = () => {
-    const allDays = rawData.dailyData;
-    if (range === 'all') return {
-      displayData: allDays,
-      profit: rawData.totalProfit,
-      roi: rawData.totalRoi
-    };
+  const { displayData, profit } = useMemo(() => {
+    if (range === 'all') return { displayData: dailyData, profit: totalProfit };
 
     const daysCount = parseInt(range);
-    const subset = allDays.slice(-daysCount);
-    if (subset.length === 0) return { displayData: [], profit: 0, roi: 0 };
+    const subset = dailyData.slice(-daysCount);
+    if (subset.length === 0) return { displayData: [], profit: 0 };
 
-    const lastDay = subset[subset.length - 1];
-    const firstDay = subset[0];
-    const dayBeforeIndex = allDays.indexOf(firstDay) - 1;
-
-    let prevPnL = 0;
-    let prevBalance = 0;
-    let prevTransfer = 0;
-
-    if (dayBeforeIndex >= 0) {
-      const dayBefore = allDays[dayBeforeIndex];
-      prevPnL = dayBefore.cumulative_profit || 0;
-      prevBalance = dayBefore.wallet_balance || 0;
-      prevTransfer = dayBefore.cumulative_transfer || 0;
-    } else {
-      prevPnL = 0;
-      prevTransfer = 0;
-      prevBalance = (firstDay.wallet_balance || 0) - (firstDay.net_profit || 0) - (firstDay.net_transfer || 0);
-    }
-
-    const rangeProfit = (lastDay.cumulative_profit || 0) - prevPnL;
-
-    // 歷史最高投入基礎，確保不會因為起初金額太小導致爆衝
-    let maxBaseInPeriod = Math.max(prevBalance, 20.0);
-
-    // 調整 Chart 顯示：這段時間內的累積成長
-    const chartData = subset.map(d => {
-      const pnlInPeriod = (d.cumulative_profit || 0) - prevPnL;
-      const transferInPeriod = (d.cumulative_transfer || 0) - prevTransfer;
-
-      // 該日為止的區間可用資本 = 進入此區間前的餘額 + 在此區間內新增的轉帳總額
-      const baseForDay = prevBalance + transferInPeriod;
-      if (baseForDay > maxBaseInPeriod) {
-        maxBaseInPeriod = baseForDay;
-      }
-
-      return {
-        ...d,
-        range_cumulative_profit: pnlInPeriod,
-        range_pnl_percentage: (pnlInPeriod / Math.max(maxBaseInPeriod, 20.0)) * 100
-      };
-    });
-
-    const totalTransferInPeriod = (lastDay.cumulative_transfer || 0) - prevTransfer;
-    const finalBase = Math.max(prevBalance + totalTransferInPeriod, 20.0);
-    const rangeRoi = (rangeProfit / Math.max(finalBase, 20.0)) * 100;
+    const firstIdx = dailyData.indexOf(subset[0]);
+    const prevPnL = firstIdx > 0 ? (dailyData[firstIdx - 1].cumulative_profit || 0) : 0;
+    const rangeProfit = (subset[subset.length - 1].cumulative_profit || 0) - prevPnL;
 
     return {
-      displayData: chartData,
+      displayData: subset.map(d => ({ ...d, range_cumulative_profit: (d.cumulative_profit || 0) - prevPnL })),
       profit: Number(rangeProfit.toFixed(2)),
-      roi: Number(rangeRoi.toFixed(2))
     };
-  };
-
-  const { displayData, profit, roi } = getFilteredData();
+  }, [range, dailyData, totalProfit]);
 
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
@@ -216,6 +166,7 @@ export default function PnlDashboard() {
             <a href="https://bingxdao.com/invite/KFSSRQ/" target="_blank" rel="noopener noreferrer" style={{ padding: '6px 12px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-main)', textDecoration: 'none', transition: 'all 0.2s' }}>{t('dashboard.exchange_bingx')}</a>
             <a href="https://okx.com/join/17546814" target="_blank" rel="noopener noreferrer" style={{ padding: '6px 12px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-main)', textDecoration: 'none', transition: 'all 0.2s' }}>{t('dashboard.exchange_okx')}</a>
             <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_00WX65DDWK&utm_source=default" target="_blank" rel="noopener noreferrer" style={{ padding: '6px 12px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-main)', textDecoration: 'none', transition: 'all 0.2s' }}>{t('dashboard.exchange_binance')}</a>
+            <a href="https://crypto.com/app/7m67z2z3y9" target="_blank" rel="noopener noreferrer" style={{ padding: '6px 12px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-main)', textDecoration: 'none', transition: 'all 0.2s' }}>{t('dashboard.exchange_cryptocom')}</a>
           </div>
           <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
             {t('common.donation')} <code style={{ color: 'var(--primary)', background: 'var(--bg)', padding: '2px 6px', borderRadius: '4px' }}>0x63557719a40812ee964c9399d3883117d5af6ce4</code>

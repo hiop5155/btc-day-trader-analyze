@@ -13,7 +13,11 @@
     "collapse": "Collapse",
     "expand": "Expand",
     "select_report": "Select an analysis report",
-    "thinking": "Thinking..."
+    "thinking": "Thinking...",
+    "daily_pnl_table": "Daily P&L",
+    "date": "Date",
+    "daily_net_pnl": "Daily Net PnL (USDT)",
+    "cumulative_pnl": "Cumulative PnL (USDT)"
   },
   "dashboard": {
     "cumulative_roi": "Cumulative ROI",
@@ -34,15 +38,46 @@
     "exchange_pionex": "Pionex",
     "exchange_bingx": "BingX",
     "exchange_okx": "OKx",
-    "exchange_binance": "Binance"
+    "exchange_binance": "Binance",
+    "exchange_cryptocom": "Crypto.com"
+  },
+  "trades": {
+    "page_title": "Trade Log",
+    "total_trades": "Total",
+    "closed": "Closed",
+    "win_rate": "Win Rate",
+    "total_pnl": "Total PnL",
+    "open_section": "Open",
+    "close_section": "Close",
+    "entry": "Entry",
+    "sl": "Stop Loss",
+    "tp1": "TP1",
+    "tp2": "TP2",
+    "contracts": "Contracts",
+    "notional": "Notional",
+    "risk_usd": "Risk (USD)",
+    "risk_pct": "Risk %",
+    "fill_time": "Fill Time",
+    "order_id": "Order ID",
+    "status": "Status",
+    "close_price": "Close Price",
+    "pnl_usd": "PnL (USDT)",
+    "pnl_pct": "PnL %",
+    "exit_reason": "Exit Reason",
+    "close_time": "Close Time",
+    "thesis": "Thesis",
+    "notes": "Notes",
+    "adjustments": "Adjustments"
   },
   "about": {
     "title": "About Site",
     "p1": "Welcome to my **BTC Trading Analysis & Account Backtest Dashboard**. This site aims to provide transparent and verifiable trading records, allowing followers to clearly understand the logic and actual execution results behind each strategy.",
     "core_features": "Core Features:",
     "feat1": "**Real-time Analysis**: The left list shows technical analysis and trade suggestions for BTC market conditions.",
-    "feat2": "**PnL Dashboard**: Connects to Binance API to display real-time account PnL, including 7-day, 30-day, 3-month, and all-time backtest data.",
+    "feat2": "**PnL Dashboard**: Connects to OKX API to display real-time account PnL, with full tracking of daily net profit and cumulative returns.",
     "feat3": "**Transparent Performance**: Every fee, funding rate, and transfer has been reconciled to ensure the accuracy and authenticity of ROI calculations.",
+    "powered_by": "Powered By:",
+    "powered_by_desc": "Analysis reports and trading decisions are powered by **Claude Sonnet (Anthropic)**.",
     "p2": "If you are interested in my trading strategies, feel free to register on exchanges via the referral links below. Not only can you get exclusive fee discounts, but it's also the best way to support me!"
   }
 }

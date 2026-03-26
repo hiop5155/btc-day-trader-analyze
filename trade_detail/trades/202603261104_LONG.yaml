@@ -1,0 +1,38 @@
+# Trade #005
+id: 5
+datetime_utc8: "202603261104"
+direction: LONG
+grade: A
+
+open:
+  entry: 70786
+  sl: 70580
+  tp1: 71460
+  tp2: 71800
+  contracts: 2
+  notional_usd: 1415.72
+  risk_usd: 4.12
+  risk_pct: 2.1
+  order_id: "3422278619503747072"
+  algo_id: "3422278619539181568"
+
+close:
+  status: CLOSED
+  close_price: 70846.6
+  pnl_usd: -0.20        # gross +1.21 − entry_fee 0.70786 − close_fee 0.708466 = −0.2063
+  pnl_pct: -0.10
+  exit_reason: ALGO     # OCO triggered at 70,846 (~11:22 UTC+8); both attached+standalone OCOs active simultaneously caused early close before TP1/SL
+
+thesis: |
+  70,650 sweep of 4H HL (70,647) with 172,219-contract pin bar (session record)
+  5m MSB confirmed: 70,900 close > 70,880 prior swing high
+  Rising lows post-sweep: 70,650→70,700→70,764→70,823
+  OI cumulative +663 today — massive short squeeze fuel
+  Asia session 1:3 R:R = (71,460−70,786)÷206 ≈ 3.27:1 ✓
+
+adjustments: []
+
+notes: |
+  LESSON: swap_place_order with tpTriggerPx/slTriggerPx auto-creates an attached conditional algo.
+  Adding a separate swap_place_algo_order creates a DUPLICATE — two algos racing on the same position.
+  Next time: use EITHER attached params in place_order OR separate algo order, NOT both.

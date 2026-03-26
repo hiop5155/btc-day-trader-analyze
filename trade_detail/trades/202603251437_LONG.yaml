@@ -1,0 +1,29 @@
+# Trade #001
+id: 1
+datetime_utc8: "202603251437"
+direction: LONG
+grade: A
+
+open:
+  entry: 71100
+  sl: 70890
+  tp1: 71730
+  contracts: 1
+  notional_usd: 711.0
+  risk_usd: 2.10
+  risk_pct: 1.05
+  order_id: "3419809828949680128"
+  algo_id: "3419809828918005760"
+
+close:
+  status: CLOSED
+  close_price: 70860.0
+  pnl_usd: -2.90        # gross -2.40 − entry_fee 0.1422 − close_fee 0.3543 = −2.8965
+  pnl_pct: -1.45
+  exit_reason: SL       # SL triggered at 70,890, filled at 70,860 (slippage)
+
+thesis: |
+  5m sweep + MSB structure
+  Asia session setup, entry limit at 71,100
+
+adjustments: []

@@ -1,13 +1,14 @@
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import { plugin as mdPlugin, Mode } from 'vite-plugin-markdown'
+import yaml from '@rollup/plugin-yaml'
 import path from 'path'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
 
   // Resolve mdDir relative to this config file's directory
-  const mdDir = path.resolve(__dirname, env.VITE_MD_DIR || '../../day')
+  const mdDir = path.resolve(__dirname, env.VITE_MD_DIR || '../day')
 
   return {
     plugins: [
@@ -15,6 +16,7 @@ export default defineConfig(({ mode }) => {
       mdPlugin({
         mode: [Mode.HTML],
       }),
+      yaml(),
     ],
     resolve: {
       alias: {

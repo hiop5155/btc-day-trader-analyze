@@ -1,0 +1,29 @@
+# Trade #002
+id: 2
+datetime_utc8: "202603252023"
+direction: LONG
+grade: A
+
+open:
+  entry: 71183
+  sl: 70970
+  tp1: 71609
+  contracts: 1
+  notional_usd: 711.83
+  risk_usd: 2.13
+  risk_pct: 1.06
+  order_id: "3420223279043928064"
+  algo_id: "3420223279012253696"
+
+close:
+  status: CLOSED
+  close_price: 71623.6
+  pnl_usd: 3.91         # gross +4.406 − entry_fee 0.142366 − close_fee 0.358118 = +3.9055
+  pnl_pct: 1.95
+  exit_reason: TP1      # TP triggered at 71,609, filled at 71,623.6
+
+thesis: |
+  Limit order placed at 18:03 UTC+8, filled at 20:23 UTC+8
+  Bullish structure continuation, TP1 at 71,609
+
+adjustments: []

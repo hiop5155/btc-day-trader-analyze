@@ -1,7 +1,8 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import PnlDashboard from './Dashboard'
 import './App.css'
+import PnlTable from './PnlTable'
+import TradeList from './TradeList'
 
 const mdModules = import.meta.glob('@md/**/*.md', { eager: true })
 
@@ -48,6 +49,14 @@ function getLanguageEntries(lang) {
   }).sort((a, b) => b.timestamp.localeCompare(a.timestamp))
 }
 
+const getTradesEntry = (t) => ({
+  filename: 'trade-log',
+  name: 'trade-log',
+  timestamp: 'trades',
+  title: t('trades.page_title'),
+  type: 'trades',
+})
+
 const getAboutEntry = (t) => ({
   filename: 'about-me',
   name: 'about-me',
@@ -65,6 +74,11 @@ const getAboutEntry = (t) => ({
           <li>${t('about.feat2')}</li>
           <li>${t('about.feat3')}</li>
         </ul>
+      </div>
+
+      <div style="margin: 24px 0; padding: 20px; background: rgba(139,92,246,0.07); border-radius: 12px; border-left: 4px solid #8b5cf6;">
+        <h4 style="margin-top:0; color:#8b5cf6; font-size: 1.1rem;">${t('about.powered_by')}</h4>
+        <p style="margin-bottom:0; font-size: 0.9rem; line-height: 1.75;">${t('about.powered_by_desc')}</p>
       </div>
 
       <p>${t('about.p2')}</p>
@@ -139,8 +153,9 @@ function App() {
 
   const entries = useMemo(() => {
     const aboutEntry = getAboutEntry(t)
+    const tradesEntry = getTradesEntry(t)
     const mdEntries = getLanguageEntries(lang)
-    return [aboutEntry, ...mdEntries]
+    return [aboutEntry, tradesEntry, ...mdEntries]
   }, [t, lang])
 
   const mdEntries = useMemo(() => entries.filter(e => e.type === 'markdown'), [entries])
@@ -150,7 +165,6 @@ function App() {
     return entries.find(e => e.timestamp === selectedTs) || entries[0]
   }, [entries, selectedTs])
 
-  const [isPnlOpen, setIsPnlOpen] = useState(true)
   const [isListOpen, setIsListOpen] = useState(true)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -205,6 +219,23 @@ function App() {
           </div>
         </div>
         <nav className="file-list">
+          {/* Static group: About + Trades */}
+          <div className="static-nav-group">
+            {entries.filter(e => e.type === 'about' || e.type === 'trades').map((entry) => (
+              <button
+                key={entry.filename}
+                className={`file-item ${selectedTs === entry.timestamp ? 'active' : ''}`}
+                onClick={() => setSelectedTs(entry.timestamp)}
+              >
+                <span className="file-icon">{entry.type === 'about' ? 'ℹ️' : '📋'}</span>
+                <span className="file-label">{formatLabel(entry)}</span>
+              </button>
+            ))}
+          </div>
+
+          <div className="nav-divider" />
+
+          {/* Collapsible: MD reports */}
           <button
             className="section-label-toggle"
             onClick={() => setIsListOpen(!isListOpen)}
@@ -214,13 +245,13 @@ function App() {
           </button>
 
           <div className={`collapsible-list ${isListOpen ? 'is-open' : ''}`}>
-            {entries.map((entry) => (
+            {entries.filter(e => e.type === 'markdown').map((entry) => (
               <button
                 key={entry.filename}
-                className={`file-item ${selectedTs === entry.timestamp ? 'active' : ''} ${entry.type === 'about' ? 'about-item' : ''}`}
+                className={`file-item ${selectedTs === entry.timestamp ? 'active' : ''}`}
                 onClick={() => setSelectedTs(entry.timestamp)}
               >
-                <span className="file-icon">{entry.type === 'about' ? 'ℹ️' : '📄'}</span>
+                <span className="file-icon">📄</span>
                 <span className="file-label">{formatLabel(entry)}</span>
               </button>
             ))}
@@ -229,20 +260,6 @@ function App() {
       </aside>
 
       <main className="content">
-        {/* Collapsible PnL Dashboard */}
-        <div className={`pnl-section ${isPnlOpen ? 'is-open' : ''}`}>
-          <button
-            className="pnl-toggle-bar"
-            onClick={() => setIsPnlOpen(!isPnlOpen)}
-          >
-            <span className="pnl-toggle-icon">📊</span>
-            <span className="pnl-toggle-text">{t('common.pnl_dashboard')}</span>
-            <span className="chevron">{isPnlOpen ? '▲' : '▼'} {isPnlOpen ? t('common.collapse') : t('common.expand')}</span>
-          </button>
-          <div className="pnl-collapsible-content">
-            <PnlDashboard />
-          </div>
-        </div>
 
         {isLoading ? (
           <article className="card thinking-card">
@@ -259,10 +276,15 @@ function App() {
         ) : selected ? (
           <article className="card fade-in">
             <h2 className="article-title">{formatLabel(selected)}</h2>
-            <div
-              className="markdown-body"
-              dangerouslySetInnerHTML={{ __html: selected.html }}
-            />
+            {selected.type === 'trades' ? (
+              <TradeList />
+            ) : (
+              <div
+                className="markdown-body"
+                dangerouslySetInnerHTML={{ __html: selected.html }}
+              />
+            )}
+            <PnlTable />
             {/* 推薦連結區塊 */}
             <div style={{ marginTop: '40px', paddingTop: '20px', borderTop: '1px solid var(--border)' }}>
               <div style={{ fontSize: '0.9rem', color: 'var(--text-main)', marginBottom: '12px', fontWeight: 'bold' }}>{t('dashboard.referral_title')}</div>
@@ -272,6 +294,7 @@ function App() {
                 <a href="https://bingxdao.com/invite/KFSSRQ/" target="_blank" rel="noopener noreferrer" className="referral-btn">{t('dashboard.exchange_bingx')}</a>
                 <a href="https://okx.com/join/17546814" target="_blank" rel="noopener noreferrer" className="referral-btn">{t('dashboard.exchange_okx')}</a>
                 <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_00WX65DDWK&utm_source=default" target="_blank" rel="noopener noreferrer" className="referral-btn">{t('dashboard.exchange_binance')}</a>
+                <a href="https://crypto.com/app/7m67z2z3y9" target="_blank" rel="noopener noreferrer" className="referral-btn">{t('dashboard.exchange_cryptocom')}</a>
               </div>
               <div style={{ marginTop: '16px', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
                 {t('common.donation')} <code style={{ color: 'var(--primary)', marginLeft: '4px', background: 'var(--md-code-bg)', padding: '2px 6px', borderRadius: '4px' }}>0x63557719a40812ee964c9399d3883117d5af6ce4</code>

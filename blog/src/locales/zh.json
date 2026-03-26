@@ -13,7 +13,11 @@
     "collapse": "收合",
     "expand": "展開",
     "select_report": "選擇一份分析報告",
-    "thinking": "分析思考中..."
+    "thinking": "分析思考中...",
+    "daily_pnl_table": "每日盈虧",
+    "date": "日期",
+    "daily_net_pnl": "單日盈虧 (USDT)",
+    "cumulative_pnl": "累積盈虧 (USDT)"
   },
   "dashboard": {
     "cumulative_roi": "累積投報率",
@@ -34,15 +38,46 @@
     "exchange_pionex": "派網",
     "exchange_bingx": "BingX",
     "exchange_okx": "OKx",
-    "exchange_binance": "幣安"
+    "exchange_binance": "幣安",
+    "exchange_cryptocom": "Crypto.com"
+  },
+  "trades": {
+    "page_title": "交易明細",
+    "total_trades": "總筆數",
+    "closed": "已平倉",
+    "win_rate": "勝率",
+    "total_pnl": "總盈虧",
+    "open_section": "開倉資訊",
+    "close_section": "平倉資訊",
+    "entry": "進場價",
+    "sl": "止損",
+    "tp1": "止盈 TP1",
+    "tp2": "止盈 TP2",
+    "contracts": "張數",
+    "notional": "名目價值",
+    "risk_usd": "風險金額",
+    "risk_pct": "風險比例",
+    "fill_time": "成交時間",
+    "order_id": "訂單 ID",
+    "status": "狀態",
+    "close_price": "平倉價",
+    "pnl_usd": "盈虧 (USDT)",
+    "pnl_pct": "盈虧%",
+    "exit_reason": "出場原因",
+    "close_time": "平倉時間",
+    "thesis": "入場邏輯",
+    "notes": "筆記",
+    "adjustments": "調整記錄"
   },
   "about": {
     "title": "關於網站運作",
     "p1": "歡迎來到我的 **BTC 交易分析與帳戶回測儀表板**。這個網站旨在提供透明且可檢驗的交易紀錄，讓追隨者能清楚了解每一筆策略背後的邏輯與實際執行成果。",
     "core_features": "網站核心功能：",
     "feat1": "**即時分析報告**：左側清單展示了針對 BTC 行情所做的技術分析與持倉建議。",
-    "feat2": "**帳戶回測儀表板**：串接幣安 API 實時顯示當前帳戶的盈虧狀況 (PnL)，包含 7天、30天、3個月與全時段的回測數據。",
+    "feat2": "**帳戶回測儀表板**：串接 OKX API 實時顯示當前帳戶的盈虧狀況 (PnL)，包含每日淨利與累積盈虧的完整追蹤紀錄。",
     "feat3": "**透明績效追蹤**：每一筆手續費、資助費與轉帳紀錄皆已正確對帳，確保 ROI (投報率) 計算的真實性與準確度。",
+    "powered_by": "分析引擎：",
+    "powered_by_desc": "分析報告與交易決策由 **Claude Sonnet（Anthropic）** 驅動。",
     "p2": "如果你對我的交易策略感興趣，歡迎透過下方的推薦連結註冊交易所，不僅可以獲得專屬的手續費折扣，也是對我最好的支持！"
   }
 }
