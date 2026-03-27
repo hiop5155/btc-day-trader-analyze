@@ -1,0 +1,42 @@
+id: 19
+datetime_utc8: "202603270534"
+direction: LONG
+grade: A
+
+open:
+  entry: 68940
+  sl: 68800
+  tp1: 69360
+  tp2: 69742
+  contracts: 13
+  notional_usd: 8962
+  risk_usd: 18.20
+  risk_pct: 1.93
+  order_id: "3424513096338595840"
+  algo_id: "3424547821050400768"  # OCO activated on fill (TP 69,360 / SL 68,800)
+
+close:
+  status: CLOSED
+  close_price: 68750.7   # OCO SL market fill @ 06:24 UTC+8; trigger 68,800, slippage −49.3pt (fast drop 06:20 5m)
+  pnl_usd: -30.87        # (68750.7−68940)×13×0.01 − entry_fee(1.792) − exit_fee(4.469); funding_fee 0
+  pnl_pct: -3.27         # -30.87 / 943.80
+  exit_reason: SL
+  funding_fee: 0         # held 05:51–06:24 UTC+8; no settlement point crossed (next: 08:00 UTC+8)
+
+thesis: |
+  Asia stop-hunt re-entry. Trade #18 SL triggered at 05:10 UTC+8 (L=68,840.7 sweep),
+  price immediately recovered to 69,108 within 10 min (+268pt) — confirmed stop-hunt.
+  MSB confirmed: 5m close 69,108 (05:20 UTC+8) > prior swing high 68,974.9;
+  15m close 69,055 also confirms MSB on higher timeframe.
+  OB zone 68,880–68,940 (prior congestion area, demand flip).
+  OI −18.6 BTC post-sweep (shorts covering into bounce). Funding +0.0000754 (below neutral).
+  Limit entry at OB support 68,940. SL below sweep extreme 68,841 − buffer → 68,800 (59pt).
+  TP1 = 68,940 + 420 = 69,360 (R:R = 420/140 = 3.0, satisfies Asia ≥ 1:3).
+  Margin-limited at 13 contracts → effective risk 1.93% (target 3%, acceptable).
+
+adjustments: []
+  # - datetime_utc8: "YYYYMMDDHHMM"
+  #   type: SL_MOVE   # SL_MOVE / TP_ADJUST / SIZE_REDUCE
+  #   from: <old_value>
+  #   to: <new_value>
+  #   note: <reason>

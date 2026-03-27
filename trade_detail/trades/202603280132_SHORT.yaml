@@ -1,0 +1,30 @@
+id: 12
+datetime_utc8: "202603280132"
+direction: SHORT
+grade: A
+
+open:
+  entry: 65880
+  sl: 66150
+  tp: 65200
+  contracts: 10
+  notional_usd: 6588.0
+  risk_usd: 27.00
+  risk_pct: 2.80
+  actual_risk_pct: 2.80
+  order_id: "3426925354586955776"
+
+close:
+  status: OPEN
+  close_price: null
+  pnl_usd: null
+  pnl_pct: null
+  exit_reason: null
+
+thesis: |
+  66,268 bounce rejected — clean pullback-then-failure structure.
+  5m lower highs 66,268→66,089→65,927→65,834. Orderbook 4.4:1 ask-heavy.
+  4H bearish (−234pt). Asia session but structure strong (F1:7 F2:7).
+  Entry limit at 65,880 after rejection confirmation.
+
+adjustments: []

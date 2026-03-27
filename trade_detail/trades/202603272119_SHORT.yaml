@@ -1,0 +1,30 @@
+id: 10
+datetime_utc8: "202603272119"
+direction: SHORT
+grade: A
+
+open:
+  entry: 66560
+  sl: 66720
+  tp: 66050
+  contracts: 17
+  notional_usd: 11315.2
+  risk_usd: 27.20
+  risk_pct: 3.0
+  actual_risk_pct: 3.0
+  order_id: "3426416283555422208"
+
+close:
+  status: CLOSED
+  close_price: 66050
+  pnl_usd: 81.59
+  pnl_pct: 8.91
+  exit_reason: TP
+  exit_datetime_utc8: "2026-03-27 21:57"
+
+thesis: |
+  4H bearish reversal, 15m rejection candle at 66,688 (lower high vs 66,815).
+  Orderbook flipped from 15:1 bid to 1:1 (buyers exhausted). OI rising into decline.
+  Entry on limit at 66,560 below failed bounce zone.
+
+adjustments: []

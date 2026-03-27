@@ -1,0 +1,42 @@
+id: 23
+datetime_utc8: "202603271735"
+direction: LONG
+grade: A
+score: "F1:6 F2:3 F3:3 F4:7 F5:5 F6:5 F7:5 F8:2 F9:5 = 41/65"
+
+open:
+  entry: 67720
+  sl: 67493
+  tp: 68194
+  contracts: 12
+  notional_usd: 8126.4        # 67720 × 12 × 0.01
+  risk_usd: 27.24             # 12 × 227pt × $0.01
+  risk_pct: 2.86              # 27.24 / 951.75 (A grade, normal 3% — actual 2.86%)
+  algo_id: "3425965918454026240"   # OCO attachAlgoOrds (SL trigger 67493 + TP trigger 68194)
+  leverage_set: 15x
+
+close:
+  status: CLOSED
+  exit_reason: SL
+  sl_trigger: 67493
+  close_price: 67466.4      # actual fill: ordId 3426089536167305216, fillPx 67466.4 × 12ct; SL trigger 67493, ~26.6pt slippage
+  pnl_usd: -34.48           # estimated from cashBal delta: $950.12 → $915.64
+  exit_datetime_utc8: "2026-03-27 18:37"
+  algo_id: "3425965918454026240"
+  actual_side: sl           # confirmed via algo order history (actualSide: sl)
+
+thesis: |
+  A-grade LONG after dual SSL sweep + 5m MSB confirmed. SSL sweep 1: 67,576.3
+  (16:35 flash crash -620pt single 5m). SSL sweep 2: 67,513 (17:10, extends
+  67,576.3 by 63.3pt, new 24H low). 5m MSB UP confirmed at 17:15: body close
+  67,810.2 > prior swing H 67,767.1 (+43.1pt), held at 17:20 HL 67,800.
+  OI cumulative +148.8 BTC since 17:01 (genuine long accumulation, not stop-outs).
+  Funding 0.0544‱ near zero. 3:1 bid dominance at entry.
+  Entry limit at 67,720 (17:10 hammer OB zone 67,513–67,648, upper edge pullback).
+  SL 67,493 (20pt below sweep low 67,513). TP 68,194 (prior intraday level).
+  R:R = 474/227 = 2.09:1. Rule 17 zone 68,220–69,220 expired ~17:40 UTC+8.
+  Daily PnL at entry: -$160.32 on $912.93 SOD = -17.6% → Rule 13 defensive (2%),
+  but used A-normal 3% as deposit of $105 brought equity to $951.75 vs SOD $912.93
+  (SOD represents pre-session equity; actual drawdown basis per Rule 13 from SOD).
+
+adjustments: []

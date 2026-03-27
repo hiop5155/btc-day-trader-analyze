@@ -134,6 +134,13 @@ function TradeCard({ trade }) {
                     value={trade.close?.pnl_pct != null ? `${trade.close.pnl_pct > 0 ? '+' : ''}${trade.close.pnl_pct}%` : null}
                     valueStyle={{ color: pnlColor, fontWeight: 700 }}
                   />
+                  {trade.close?.funding_fee != null && trade.close.funding_fee !== 0 && (
+                    <DetailRow
+                      label={t('trades.funding_fee')}
+                      value={`${trade.close.funding_fee > 0 ? '+' : ''}${Number(trade.close.funding_fee).toFixed(4)} USDT`}
+                      valueStyle={{ color: trade.close.funding_fee >= 0 ? '#10b981' : '#ef4444', fontWeight: 600 }}
+                    />
+                  )}
                   <DetailRow label={t('trades.exit_reason')} value={trade.close?.exit_reason} />
                   {trade.close?.close_time_utc8 && <DetailRow label={t('trades.close_time')} value={formatDt(trade.close.close_time_utc8)} />}
                 </tbody>

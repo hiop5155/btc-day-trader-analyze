@@ -65,6 +65,7 @@
     "close_price": "平倉價",
     "pnl_usd": "盈虧 (USDT)",
     "pnl_pct": "盈虧%",
+    "funding_fee": "資金費率收付",
     "exit_reason": "出場原因",
     "close_time": "平倉時間",
     "thesis": "入場邏輯",

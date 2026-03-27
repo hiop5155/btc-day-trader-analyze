@@ -9,7 +9,7 @@ function buildDailyData() {
   for (const mod of Object.values(tradeModules)) {
     const t = mod.default ?? mod;
     const status = t?.close?.status;
-    const pnl = t?.close?.pnl_usd;
+    const pnl = t?.close?.pnl_usd;  // already includes funding_fee when present
     const dt = String(t?.datetime_utc8 ?? '');
     if (status === 'CLOSED' && pnl != null && dt.length >= 8) {
       const date = `${dt.slice(0, 4)}-${dt.slice(4, 6)}-${dt.slice(6, 8)}`;

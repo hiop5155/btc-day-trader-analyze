@@ -65,6 +65,7 @@
     "close_price": "Close Price",
     "pnl_usd": "PnL (USDT)",
     "pnl_pct": "PnL %",
+    "funding_fee": "Funding Fee",
     "exit_reason": "Exit Reason",
     "close_time": "Close Time",
     "thesis": "Thesis",

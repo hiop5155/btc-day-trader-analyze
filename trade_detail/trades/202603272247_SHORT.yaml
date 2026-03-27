@@ -1,0 +1,30 @@
+id: 11
+datetime_utc8: "202603272247"
+direction: SHORT
+grade: A
+
+open:
+  entry: 65950
+  sl: 66100
+  tp: 65200
+  contracts: 19
+  notional_usd: 12530.5
+  risk_usd: 28.50
+  risk_pct: 2.86
+  actual_risk_pct: 2.86
+  order_id: "3426594049164795904"
+
+close:
+  status: CLOSED
+  close_price: 66100
+  pnl_usd: -34.51
+  pnl_pct: -3.46
+  exit_reason: SL
+  exit_datetime_utc8: "2026-03-27 23:00"
+
+thesis: |
+  5m pullback rejection at 65,972 (lower high) after 65,682 low sweep.
+  Orderbook flipped to 2.7:1 ask-heavy. 4H deeply bearish (−834pt).
+  Entry on limit at 65,950 below rejected bounce high.
+
+adjustments: []

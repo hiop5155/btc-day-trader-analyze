@@ -1,0 +1,39 @@
+id: 22
+datetime_utc8: "202603271522"
+direction: LONG
+grade: A+
+
+open:
+  entry: 68720
+  sl: 68570
+  tp1: 69052
+  tp2: 69164          # optional — prior 4H high
+  contracts: 21
+  notional_usd: 14431.2       # 68720 × 21 × 0.01
+  risk_usd: 31.50             # 21 × 150pt × $0.01
+  risk_pct: 3.15              # 31.50 / 1001.54 (capped: uncapped formula = 5%, 15x leverage limit reduces from 33→21 contracts)
+  order_id: "3425696841435406342"
+  leverage_set: 15x           # raised from 10x to 15x (Rule 15 allows up to 15x); required for 21 contracts
+
+close:
+  status: CLOSED
+  fill_price: 68720              # limit order filled ~15:33 UTC+8 (15:30 5m L:68,684.1 swept through 68,720)
+  close_price: 68531.0           # actual fill: 4 sub-fills at 68,530.9(×13.47ct) + 68,531.0(×7.53ct) = weighted avg 68,531.0; SL trigger 68,570, ~39pt slippage; ordId 3425733880662941697
+  sl_trigger: 68570
+  pnl_usd: -49.79                # actual equity change 1001.54 → 951.75 (incl. maker entry fee + taker SL fee + slippage)
+  pnl_pct: -4.97                 # 49.79 / 1001.54
+  exit_reason: SL
+  funding_fee: 0                 # position held ~7 min (15:33–15:40), no settlement crossed
+
+thesis: |
+  Post-pullback A+ LONG re-entry into 15m FVG zone. 15:10 5m +243.9pt explosive
+  breakout (O:68,586 H:68,887.3 C:68,829.9) created new session high 68,887.3,
+  breaking above prior 68,836.5 cycle high. 15:00 15m CLOSED C:68,829.9 → 15m MSB
+  confirmed. 4H live close 68,815.9 > 4H open 68,732.8 (+83.1pt) → 4H MSB confirmed.
+  15m FVG gap: C1(14:45 15m) H:68,710 → C3(15:15 15m) L:68,780 = 70pt FVG.
+  Limit entry at 68,720 (FVG mid-bottom). SL 68,570 = 10pt below 15:05 5m low 68,579.8.
+  TP1 = 69,052 (SOD). R/R = 332/150 = 2.21:1 (net ~2.18:1 after ~$0.95 funding cost).
+  All A+ conditions: daily SSL 68,258 swept at 12:05 + 4H MSB + funding +0.0000655 ≤ 0.01%.
+  OI +31.4 BTC since last cycle. Funding settlement at 16:00 UTC+8 (~44 min).
+
+adjustments: []

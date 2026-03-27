@@ -125,6 +125,8 @@ def print_detail(trades, trade_id):
     print(f"    Status     : {color_status(c.get('status'))}")
     print(f"    Close px   : {c.get('close_price') or '—'}")
     print(f"    PnL        : {color_pnl(c.get('pnl_usd'))}")
+    if c.get("funding_fee") is not None:
+        print(f"    Funding fee: {c.get('funding_fee')}")
     print(f"    Exit reason: {c.get('exit_reason') or '—'}")
     if t.get("thesis"):
         print(f"\n  {BOLD}Thesis{RESET}")

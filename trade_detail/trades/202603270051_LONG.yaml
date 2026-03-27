@@ -1,0 +1,33 @@
+id: 15
+datetime_utc8: "202603270051"
+direction: LONG
+grade: A
+
+open:
+  entry: 68855
+  sl: 68445
+  tp1: 69675
+  tp2: 70085
+  contracts: 7
+  notional_usd: 4819.85        # 68855 × 7 × 0.01
+  risk_usd: 28.70              # 7 contracts × 410pt × $0.01
+  risk_pct: 2.85               # 28.70 / 1007.07 equity
+  order_id: "3423944337307688960"
+  algo_id: "3423944337276014592"  # OCO algo auto-created via tpTriggerPx/slTriggerPx
+
+close:
+  status: CANCELLED
+  close_price: null
+  pnl_usd: 0
+  pnl_pct: 0
+  exit_reason: MANUAL   # cancelled: post-sweep new lows at 68,791 negated MSB; 4H bearish
+  funding_fee: null
+
+thesis: |
+  Sell-side liquidity sweep: 5m candle (23:15 UTC+8) swept to L=68,495.1, below prior day absolute low 68,616.7.
+  Strong +705pt bounce to 69,200 (23:50 UTC+8) confirms institutional absorption at this level.
+  MSB confirmed: post-sweep price broke above pre-sweep swing H=68,974.3 by reaching 69,200.
+  Pullback to OB zone (68,791–68,854) forming HL above sweep low — entry on limit at 68,855.
+  US session (16:51 UTC), R:R 2:1 threshold met. SL below sweep extreme (68,445 = 50pt under 68,495.1).
+
+adjustments: []
