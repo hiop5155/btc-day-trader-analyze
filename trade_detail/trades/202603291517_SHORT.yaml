@@ -15,11 +15,15 @@ open:
   order_id: "3431486198008209408"
 
 close:
-  status: OPEN
-  close_price: null
-  pnl_usd: null
-  pnl_pct: null
-  exit_reason: null
+  status: CLOSED
+  close_price: 66715.6
+  raw_pnl: -16.27
+  entry_fee: -1.60
+  close_fee: -4.00
+  funding_fee: -0.43
+  pnl_usd: -22.30
+  pnl_pct: -2.46
+  exit_reason: SL
 
 thesis: |
   1H MSB confirmed (66,505 < 66,560). Break-and-retest of 66,560 S/R.
