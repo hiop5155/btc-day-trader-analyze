@@ -18,6 +18,7 @@ open:
 close:
   status: CLOSED
   close_price: 70065.4        # market close at 14:17 UTC+8; filled via swap_close_position
+  raw_pnl: null
   entry_fee: null
   close_fee: null
   funding_fee: null

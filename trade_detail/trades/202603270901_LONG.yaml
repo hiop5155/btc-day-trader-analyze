@@ -18,6 +18,7 @@ open:
 close:
   status: CLOSED
   close_price: 68850          # OCO trailing SL triggered 09:35 UTC+8; fill confirmed at 68,850 (no slippage)
+  raw_pnl: null
   entry_fee: null
   close_fee: null
   funding_fee: null

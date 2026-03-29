@@ -20,6 +20,7 @@ close:
   exit_reason: SL
   sl_trigger: 67493
   close_price: 67466.4      # actual fill: ordId 3426089536167305216, fillPx 67466.4 × 12ct; SL trigger 67493, ~26.6pt slippage
+  raw_pnl: null
   entry_fee: null
   close_fee: null
   funding_fee: null

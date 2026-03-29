@@ -18,6 +18,7 @@ open:
 close:
   status: CLOSED
   close_price: 69975.5        # market close UTC 06:51 / 14:51 UTC+8; ordId 3422722547558342656
+  raw_pnl: null
   entry_fee: null
   close_fee: null
   funding_fee: null

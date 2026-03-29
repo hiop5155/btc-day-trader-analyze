@@ -17,6 +17,7 @@ open:
 close:
   status: CLOSED
   close_price: 66100
+  raw_pnl: null
   entry_fee: null
   close_fee: null
   funding_fee: null

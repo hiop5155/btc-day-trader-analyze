@@ -20,6 +20,7 @@ close:
   status: CLOSED
   close_price: 69586.71        # avgPx from exchange (ordId 3423569056856236033)
   close_time_utc8: "202603262145"   # fillTime 1774532708750 = 13:45 UTC = 21:45 UTC+8
+  raw_pnl: null
   entry_fee: null
   close_fee: null
   funding_fee: null

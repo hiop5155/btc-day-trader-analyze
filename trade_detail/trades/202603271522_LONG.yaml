@@ -20,6 +20,7 @@ close:
   fill_price: 68720              # limit order filled ~15:33 UTC+8 (15:30 5m L:68,684.1 swept through 68,720)
   close_price: 68531.0           # actual fill: 4 sub-fills at 68,530.9(×13.47ct) + 68,531.0(×7.53ct) = weighted avg 68,531.0; SL trigger 68,570, ~39pt slippage; ordId 3425733880662941697
   sl_trigger: 68570
+  raw_pnl: null
   entry_fee: null
   close_fee: null
   funding_fee: null

@@ -17,6 +17,7 @@ open:
 close:
   status: CLOSED
   close_price: 66320
+  raw_pnl: -24.00
   entry_fee: -2.65
   close_fee: -6.63
   funding_fee: 0

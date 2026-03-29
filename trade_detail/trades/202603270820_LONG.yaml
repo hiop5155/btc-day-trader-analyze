@@ -18,6 +18,7 @@ open:
 close:
   status: CLOSED
   close_price: 68668          # actual fill: ordId 3424878747943133188, fillPx 68668; SL trigger 68,670, 2pt slippage
+  raw_pnl: null
   entry_fee: null
   close_fee: null
   funding_fee: null
