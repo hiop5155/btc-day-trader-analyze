@@ -21,7 +21,6 @@ close:
   raw_pnl: null
   entry_fee: null
   close_fee: null
-  funding_fee: null
   pnl_usd: -28.01        # (68718-68950)×10×0.01 − 1.379(entry fee) − 3.4359(SL fee)
   pnl_pct: -2.78         # -28.01 / 1007.07 equity
   exit_reason: SL        # OCO SL triggered at 68,720; filled @ 68,718 taker

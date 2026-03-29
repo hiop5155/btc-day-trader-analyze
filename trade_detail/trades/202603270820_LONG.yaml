@@ -21,7 +21,6 @@ close:
   raw_pnl: null
   entry_fee: null
   close_fee: null
-  funding_fee: null
   pnl_usd: -28.61             # actual equity change: 912.93 → 884.32 (incl. all fees + slippage)
   pnl_pct: -3.13              # -28.61 / 912.93
   exit_reason: SL             # 08:35 5m dropped from 68,709 to L=68,501.3; SL triggered at 68,670

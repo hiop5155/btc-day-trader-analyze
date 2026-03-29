@@ -23,7 +23,6 @@ close:
   raw_pnl: null
   entry_fee: null
   close_fee: null
-  funding_fee: null
   pnl_usd: 6.63                 # gross 7.464 − open_fee 0.280 − close_fee 0.697 + funding_fee 0.140 = 6.627
   pnl_pct: 3.46                 # 6.63 / 191.69 equity at open
   funding_fee: +0.1401          # 收取：08:00 UTC (16:00 UTC+8) 結算，2 合約空頭，正資金費率

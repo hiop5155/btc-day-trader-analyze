@@ -23,7 +23,6 @@ close:
   raw_pnl: null
   entry_fee: null
   close_fee: null
-  funding_fee: null
   pnl_usd: -49.79                # actual equity change 1001.54 → 951.75 (incl. maker entry fee + taker SL fee + slippage)
   pnl_pct: -4.97                 # 49.79 / 1001.54
   exit_reason: SL
