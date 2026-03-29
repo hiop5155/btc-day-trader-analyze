@@ -18,6 +18,9 @@ open:
 close:
   status: CLOSED
   close_price: 69975.5        # market close UTC 06:51 / 14:51 UTC+8; ordId 3422722547558342656
+  entry_fee: null
+  close_fee: null
+  funding_fee: null
   pnl_usd: -0.73              # (69975.5-70000)×0.01 − entry_fee 0.14 − exit_fee 0.3499 = −0.735
   pnl_pct: -0.38              # −0.735 / 192.43 equity at open
   exit_reason: MANUAL         # Cron cycle closed via swap_close_position at 14:51 UTC+8

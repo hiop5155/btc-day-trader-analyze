@@ -18,6 +18,9 @@ open:
 close:
   status: CLOSED
   close_price: 70368         # SL triggered at 70,380, market filled at 70,368 (−12pt slippage)
+  entry_fee: null
+  close_fee: null
+  funding_fee: null
   pnl_usd: -4.23             # gross −3.24 − entry_fee 0.28212 − exit_fee 0.70368 = −4.226
   pnl_pct: -2.13             # −4.23 / 198.70 equity at open
   exit_reason: SL            # 13:40 UTC+8 candle crashed 280pt; SL ordId 3422599688106237961

@@ -18,6 +18,9 @@ open:
 close:
   status: CLOSED
   close_price: 71649.1
+  entry_fee: null
+  close_fee: null
+  funding_fee: null
   pnl_usd: 0.49         # gross +0.991 − entry_fee 0.1431 − close_fee 0.3582455 = +0.4896
   pnl_pct: 0.24
   exit_reason: ALGO     # Algo OCO triggered at 71,649.1 (standalone algo, before attached TP 72,250 reached)

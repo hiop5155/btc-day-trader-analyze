@@ -18,6 +18,9 @@ open:
 close:
   status: CLOSED
   close_price: 68850          # OCO trailing SL triggered 09:35 UTC+8; fill confirmed at 68,850 (no slippage)
+  entry_fee: null
+  close_fee: null
+  funding_fee: null
   pnl_usd: +12.22             # actual equity change 884.32 → 896.54 (incl. entry+exit fees)
   pnl_pct: +1.38              # 12.22 / 884.32
   exit_reason: SL             # trailing SL at 68,850 hit during 09:35 dip to L=68,814.3; price recovered immediately

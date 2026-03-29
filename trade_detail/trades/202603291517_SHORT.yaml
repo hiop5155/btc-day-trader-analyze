@@ -1,0 +1,29 @@
+id: 16
+datetime_utc8: "202603291517"
+direction: SHORT
+grade: A
+
+open:
+  entry: 66580
+  sl: 66730
+  tp: 66260
+  contracts: 12
+  notional_usd: 7989.6
+  risk_usd: 18.12
+  risk_pct: 2.0
+  actual_risk_pct: 2.0
+  order_id: "3431486198008209408"
+
+close:
+  status: OPEN
+  close_price: null
+  pnl_usd: null
+  pnl_pct: null
+  exit_reason: null
+
+thesis: |
+  1H MSB confirmed (66,505 < 66,560). Break-and-retest of 66,560 S/R.
+  Orderbook 6.7:1 ask-heavy. 4H bearish (-318pt). EU session F9=3.
+  Score 40/62 Grade A. R:R 2.13. Rule 20 R:R cap not triggered.
+
+adjustments: []

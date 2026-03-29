@@ -18,6 +18,9 @@ open:
 close:
   status: CLOSED
   close_price: 70860.0
+  entry_fee: null
+  close_fee: null
+  funding_fee: null
   pnl_usd: -2.90        # gross -2.40 − entry_fee 0.1422 − close_fee 0.3543 = −2.8965
   pnl_pct: -1.45
   exit_reason: SL       # SL triggered at 70,890, filled at 70,860 (slippage)

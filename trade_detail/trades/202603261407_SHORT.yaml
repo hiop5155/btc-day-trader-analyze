@@ -18,6 +18,9 @@ open:
 close:
   status: CLOSED
   close_price: 70065.4        # market close at 14:17 UTC+8; filled via swap_close_position
+  entry_fee: null
+  close_fee: null
+  funding_fee: null
   pnl_usd: -1.14              # gross −0.654 − entry_fee 0.14 − exit_fee 0.350327 = −1.144
   pnl_pct: -0.59              # −1.14 / 194.47 equity at open
   exit_reason: MANUAL         # Early close: short thesis invalidated by OI +201 BTC + rising lows

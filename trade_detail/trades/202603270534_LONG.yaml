@@ -18,6 +18,9 @@ open:
 close:
   status: CLOSED
   close_price: 68750.7   # OCO SL market fill @ 06:24 UTC+8; trigger 68,800, slippage −49.3pt (fast drop 06:20 5m)
+  entry_fee: null
+  close_fee: null
+  funding_fee: null
   pnl_usd: -30.87        # (68750.7−68940)×13×0.01 − entry_fee(1.792) − exit_fee(4.469); funding_fee 0
   pnl_pct: -3.27         # -30.87 / 943.80
   exit_reason: SL

@@ -18,6 +18,9 @@ open:
 close:
   status: CLOSED
   close_price: 71623.6
+  entry_fee: null
+  close_fee: null
+  funding_fee: null
   pnl_usd: 3.91         # gross +4.406 − entry_fee 0.142366 − close_fee 0.358118 = +3.9055
   pnl_pct: 1.95
   exit_reason: TP1      # TP triggered at 71,609, filled at 71,623.6

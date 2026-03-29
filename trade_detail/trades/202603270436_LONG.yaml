@@ -18,6 +18,9 @@ open:
 close:
   status: CLOSED
   close_price: 68850
+  entry_fee: null
+  close_fee: null
+  funding_fee: null
   pnl_usd: -35.26     # (68850-69073)×13×0.01 − entry_fee(1.796) − exit_fee(4.475); fill at 68850 (market SL)
   pnl_pct: -3.60      # -35.26 / 979.06
   exit_reason: SL     # Asia stop-hunt: 05:10 5m L=68,840.7 triggered last-price SL@68,850; price recovered to 68,923 immediately after

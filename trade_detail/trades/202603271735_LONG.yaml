@@ -20,6 +20,9 @@ close:
   exit_reason: SL
   sl_trigger: 67493
   close_price: 67466.4      # actual fill: ordId 3426089536167305216, fillPx 67466.4 × 12ct; SL trigger 67493, ~26.6pt slippage
+  entry_fee: null
+  close_fee: null
+  funding_fee: null
   pnl_usd: -34.48           # estimated from cashBal delta: $950.12 → $915.64
   exit_datetime_utc8: "2026-03-27 18:37"
   algo_id: "3425965918454026240"

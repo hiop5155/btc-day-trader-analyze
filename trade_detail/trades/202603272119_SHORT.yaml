@@ -17,6 +17,9 @@ open:
 close:
   status: CLOSED
   close_price: 66050
+  entry_fee: null
+  close_fee: null
+  funding_fee: null
   pnl_usd: 81.59
   pnl_pct: 8.91
   exit_reason: TP

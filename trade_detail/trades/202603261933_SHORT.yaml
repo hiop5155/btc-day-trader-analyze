@@ -20,6 +20,9 @@ close:
   status: CLOSED
   close_price: 69586.71        # avgPx from exchange (ordId 3423569056856236033)
   close_time_utc8: "202603262145"   # fillTime 1774532708750 = 13:45 UTC = 21:45 UTC+8
+  entry_fee: null
+  close_fee: null
+  funding_fee: null
   pnl_usd: -4.31              # (69420−69586.71)×2×0.01 − entry_fee 0.278 − close_fee 0.696
   pnl_pct: -2.17              # -4.31 / 198.25 equity at open
   exit_reason: SL             # OCO algo triggered @ last=69575, market filled 69586.71

@@ -18,6 +18,9 @@ open:
 close:
   status: CLOSED
   close_price: 69999
+  entry_fee: null
+  close_fee: null
+  funding_fee: null
   pnl_usd: -0.90   # (69999-70040)×0.01 − 0.14008 open_fee − 0.34999 close_fee
   pnl_pct: -0.47   # -0.90 / 192.43
   exit_reason: MANUAL   # Background loop (06:35 UTC / 14:35 UTC+8) closed via swap_close_position: 4H bearish counter-trend assessment; SL at 69,720 was attached but not triggered (close_price 69,999 > SL)

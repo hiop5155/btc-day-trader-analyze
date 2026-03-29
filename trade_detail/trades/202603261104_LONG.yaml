@@ -19,6 +19,9 @@ open:
 close:
   status: CLOSED
   close_price: 70846.6
+  entry_fee: null
+  close_fee: null
+  funding_fee: null
   pnl_usd: -0.20        # gross +1.21 − entry_fee 0.70786 − close_fee 0.708466 = −0.2063
   pnl_pct: -0.10
   exit_reason: ALGO     # OCO triggered at 70,846 (~11:22 UTC+8); both attached+standalone OCOs active simultaneously caused early close before TP1/SL
