@@ -17,8 +17,11 @@ open:
 close:
   status: CLOSED
   close_price: 66150
-  pnl_usd: -31.15
-  pnl_pct: -3.24
+  entry_fee: -1.32
+  close_fee: -3.31
+  funding_fee: 0
+  pnl_usd: -32.47
+  pnl_pct: -3.38
   exit_reason: SL
 
 thesis: |
