@@ -1,0 +1,29 @@
+id: 14
+datetime_utc8: "202603281703"
+direction: SHORT
+grade: A
+
+open:
+  entry: 66400
+  sl: 66500
+  tp: 66000
+  contracts: 20
+  notional_usd: 13280.0
+  risk_usd: 20.00
+  risk_pct: 2.23
+  actual_risk_pct: 2.23
+  order_id: "3428799420784664577"
+
+close:
+  status: CLOSED
+  close_price: 66500
+  pnl_usd: -26.65
+  pnl_pct: -2.99
+  exit_reason: SL
+
+thesis: |
+  4H bearish (66,535→66,344). 15m MSB confirmed. Descending highs on 5m.
+  Broke below 66,440 consolidation. Limit at 66,400 for pullback retest.
+  R:R 4:1. US session F9=5. New breakeven SL rule active (SL ≤ 150pt).
+
+adjustments: []

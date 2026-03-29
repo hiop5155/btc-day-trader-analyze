@@ -1,0 +1,30 @@
+id: 13
+datetime_utc8: "202603280918"
+direction: SHORT
+grade: A+
+
+open:
+  entry: 66200
+  sl: 66320
+  tp: 65600
+  contracts: 20
+  notional_usd: 13240.0
+  risk_usd: 24.00
+  risk_pct: 2.58
+  actual_risk_pct: 2.58
+  order_id: "3427863447821312000"
+
+close:
+  status: CLOSED
+  close_price: 66320
+  pnl_usd: -30.64
+  pnl_pct: -3.30
+  exit_reason: SL
+
+thesis: |
+  Failed breakout: sweep above 66,450 to 66,488 → full reversal.
+  1H MSB confirmed (66,064 < 66,256). 4H shooting star forming.
+  FVG entry zone 66,118-66,272. Limit at 66,200 for pullback retest.
+  R:R 5:1. OI -99 (longs liquidating). Funding -0.0035% aligned.
+
+adjustments: []

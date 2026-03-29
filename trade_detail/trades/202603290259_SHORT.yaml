@@ -1,0 +1,34 @@
+id: 15
+datetime_utc8: "202603290259"
+direction: SHORT
+grade: A
+
+open:
+  entry: 66900
+  sl: 67100
+  tp: 66300
+  contracts: 8
+  notional_usd: 5352
+  risk_usd: 17.35
+  risk_pct: 2.0
+  actual_risk_pct: 2.0
+  order_id: "3429999850923450370"
+
+close:
+  status: CLOSED
+  close_price: 66375
+  pnl_usd: 39.32
+  pnl_pct: 4.53
+  exit_reason: TP
+
+thesis: |
+  15m bearish OB rejection at 66,920 after sweep of 67,294 highs.
+  1H MSB confirmed (66,667 < 66,819). 4H bearish (-100.8pt).
+  US session F9=5. Score 41/65 Grade A.
+
+partial_tp:
+  price: 66600
+  contracts: 2
+  algoId: "3430033721775624192"
+
+adjustments: []

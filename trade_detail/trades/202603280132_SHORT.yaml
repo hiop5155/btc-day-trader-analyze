@@ -15,11 +15,11 @@ open:
   order_id: "3426925354586955776"
 
 close:
-  status: OPEN
-  close_price: null
-  pnl_usd: null
-  pnl_pct: null
-  exit_reason: null
+  status: CLOSED
+  close_price: 66150
+  pnl_usd: -31.15
+  pnl_pct: -3.24
+  exit_reason: SL
 
 thesis: |
   66,268 bounce rejected — clean pullback-then-failure structure.
