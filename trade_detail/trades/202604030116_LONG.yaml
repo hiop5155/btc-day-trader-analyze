@@ -13,17 +13,17 @@ open:
   risk_pct: 2.97
   actual_risk_pct: 2.97
   order_id: "3444293039805128704"
-  algo_id: null
+  algo_id: "3444322606865190912"
   expiry_utc8: "202604030516"
 
 close:
-  status: PENDING
-  fill_datetime_utc8: null
-  fill_price: null
+  status: OPEN
+  fill_datetime_utc8: "202604030133"
+  fill_price: 67100.0
   close_datetime_utc8: null
   close_price: null
   raw_pnl: null
-  entry_fee: null
+  entry_fee: -1.2078
   close_fee: null
   funding_fee: null
   pnl_usd: null
