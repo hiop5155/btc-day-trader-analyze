@@ -1,0 +1,55 @@
+id: 45
+datetime_utc8: "202604022216"
+direction: LONG
+grade: A
+
+open:
+  entry: 66200
+  sl: 66691
+  tp: 67200
+  contracts: 7
+  notional_usd: 4634.0
+  risk_usd: 22.40
+  risk_pct: 2.69
+  actual_risk_pct: 2.69
+  order_id: "3443931314941550592"
+  algo_id: "3443948748450566144"
+  expiry_utc8: "202604030216"
+
+close:
+  status: CLOSED
+  fill_datetime_utc8: "202604022227"
+  fill_price: 66200.0
+  close_datetime_utc8: "202604022250"
+  close_price: 66690.5
+  raw_pnl: 34.34
+  entry_fee: -0.93
+  close_fee: -2.33
+  funding_fee: 0.0
+  pnl_usd: 31.07
+  pnl_pct: 3.73
+  exit_reason: SL_HIT
+  cancel_reason: null
+
+score: 47
+score_breakdown: "F1:7 F2:7 F3:8 F4:10 F5:5 F6:0 F7:5 F8:0 F9:5"
+
+thesis: |
+  4H flipped BULLISH (CO=+170.6pt) after V-bounce from day's low 65,653.
+  Price swept below sr_4h[0].l=66,107 to 65,653, then recovered +791pt to 66,444.
+  1H MSB confirmed: new HH within 4H session. Pullback limit entry at sr_4h[1].l=66,175.8 OB zone.
+  SL below 65,880 (below 22:00 recovery base 65,969). TP at 67,200 (R:R 3.13x).
+  US session with very strong bullish volume delta (cum_delta +84,161 vs threshold +11,114).
+  Funding -0.00307% favors LONG (收費). daily_move -2.54% (sod_utc0) — Rule 0f inactive.
+
+adjustments:
+  - datetime_utc8: "202604022240"
+    type: EXTERNAL_SL_ADJUST
+    old_sl: 65880
+    new_sl: 66500
+    reason: "User manually adjusted SL to 66,500 via OKX (detected Phase 2 at 22:46 cycle)"
+  - datetime_utc8: "202604022246"
+    type: TRAIL_SL_MOVE
+    old_sl: 66500
+    new_sl: 66691
+    reason: "8-main triggered: profit 639.9pt >= trail_threshold 256pt. HL at 22:40 candle low=66,710.6; SL_candidate=66,691 > current_SL(66,500) AND > entry+threshold(66,456)."

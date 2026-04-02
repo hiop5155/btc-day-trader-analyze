@@ -1,0 +1,48 @@
+id: 46
+datetime_utc8: "202604022316"
+direction: LONG
+grade: A
+
+open:
+  entry: 66700
+  sl: 66490
+  tp: 67500
+  contracts: 18
+  notional_usd: 12006.0
+  risk_usd: 37.80
+  risk_pct: 4.37
+  actual_risk_pct: 4.37
+  order_id: "3444050881059708928"
+  algo_id: "3444234331026624512"
+  expiry_utc8: "202604030316"
+
+close:
+  status: OPEN
+  fill_datetime_utc8: "202604022320"
+  fill_price: 66700.0
+  close_datetime_utc8: null
+  close_price: null
+  raw_pnl: null
+  entry_fee: -2.4012
+  close_fee: null
+  funding_fee: 0.603
+  pnl_usd: null
+  pnl_pct: null
+  exit_reason: null
+  cancel_reason: null
+
+score: 47
+score_breakdown: "F1:7 F2:7 F3:8 F4:10 F5:5 F6:0 F7:5 F8:0 F9:5"
+
+thesis: |
+  4H strongly BULLISH (CO=+603.5pt). V-bounce from 65,653 reached 67,077 high at 22:45.
+  Price pulling back in consolidation (22:50–23:10) with double-bottom at 66,666.
+  Limit entry at 22:35 bullish OB base (66,480→66,828) and double-bottom support zone.
+  SL below 22:50 structure low 66,623 with buffer at 66,490 (210pt).
+  TP 67,500 targeting new 4H high (R:R 3.81x). Boost tier (daily +10.03%) → 4.5% risk.
+  Funding −0.00462% → LONG receives at 00:00 UTC+8. Rule 17 clear (prior exit was profitable trail).
+
+adjustments:
+  - type: OCO_REESTABLISHED
+    datetime_utc8: "202604030046"
+    reason: "OCO algoId 3444054088361971712 disappeared from algo_orders; re-established new OCO algoId 3444234331026624512 (SL=66490, TP=67500 unchanged)"
