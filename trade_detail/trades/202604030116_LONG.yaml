@@ -17,18 +17,18 @@ open:
   expiry_utc8: "202604030516"
 
 close:
-  status: OPEN
+  status: CLOSED
   fill_datetime_utc8: "202604030133"
   fill_price: 67100.0
-  close_datetime_utc8: null
-  close_price: null
-  raw_pnl: null
+  close_datetime_utc8: "202604030149"
+  close_price: 66786.4
+  raw_pnl: -28.224
   entry_fee: -1.2078
-  close_fee: null
+  close_fee: -3.0054
   funding_fee: null
-  pnl_usd: null
-  pnl_pct: null
-  exit_reason: null
+  pnl_usd: -32.43
+  pnl_pct: -3.57
+  exit_reason: SL_HIT
   cancel_reason: null
 
 score: 48
