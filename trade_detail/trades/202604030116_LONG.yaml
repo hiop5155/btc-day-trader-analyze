@@ -1,0 +1,45 @@
+id: 47
+datetime_utc8: "202604030116"
+direction: LONG
+grade: A
+
+open:
+  entry: 67100
+  sl: 66800
+  tp: 68000
+  contracts: 9
+  notional_usd: 6039.0
+  risk_usd: 27.00
+  risk_pct: 2.97
+  actual_risk_pct: 2.97
+  order_id: "3444293039805128704"
+  algo_id: null
+  expiry_utc8: "202604030516"
+
+close:
+  status: PENDING
+  fill_datetime_utc8: null
+  fill_price: null
+  close_datetime_utc8: null
+  close_price: null
+  raw_pnl: null
+  entry_fee: null
+  close_fee: null
+  funding_fee: null
+  pnl_usd: null
+  pnl_pct: null
+  exit_reason: null
+  cancel_reason: null
+
+score: 48
+score_breakdown: "F1:7 F2:7 F3:6 F4:8 F5:5 F6:2 F7:5 F8:3 F9:5"
+
+thesis: |
+  4H BULLISH (CO=+535.5pt). V-bounce from 66,820 sweep (01:00) recovered to new 4H high 67,392.
+  Limit buy at 67,100 — just above 67,077 previous session high turned support.
+  SL below 01:00 sweep low 66,820 + buffer at 66,800 (300pt).
+  TP 68,000 (R:R 3.0x), above prior 4H structure highs.
+  Trade #46 closed profitably (66,992) before this V-bounce; Rule 17 no cooldown.
+  Normal risk tier (daily +2.44%) → 3% → 9 contracts.
+
+adjustments: []
