@@ -1,0 +1,50 @@
+id: 44
+datetime_utc8: "202604022019"
+direction: SHORT
+grade: A
+
+open:
+  entry: 66175
+  sl: 66290
+  tp: 65850
+  contracts: 17
+  notional_usd: 11249.75
+  risk_usd: 19.55
+  risk_pct: 2.49
+  actual_risk_pct: 2.49
+  order_id: "3443713633650958338"
+  algo_id: "3443714169819107328"
+  expiry_utc8: "202604030019"
+
+close:
+  status: CLOSED
+  fill_datetime_utc8: "202604022040"
+  fill_price: 66175
+  close_datetime_utc8: "202604022120"
+  close_price: 65847.7
+  raw_pnl: 55.64
+  entry_fee: -2.25
+  close_fee: -5.60
+  funding_fee: 0.0
+  pnl_usd: 47.79
+  pnl_pct: 6.08
+  exit_reason: TP_HIT
+  cancel_reason: null
+
+score: 45
+score_breakdown: "F1:7 F2:7 F3:8 F4:7 F5:5 F6:3 F7:5 F8:0 F9:3"
+
+thesis: |
+  New 4H BEARISH session opened 20:00 UTC+8 at 66,179.5 (CO=−138.7pt declining).
+  Price rejecting from 4H OB zone: new session open 66,175–66,180 confluent with sr_4h[1].l=66,175.8.
+  Entry limit sell at OB base; SL above session open resistance 66,290 (115pt);
+  TP at 65,850 targeting prior session low area (R:R 2.83x).
+  Trade #43 cancelled RESCORE_FAIL; fresh setup in same bear trend.
+  Daily move −2.99% (just under 3% Rule 0f threshold); 4H BEARISH with-trend SHORT.
+
+adjustments:
+  - datetime_utc8: "202604022103"
+    type: BREAKEVEN_MOVE
+    old_sl: 66290
+    new_sl: 66175
+    reason: "8-pre triggered: sl_distance 115pt ≤ 150pt AND profit 201pt ≥ 115pt. SL moved to entry. Trade risk-free."

@@ -1,0 +1,41 @@
+trade_id: "202603311000_SHORT"
+direction: SHORT
+grade: A+ # 51/65
+score:
+  F1_sweep: 10
+  F2_msb: 5
+  F3_entry: 8
+  F4_rr: 10
+  F5_funding: 3
+  F6_oi: 3
+  F7_orderbook: 7
+  F8_antichase: 0
+  F9_session: 5
+  total: 51
+  max: 65
+thesis: "BSL sweep confirmed: 68,199 BSL swept → 68,388.9 (+190pt), then -440pt reversal. 09:55 5m reversal candle -301pt. Fresh longs trapped at highs (OI +7,716). 1H 09:00 shooting-star pattern forming. SHORT in 4H bearish = trend-following (no 0e gate). R:R 3.07:1."
+open:
+  entry: 68100
+  sl: 68400
+  tp: 67178
+  contracts: 7
+  risk_pct: 2.45
+  risk_usd: 21.00
+  leverage: 15.0
+  order_type: limit
+  ord_id: "3436624278658703370"
+  datetime_utc8: "202603311000"
+  session: Asia
+close:
+  status: CANCELLED
+  close_price: null
+  close_datetime_utc8: "202603311200"
+  exit_reason: RESCORE_FAIL_9B
+  raw_pnl: 0
+  entry_fee: 0
+  close_fee: 0
+  funding_fee: 0
+  pnl_usd: 0
+  pnl_pct: 0
+adjustments: []
+notes: "Never filled. Placed 10:00, cancelled 12:00 UTC+8 (130min). 9b re-score triggered at 12:00 (age≥1hr, dist=360pt>1×SL=300pt). Re-score 39/65 < 40 threshold → RESCORE_FAIL. Key factors: 4H flipped NEUTRAL on new candle open (0e gate lifted but F1 no longer A+ counter-trend); orderbook flipped bid-heavy (663BTC bid vs 285BTC ask = 2.3:1); F7 dropped from 5→2. Price peaked 68,084 at 10:15 (16pt short of entry), then declined to 67,612 low without filling."

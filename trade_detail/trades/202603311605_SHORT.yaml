@@ -1,0 +1,48 @@
+trade_id: "202603311605_SHORT"
+direction: SHORT
+grade: A # 42/65
+score:
+  F1_sweep: 7
+  F2_msb: 7
+  F3_entry: 8
+  F4_rr: 7
+  F5_funding: 5
+  F6_oi: 5
+  F7_orderbook: 0
+  F8_antichase: 0
+  F9_session: 3
+  total: 42
+  max: 65
+thesis: "4H BEARISH (C-O=-357pt, 12:00-15:59 4H candle). 1H bearish MSB confirmed: 12:00 1H closed 67,520 < prior 1H L 67,612. 15:15 SSL sweep to 67,064 → recovery to 67,415 → pullback into supply OB zone 67,370-67,520. OI +39,624 (new shorts accumulating). F7=0 noted (736 BTC bid at 67,326) — penalized in score. Limit SHORT at 67,380 filled at 67,408.9 on mini-bounce."
+open:
+  entry: 67408.9
+  sl: 67530
+  tp: 67005
+  contracts: 17
+  risk_pct: 2.41
+  risk_usd: 20.59
+  leverage: 13.4
+  order_type: limit
+  ord_id: "3437380375271137280"
+  algo_id: "3437380375273017344"
+  datetime_utc8: "202603311605"
+  session: EU
+  entry_fee: -5.73
+close:
+  status: CLOSED
+  close_price: 67055.7
+  close_datetime_utc8: "202603311639"
+  exit_reason: TP
+  raw_pnl: 60.04
+  entry_fee: -5.73
+  close_fee: -5.70
+  funding_fee: 0.0
+  pnl_usd: 48.61
+  pnl_pct: 5.67
+adjustments:
+  - datetime_utc8: "202603311633"
+    type: BREAKEVEN_MOVE
+    old_sl: 67530
+    new_sl: 67408.9
+    reason: "Step 8-pre: sl_distance=121.1pt ≤ 150pt AND profit=253.7pt ≥ sl_distance. SL moved to entry (breakeven). Price=67,155. Mark=67,155.2."
+notes: "Filled at 67,408.9 (above limit 67,380 = better short price, +28.9pt slippage in our favor). SL 121.1pt, TP 403.9pt, R:R 3.34:1. OCO algo live: algoId 3437380375273017344. Next funding settlement 00:00 UTC+8 (SHORT receives if rate remains positive)."

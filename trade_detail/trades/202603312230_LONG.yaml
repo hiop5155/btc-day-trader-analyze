@@ -1,0 +1,41 @@
+trade_id: 202603312230_LONG
+direction: LONG
+status: OPEN
+
+open:
+  datetime_utc8: "2026-03-31 22:30"
+  order_type: limit
+  entry: 67518
+  sl: 67473
+  tp: 67985
+  contracts: 18
+  sl_distance: 45
+  tp_distance: 467
+  rr: 10.38
+  limit_px: 67600
+  ordId: "3438162122300678144"
+  algoId: "3438162122336112640"
+  expiry_utc8: "2026-04-01 02:30"
+
+grade: A
+score: 47
+score_detail: "F1:7 F2:7 F3:8 F4:10 F5:5 F6:0 F7:5 F8:0 F9:5"
+session: US
+risk_pct: 2.78
+equity_at_entry: 866.49
+note: "Limit at 67600, filled at 67518 (better fill +82pt). SL at structural 67473 (22:25 HL-20pt)."
+
+adjustments: []
+
+close:
+  status: CLOSED
+  datetime_utc8: "2026-03-31 22:31"
+  close_price: 67453.1
+  exit_reason: SL
+  sl_trigger_px: 67473
+  fill_px: 67453.1
+  slippage_pt: 19.9
+  pnl_usd: -23.83
+  pnl_pct: -2.75
+  fees_usd: -12.15
+  note: "SL 45pt from entry (Rule 24 not yet live at time of trade). Filled 75s after entry."

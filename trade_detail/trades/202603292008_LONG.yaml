@@ -1,0 +1,35 @@
+id: 17
+datetime_utc8: "202603292008"
+direction: LONG
+grade: A
+
+open:
+  entry: 66746.5
+  sl: 66640
+  tp: 67200
+  contracts: 16
+  notional_usd: 10679.44
+  risk_usd: 26.51
+  risk_pct: 3.0
+  actual_risk_pct: 1.93
+  order_id: "3432071098297966592"
+
+close:
+  status: CLOSED
+  close_price: 66640
+  close_datetime_utc8: "202603292108"
+  raw_pnl: -17.04
+  entry_fee: -5.33972
+  close_fee: -5.3312
+  funding_fee: 0
+  pnl_usd: -27.71
+  pnl_pct: -3.16
+  exit_reason: SL
+
+thesis: |
+  1H bullish MSB confirmed at 20:00 UTC+8 (C:66,777 > prior 1H swing high 66,736.4).
+  BSL sweep to 66,956 then pullback to 66,747 = clean OB retest near 1H MSB close.
+  OI +78 BTC genuine accumulation + 450-lot bid wall confirmed institutional support.
+  Entry at 66,746.5 (better than planned 66,800). R:R = 4.26:1 (SL:66,640 / TP:67,200).
+
+adjustments: []

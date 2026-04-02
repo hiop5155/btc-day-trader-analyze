@@ -1,0 +1,38 @@
+id: 40
+datetime_utc8: "202604011315"
+direction: LONG
+grade: A
+
+open:
+  entry: 68200
+  sl: 67950
+  tp: 68800
+  contracts: 9
+  notional_usd: 6138.0
+  risk_usd: 24.39
+  risk_pct: 3.0
+  actual_risk_pct: 3.0
+  order_id: "3439983350065881088"
+  algo_id: "3439983350034206720"
+
+close:
+  status: CANCELLED
+  close_price: null
+  raw_pnl: 0
+  entry_fee: 0
+  close_fee: 0
+  funding_fee: 0
+  pnl_usd: 0
+  pnl_pct: 0
+  exit_reason: RESCORE_FAIL
+  cancel_note: "9b triggered at 14:15 (age=60min, dist=435pt > 1×SL=250pt).
+    Rescore at 68,634: F4=0 (R:R=0.66, TP=68800 only 166pt above vs SL=250pt).
+    TP too close after rally — original OB entry never filled."
+
+thesis: |
+  4H just turned BULLISH (CO=+207.5pt). 1H MSB confirmed: 1H closed above prior
+  swing high 68,333. Breakout-retest setup: price spiked to 68,456, pulled back
+  to OB zone 68,108-68,200, strong rejection candle (O=68,195 C=68,377). OI
+  rising +2,943 with price = genuine accumulation. Limit at OB retest, R:R=2.4.
+
+adjustments: []

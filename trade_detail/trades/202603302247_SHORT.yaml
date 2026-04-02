@@ -1,0 +1,40 @@
+trade_id: "202603302247_SHORT"
+direction: SHORT
+grade: A # 47/65
+score:
+  F1_sweep: 10
+  F2_msb: 10
+  F3_entry: 5
+  F4_rr: 7
+  F5_funding: 5
+  F6_oi: 0
+  F7_orderbook: 5
+  F8_antichase: 0
+  F9_session: 5
+  total: 47
+  max: 65
+thesis: "BSL sweep 68,199 + 4H MSB (67,054 < 67,331). OI -338 longs liquidating. Limit at broken 67,405 support retest."
+open:
+  entry: 67400
+  sl: 67770
+  tp: 66500
+  contracts: 7
+  risk_pct: 3.0
+  risk_usd: 25.90
+  leverage: 5.32
+  order_type: limit
+  ord_id: "3435291450683645952"
+  datetime_utc8: "202603302247"
+  session: US
+close:
+  status: CLOSED
+  close_price: 67770
+  close_datetime_utc8: "202603302255"
+  exit_reason: SL
+  raw_pnl: -25.90
+  entry_fee: -0.94
+  close_fee: -2.37
+  funding_fee: 0
+  pnl_usd: -29.36
+  pnl_pct: -3.31
+adjustments: []

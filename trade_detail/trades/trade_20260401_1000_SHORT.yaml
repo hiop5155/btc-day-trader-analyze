@@ -1,0 +1,55 @@
+id: trade_20260401_1000_SHORT
+date: "2026-04-01"
+time_utc8: "10:00"
+instrument: BTC-USDT-SWAP
+direction: SHORT
+grade: A
+score: 42
+score_breakdown: "F1:7 F2:7 F3:8 F4:7 F5:5 F6:5 F7:2 F8:0 F9:1 = 42/65"
+session: ASIA
+
+open:
+  status: FILLED
+  ord_id: "3439557440103735296"
+  algo_id: "3439557440072060928"
+  limit_px: 67800
+  fill_px: 67800
+  sl: 68050
+  tp: 67200
+  sl_distance: 250
+  tp_distance: 600
+  rr: 2.40
+  contracts: 10
+  risk_pct: 3.0
+  risk_usd: 25.00
+  max_profit_usd: 60.00
+
+context:
+  price_at_decision: 67800
+  sod: 66705
+  day_gain_pt: 1095
+  day_gain_pct: 1.64
+  four_h_co: -454.5
+  four_h_bias: BEARISH
+  one_h_msb: true
+  one_h_msb_note: "09:00-10:00 1H low 67,714 < prev 1H low 67,815"
+  s_r_level: 67794.4
+  oi: 2991062
+  oi_prev: 2979491
+  oi_delta: +11571
+  ob_ratio: 1.63
+  atr_5m: 142.6
+  atr_4h: 1259.7
+  asia_min_sl: 250
+
+expiry_utc8: "14:00"
+exit_reason: null
+adjustments: []
+
+close:
+  time_utc8: "11:05"
+  exit_reason: SL
+  exit_px: ~68050
+  actual_loss_usd: -29.81
+  actual_loss_pct: -3.54
+  note: "Asia stop-hunt: price surged 300pt in single 5m candle (67,636→68,079). SL at 68,050 triggered, market fill ~68,080 with slippage."

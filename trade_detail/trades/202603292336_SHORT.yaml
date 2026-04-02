@@ -1,0 +1,46 @@
+trade_id: "202603292336_SHORT"
+direction: SHORT
+grade: A # 45/65
+score:
+  F1_sweep: 8
+  F2_msb: 7
+  F3_entry: 8
+  F4_rr: 7
+  F5_funding: 5
+  F6_oi: 5
+  F7_orderbook: 0
+  F8_antichase: 0
+  F9_session: 5
+  total: 45
+  max: 65
+thesis: "1H MSB confirmed (broke 66,420 → 66,300). 4H bearish −402pt. OI +58 new shorts. Limit at 5m FVG 66,484–66,525 retest."
+open:
+  entry: 66490
+  sl: 66660
+  tp: 66100
+  contracts: 15
+  risk_pct: 3.0
+  risk_usd: 25.50
+  leverage: 11.65
+  order_type: limit
+  ord_id: "3432490886690201601"
+  datetime_utc8: "202603292354"
+  fill_datetime_utc8: "202603292354"
+  session: US
+close:
+  status: CLOSED
+  close_price: 66400
+  close_datetime_utc8: "202603300222"
+  exit_reason: SL
+  raw_pnl: 13.50
+  entry_fee: -1.99
+  close_fee: -4.98
+  funding_fee: 0.36
+  pnl_usd: 6.88
+  pnl_pct: 0.80
+adjustments:
+  - type: TRAIL_SL
+    datetime_utc8: "202603300153"
+    old_sl: 66660
+    new_sl: 66400
+    reason: "Trailing SL to 66,400 (broken support level). Locks in ~$13.50 profit."
