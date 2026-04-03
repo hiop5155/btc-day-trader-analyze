@@ -5,20 +5,20 @@ grade: A
 
 open:
   entry: 66870
-  sl: 66950
+  sl: 67000
   tp: 66300
   contracts: 18
   notional_usd: 12036.6
-  risk_usd: 14.40
-  risk_pct: 1.61
-  actual_risk_pct: 1.61
+  risk_usd: 23.40
+  risk_pct: 2.62
+  actual_risk_pct: 2.62
   order_id: "3446257108888018944"
   algo_id: "3446257108856344576"
   expiry_utc8: "202604032130"
-  note: "Contracts reduced 20→18 (Rule 15: 20c=14.95x ok but 51008 margin; 18c=13.5x ✓)"
+  note: "Contracts reduced 20→18 (51008 margin). SL amended 66950→67000 by user (above 1H H=66,986; 130pt = 1.56×ATR_5m)"
 
 close:
-  status: OPEN
+  status: HOLDING
   exit_reason: ""
   close_price: null
   close_datetime_utc8: ""
@@ -54,4 +54,9 @@ context:
     OI +2,701 BTC + price down = new shorts accumulating (F6=5).
     Orderbook ratio 0.04 noted as risk (bid wall at 66,720-66,800).
 
-adjustments: []
+adjustments:
+  - type: SL_MOVE
+    datetime_utc8: "202604031731"
+    old_sl: 66950
+    new_sl: 67000
+    reason: "User amended — above 1H[17:00] H=66,986; 130pt SL more robust vs ATR_5m=83.4"
