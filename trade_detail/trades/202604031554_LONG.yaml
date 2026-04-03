@@ -18,14 +18,15 @@ open:
   note: "Contracts reduced 28→18 (A+ 4.5% risk = 28c at 19.7x; 20c failed 51008 margin; 18c = 13.5x ✓)"
 
 close:
-  status: OPEN
-  exit_reason: ""
+  status: CANCELLED
+  exit_reason: "THESIS_INVALID"
   close_price: null
-  close_datetime_utc8: ""
-  pnl_usd: null
-  pnl_pct: null
+  close_datetime_utc8: "202604031646"
+  pnl_usd: 0
+  pnl_pct: 0
   mae: null
   mfe: null
+  cancel_reason: "4H flipped BEARISH (CO=−121.5pt at 16:46); original thesis was 4H BULLISH trend-following LONG A+. Counter-trend re-score: 33/65 < A+ 50 required. Note: order sz observed as 10 at cancellation (placed 18; accFillSz=0; possible external amend)."
 
 score:
   total: 50
