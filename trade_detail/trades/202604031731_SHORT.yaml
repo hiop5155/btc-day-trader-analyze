@@ -1,0 +1,57 @@
+id: 51
+datetime_utc8: "202604031731"
+direction: SHORT
+grade: A
+
+open:
+  entry: 66870
+  sl: 66950
+  tp: 66300
+  contracts: 18
+  notional_usd: 12036.6
+  risk_usd: 14.40
+  risk_pct: 1.61
+  actual_risk_pct: 1.61
+  order_id: "3446257108888018944"
+  algo_id: "3446257108856344576"
+  expiry_utc8: "202604032130"
+  note: "Contracts reduced 20→18 (Rule 15: 20c=14.95x ok but 51008 margin; 18c=13.5x ✓)"
+
+close:
+  status: OPEN
+  exit_reason: ""
+  close_price: null
+  close_datetime_utc8: ""
+  pnl_usd: null
+  pnl_pct: null
+  mae: null
+  mfe: null
+
+score:
+  total: 48
+  grade: A
+  F1: 7
+  F2: 5
+  F3: 8
+  F4: 10
+  F5: 5
+  F6: 5
+  F7: 5
+  F8: 0
+  F9: 3
+
+context:
+  price_at_entry: 66787.2
+  atr_5m: 83.4
+  atr_15m: 169.0
+  bias_4h: BEARISH
+  co_4h: -228.0
+  session: EU
+  reason: >
+    4H BEARISH (CO=-228pt). 17:20 breakdown candle swept to 66,720 new low.
+    15m MSB confirmed (close 66,796 < prior L 66,875). SHORT limit at 5m OB
+    66,857-66,888 (17:10 candle; displacement 176pt > 1.5xATR_5m).
+    OI +2,701 BTC + price down = new shorts accumulating (F6=5).
+    Orderbook ratio 0.04 noted as risk (bid wall at 66,720-66,800).
+
+adjustments: []
