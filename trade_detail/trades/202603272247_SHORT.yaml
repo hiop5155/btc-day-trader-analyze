@@ -1,5 +1,5 @@
 id: 11
-datetime_utc8: "202603272247"
+datetime_utc0: "202603272247"
 direction: SHORT
 grade: A
 
@@ -24,7 +24,7 @@ close:
   pnl_usd: -34.51
   pnl_pct: -3.46
   exit_reason: SL
-  exit_datetime_utc8: "2026-03-27 23:00"
+  exit_datetime_utc0: "2026-03-27 23:00"
 
 thesis: |
   5m pullback rejection at 65,972 (lower high) after 65,682 low sweep.

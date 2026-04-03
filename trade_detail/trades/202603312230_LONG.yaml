@@ -3,7 +3,7 @@ direction: LONG
 status: OPEN
 
 open:
-  datetime_utc8: "2026-03-31 22:30"
+  datetime_utc0: "2026-03-31 22:30"
   order_type: limit
   entry: 67518
   sl: 67473
@@ -15,7 +15,7 @@ open:
   limit_px: 67600
   ordId: "3438162122300678144"
   algoId: "3438162122336112640"
-  expiry_utc8: "2026-04-01 02:30"
+  expiry_utc0: "2026-04-01 02:30"
 
 grade: A
 score: 47
@@ -29,7 +29,7 @@ adjustments: []
 
 close:
   status: CLOSED
-  datetime_utc8: "2026-03-31 22:31"
+  datetime_utc0: "2026-03-31 22:31"
   close_price: 67453.1
   exit_reason: SL
   sl_trigger_px: 67473

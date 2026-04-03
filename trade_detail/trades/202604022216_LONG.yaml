@@ -1,5 +1,5 @@
 id: 45
-datetime_utc8: "202604022216"
+datetime_utc0: "202604022216"
 direction: LONG
 grade: A
 
@@ -14,13 +14,13 @@ open:
   actual_risk_pct: 2.69
   order_id: "3443931314941550592"
   algo_id: "3443948748450566144"
-  expiry_utc8: "202604030216"
+  expiry_utc0: "202604030216"
 
 close:
   status: CLOSED
-  fill_datetime_utc8: "202604022227"
+  fill_datetime_utc0: "202604022227"
   fill_price: 66200.0
-  close_datetime_utc8: "202604022250"
+  close_datetime_utc0: "202604022250"
   close_price: 66690.5
   raw_pnl: 34.34
   entry_fee: -0.93
@@ -43,12 +43,12 @@ thesis: |
   Funding -0.00307% favors LONG (收費). daily_move -2.54% (sod_utc0) — Rule 0f inactive.
 
 adjustments:
-  - datetime_utc8: "202604022240"
+  - datetime_utc0: "202604022240"
     type: EXTERNAL_SL_ADJUST
     old_sl: 65880
     new_sl: 66500
     reason: "User manually adjusted SL to 66,500 via OKX (detected Phase 2 at 22:46 cycle)"
-  - datetime_utc8: "202604022246"
+  - datetime_utc0: "202604022246"
     type: TRAIL_SL_MOVE
     old_sl: 66500
     new_sl: 66691

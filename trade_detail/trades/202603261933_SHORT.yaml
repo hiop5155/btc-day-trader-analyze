@@ -1,5 +1,5 @@
 id: 14
-datetime_utc8: "202603261933"
+datetime_utc0: "202603261933"
 direction: SHORT
 grade: A
 
@@ -14,12 +14,12 @@ open:
   risk_pct: 1.56               # 3.10 / 198.25 equity (margin-constrained at 10x)
   order_id: "3423303529931956224"
   algo_id: "3423319531673358336"  # OCO algo auto-created via tpTriggerPx/slTriggerPx
-  fill_time_utc8: "202603261941"  # filled at 19:40 candle H=69,422.8
+  fill_time_utc0: "202603261941"  # filled at 19:40 candle H=69,422.8
 
 close:
   status: CLOSED
   close_price: 69586.71        # avgPx from exchange (ordId 3423569056856236033)
-  close_time_utc8: "202603262145"   # fillTime 1774532708750 = 13:45 UTC = 21:45 UTC+8
+  close_time_utc0: "202603262145"   # fillTime 1774532708750 = 13:45 UTC = 21:45 UTC+8
   raw_pnl: null
   entry_fee: null
   close_fee: null

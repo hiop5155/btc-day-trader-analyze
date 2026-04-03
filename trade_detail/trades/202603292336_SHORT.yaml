@@ -24,13 +24,13 @@ open:
   leverage: 11.65
   order_type: limit
   ord_id: "3432490886690201601"
-  datetime_utc8: "202603292354"
-  fill_datetime_utc8: "202603292354"
+  datetime_utc0: "202603292354"
+  fill_datetime_utc0: "202603292354"
   session: US
 close:
   status: CLOSED
   close_price: 66400
-  close_datetime_utc8: "202603300222"
+  close_datetime_utc0: "202603300222"
   exit_reason: SL
   raw_pnl: 13.50
   entry_fee: -1.99
@@ -40,7 +40,7 @@ close:
   pnl_pct: 0.80
 adjustments:
   - type: TRAIL_SL
-    datetime_utc8: "202603300153"
+    datetime_utc0: "202603300153"
     old_sl: 66660
     new_sl: 66400
     reason: "Trailing SL to 66,400 (broken support level). Locks in ~$13.50 profit."

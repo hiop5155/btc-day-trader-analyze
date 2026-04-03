@@ -1,5 +1,5 @@
 id: 43
-datetime_utc8: "202604021651"
+datetime_utc0: "202604021651"
 direction: SHORT
 grade: A
 
@@ -14,7 +14,7 @@ open:
   actual_risk_pct: 3.0
   order_id: "3443278857433473024"
   algo_id: "3443278857401798656"
-  expiry_utc8: "202604022049"
+  expiry_utc0: "202604022049"
 
 close:
   status: CANCELLED

@@ -1,5 +1,5 @@
 id: 23
-datetime_utc8: "202603271735"
+datetime_utc0: "202603271735"
 direction: LONG
 grade: A
 score: "F1:6 F2:3 F3:3 F4:7 F5:5 F6:5 F7:5 F8:2 F9:5 = 41/65"
@@ -25,7 +25,7 @@ close:
   close_fee: null
   funding_fee: null
   pnl_usd: -34.48           # estimated from cashBal delta: $950.12 → $915.64
-  exit_datetime_utc8: "2026-03-27 18:37"
+  exit_datetime_utc0: "2026-03-27 18:37"
   algo_id: "3425965918454026240"
   actual_side: sl           # confirmed via algo order history (actualSide: sl)
 

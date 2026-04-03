@@ -25,13 +25,13 @@ open:
   order_type: limit
   ord_id: "3437380375271137280"
   algo_id: "3437380375273017344"
-  datetime_utc8: "202603311605"
+  datetime_utc0: "202603311605"
   session: EU
   entry_fee: -5.73
 close:
   status: CLOSED
   close_price: 67055.7
-  close_datetime_utc8: "202603311639"
+  close_datetime_utc0: "202603311639"
   exit_reason: TP
   raw_pnl: 60.04
   entry_fee: -5.73
@@ -40,7 +40,7 @@ close:
   pnl_usd: 48.61
   pnl_pct: 5.67
 adjustments:
-  - datetime_utc8: "202603311633"
+  - datetime_utc0: "202603311633"
     type: BREAKEVEN_MOVE
     old_sl: 67530
     new_sl: 67408.9

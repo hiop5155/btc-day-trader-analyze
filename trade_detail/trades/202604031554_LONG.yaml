@@ -1,5 +1,5 @@
 id: 50
-datetime_utc8: "202604031554"
+datetime_utc0: "202604031554"
 direction: LONG
 grade: A+
 
@@ -14,14 +14,14 @@ open:
   actual_risk_pct: 2.82
   order_id: "3446054651914313728"
   algo_id: "3446054651882639360"
-  expiry_utc8: "202604032345"
+  expiry_utc0: "202604032345"
   note: "Contracts reduced 28→18 (A+ 4.5% risk = 28c at 19.7x; 20c failed 51008 margin; 18c = 13.5x ✓)"
 
 close:
   status: CANCELLED
   exit_reason: "THESIS_INVALID"
   close_price: null
-  close_datetime_utc8: "202604031646"
+  close_datetime_utc0: "202604031646"
   pnl_usd: 0
   pnl_pct: 0
   mae: null

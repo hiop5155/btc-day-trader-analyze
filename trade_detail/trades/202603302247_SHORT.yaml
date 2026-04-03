@@ -24,12 +24,12 @@ open:
   leverage: 5.32
   order_type: limit
   ord_id: "3435291450683645952"
-  datetime_utc8: "202603302247"
+  datetime_utc0: "202603302247"
   session: US
 close:
   status: CLOSED
   close_price: 67770
-  close_datetime_utc8: "202603302255"
+  close_datetime_utc0: "202603302255"
   exit_reason: SL
   raw_pnl: -25.90
   entry_fee: -0.94

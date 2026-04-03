@@ -1,5 +1,5 @@
 id: 19
-datetime_utc8: "202603270534"
+datetime_utc0: "202603270534"
 direction: LONG
 grade: A
 
@@ -38,7 +38,7 @@ thesis: |
   Margin-limited at 13 contracts → effective risk 1.93% (target 3%, acceptable).
 
 adjustments: []
-  # - datetime_utc8: "YYYYMMDDHHMM"
+  # - datetime_utc0: "YYYYMMDDHHMM"
   #   type: SL_MOVE   # SL_MOVE / TP_ADJUST / SIZE_REDUCE
   #   from: <old_value>
   #   to: <new_value>

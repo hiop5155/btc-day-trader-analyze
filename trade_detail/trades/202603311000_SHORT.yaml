@@ -24,12 +24,12 @@ open:
   leverage: 15.0
   order_type: limit
   ord_id: "3436624278658703370"
-  datetime_utc8: "202603311000"
+  datetime_utc0: "202603311000"
   session: Asia
 close:
   status: CANCELLED
   close_price: null
-  close_datetime_utc8: "202603311200"
+  close_datetime_utc0: "202603311200"
   exit_reason: RESCORE_FAIL_9B
   raw_pnl: 0
   entry_fee: 0

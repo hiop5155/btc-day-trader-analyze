@@ -24,12 +24,12 @@ open:
   leverage: 14.1
   order_type: limit
   ord_id: "3435569084214763528"
-  datetime_utc8: "202603310100"
+  datetime_utc0: "202603310100"
   session: US
 close:
   status: CANCELLED
   close_price: null
-  close_datetime_utc8: "202603310215"
+  close_datetime_utc0: "202603310215"
   exit_reason: RESCORE_FAIL_9B
   raw_pnl: 0
   entry_fee: 0

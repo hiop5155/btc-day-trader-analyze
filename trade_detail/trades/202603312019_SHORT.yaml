@@ -3,7 +3,7 @@ direction: SHORT
 status: CLOSED
 
 open:
-  datetime_utc8: "2026-03-31 20:25"
+  datetime_utc0: "2026-03-31 20:25"
   order_type: limit
   entry: 66765
   sl: 66907
@@ -14,7 +14,7 @@ open:
   rr: 5.77
   ordId: "3437889814797443072"
   algoId: "3437892497576824832"
-  fill_detected_utc8: "2026-03-31 20:30"
+  fill_detected_utc0: "2026-03-31 20:30"
 
 grade: A
 score: 41
@@ -27,7 +27,7 @@ adjustments: []
 
 close:
   status: CLOSED
-  datetime_utc8: "2026-03-31 20:35"
+  datetime_utc0: "2026-03-31 20:35"
   close_price: 66927.9
   exit_reason: SL
   sl_trigger_px: 66907

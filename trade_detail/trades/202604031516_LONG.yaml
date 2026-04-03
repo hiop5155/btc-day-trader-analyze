@@ -1,5 +1,5 @@
 id: 49
-datetime_utc8: "202604031516"
+datetime_utc0: "202604031516"
 direction: LONG
 grade: A
 
@@ -14,7 +14,7 @@ open:
   actual_risk_pct: 2.01
   order_id: "3445991215280906240"
   algo_id: "3445991215249231872"
-  expiry_utc8: "202604031916"
+  expiry_utc0: "202604031916"
   note: "Contracts reduced 26→18 (Rule 15 leverage cap: 26c=19.4x > 15x max)"
 
 close:

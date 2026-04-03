@@ -1,5 +1,5 @@
 id: 51
-datetime_utc8: "202604031731"
+datetime_utc0: "202604031731"
 direction: SHORT
 grade: A
 
@@ -14,14 +14,14 @@ open:
   actual_risk_pct: 2.62
   order_id: "3446257108888018944"
   algo_id: "3446257108856344576"
-  expiry_utc8: "202604032130"
+  expiry_utc0: "202604032130"
   note: "Contracts reduced 20→18 (51008 margin). SL amended 66950→67000 by user (above 1H H=66,986; 130pt = 1.56×ATR_5m)"
 
 close:
   status: CLOSED
   exit_reason: SL
   close_price: 66887.97
-  close_datetime_utc8: "202604031900"
+  close_datetime_utc0: "202604031900"
   pnl_usd: -11.66
   pnl_pct: -1.31
   mae: 18.0
@@ -56,12 +56,12 @@ context:
 
 adjustments:
   - type: SL_MOVE
-    datetime_utc8: "202604031731"
+    datetime_utc0: "202604031731"
     old_sl: 66950
     new_sl: 67000
     reason: "User amended — above 1H[17:00] H=66,986; 130pt SL more robust vs ATR_5m=83.4"
   - type: BREAKEVEN_MOVE
-    datetime_utc8: "202604031830"
+    datetime_utc0: "202604031830"
     old_sl: 67000
     new_sl: 66870
     reason: "Rule 8-pre: sl_dist=130pt <=150pt; profit=150.9pt >= sl_dist=130pt. Trade risk-free."

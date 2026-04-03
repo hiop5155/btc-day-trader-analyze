@@ -1,5 +1,5 @@
 id: 7
-datetime_utc8: "202603261407"
+datetime_utc0: "202603261407"
 direction: SHORT
 grade: B
 
@@ -32,7 +32,7 @@ thesis: |
   OCO: TP 68,860 (1,140pt down) / SL 70,380 (380pt up) = R:R 3:1 ✓
 
 adjustments:
-  - datetime_utc8: "202603261417"
+  - datetime_utc0: "202603261417"
     type: MANUAL_CLOSE
     from: "OPEN"
     to: "CLOSED @ 70065.4"

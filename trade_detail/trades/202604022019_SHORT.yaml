@@ -1,5 +1,5 @@
 id: 44
-datetime_utc8: "202604022019"
+datetime_utc0: "202604022019"
 direction: SHORT
 grade: A
 
@@ -14,13 +14,13 @@ open:
   actual_risk_pct: 2.49
   order_id: "3443713633650958338"
   algo_id: "3443714169819107328"
-  expiry_utc8: "202604030019"
+  expiry_utc0: "202604030019"
 
 close:
   status: CLOSED
-  fill_datetime_utc8: "202604022040"
+  fill_datetime_utc0: "202604022040"
   fill_price: 66175
-  close_datetime_utc8: "202604022120"
+  close_datetime_utc0: "202604022120"
   close_price: 65847.7
   raw_pnl: 55.64
   entry_fee: -2.25
@@ -43,7 +43,7 @@ thesis: |
   Daily move −2.99% (just under 3% Rule 0f threshold); 4H BEARISH with-trend SHORT.
 
 adjustments:
-  - datetime_utc8: "202604022103"
+  - datetime_utc0: "202604022103"
     type: BREAKEVEN_MOVE
     old_sl: 66290
     new_sl: 66175

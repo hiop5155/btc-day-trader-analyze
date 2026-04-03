@@ -1,5 +1,5 @@
 id: 52
-datetime_utc8: "202604032101"
+datetime_utc0: "202604031301"
 direction: SHORT
 grade: A
 
@@ -14,17 +14,21 @@ open:
   actual_risk_pct: 2.89
   order_id: "3446691105971593216"
   algo_id: "3446843166975332352"
-  fill_datetime_utc8: "202604032225"
-  expiry_utc8: "202604040101"
-  note: "Grade A 45/65. 4H BEARISH CO=-350pt. 1H MSB confirmed (20:00H C=66697<19:00H L=66789). 5m OB 66807-66866 (20:40 candle, displacement 259pt > 1.5xATR). OI -9667 BTC (short covering, F6=0). ATR_5m=134pt elevated. 15 contracts (11.4x leverage). Filled at limit 66830 at 22:25 UTC+8."
+  fill_datetime_utc0: "202604031425"
+  expiry_utc0: "202604031701"
+  note: "Grade A 45/65. 4H BEARISH CO=-350pt. 1H MSB confirmed (20:00H C=66697<19:00H L=66789). 5m OB 66807-66866 (20:40 candle, displacement 259pt > 1.5xATR). OI -9667 BTC (short covering, F6=0). ATR_5m=134pt elevated. 15 contracts (11.4x leverage). Filled at limit 66830 at 14:25 UTC+0."
 
 close:
-  status: PENDING
-  exit_reason: ""
-  close_price: null
-  close_datetime_utc8: ""
-  pnl_usd: null
-  pnl_pct: null
+  status: CLOSED
+  exit_reason: SL
+  close_price: 67020
+  close_datetime_utc0: "202604031649"
+  raw_pnl: -28.50
+  entry_fee: -2.0049
+  close_fee: -5.0265
+  funding_fee: 0
+  pnl_usd: -35.53
+  pnl_pct: -4.03
   mae: null
   mfe: null
 

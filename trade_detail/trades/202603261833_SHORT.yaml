@@ -1,5 +1,5 @@
 id: 12
-datetime_utc8: "202603261833"
+datetime_utc0: "202603261833"
 direction: SHORT
 grade: A
 
@@ -14,7 +14,7 @@ open:
   risk_pct: 0.77               # 1.52 / 198.22 equity (margin-constrained; position-size capped at 2ct by 10x leverage)
   order_id: "3423183506869542912"
   algo_id: null                # TP/SL attached inline; no separate OCO algo order
-  fill_time_utc8: null         # PENDING limit fill at 69,640
+  fill_time_utc0: null         # PENDING limit fill at 69,640
 
 close:
   status: CANCELLED

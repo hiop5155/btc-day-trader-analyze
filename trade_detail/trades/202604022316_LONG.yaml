@@ -1,5 +1,5 @@
 id: 46
-datetime_utc8: "202604022316"
+datetime_utc0: "202604022316"
 direction: LONG
 grade: A
 
@@ -14,13 +14,13 @@ open:
   actual_risk_pct: 4.37
   order_id: "3444050881059708928"
   algo_id: "3444054088361971712"
-  expiry_utc8: "202604030316"
+  expiry_utc0: "202604030316"
 
 close:
   status: CLOSED
-  fill_datetime_utc8: "202604022320"
+  fill_datetime_utc0: "202604022320"
   fill_price: 66700.0
-  close_datetime_utc8: "202604030100"
+  close_datetime_utc0: "202604030100"
   close_price: 66991.9
   raw_pnl: 52.54
   entry_fee: -2.4012
@@ -44,7 +44,7 @@ thesis: |
 
 adjustments:
   - type: SL_MOVE
-    datetime_utc8: "202604030046"
+    datetime_utc0: "202604030046"
     old_sl: 66490
     new_sl: 66999
     reason: "Manual SL move by user (trail); position locked in profit (SL above entry 66700)"

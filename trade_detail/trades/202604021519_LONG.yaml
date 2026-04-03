@@ -1,5 +1,5 @@
 id: 42
-datetime_utc8: "202604021519"
+datetime_utc0: "202604021519"
 direction: LONG
 grade: A
 
@@ -14,7 +14,7 @@ open:
   actual_risk_pct: 3.0
   order_id: "3443097593170583553"
   algo_id: "3443097593138909185"
-  expiry_utc8: "202604021919"
+  expiry_utc0: "202604021919"
 
 close:
   status: CANCELLED
@@ -27,7 +27,7 @@ close:
   pnl_pct: 0
   exit_reason: CANCELLED
   cancel_reason: "4H flipped BEARISH (CO=−226pt); orderbook 536.79 (no bids); thesis fully invalidated; pre-emptive cancel before hostile fill"
-  cancel_utc8: "202604021620"
+  cancel_utc0: "202604021620"
 
 score: 47
 score_breakdown: "F1:7 F2:7 F3:8 F4:10 F5:5 F6:5 F7:2 F8:0 F9:3"

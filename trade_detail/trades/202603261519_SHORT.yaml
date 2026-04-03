@@ -1,5 +1,5 @@
 id: 11
-datetime_utc8: "202603261519"
+datetime_utc0: "202603261519"
 direction: SHORT
 grade: A
 
@@ -14,12 +14,12 @@ open:
   risk_pct: 1.25               # 2.40 / 191.69 equity
   order_id: "3422791188014391298"
   algo_id: "3422799732350390272"     # OCO live: TP 69700 / SL 70180
-  fill_time_utc8: "202603261523"    # cTime 1774509781091 = UTC 07:23:01 = 15:23 UTC+8
+  fill_time_utc0: "202603261523"    # cTime 1774509781091 = UTC 07:23:01 = 15:23 UTC+8
 
 close:
   status: CLOSED
   close_price: 69686.8          # OCO TP triggered at last=69700, filled (taker) at 69686.8
-  close_time_utc8: "202603261731"   # fillTime 1774517482792 = UTC 09:31:22 = 17:31 UTC+8
+  close_time_utc0: "202603261731"   # fillTime 1774517482792 = UTC 09:31:22 = 17:31 UTC+8
   raw_pnl: null
   entry_fee: null
   close_fee: null

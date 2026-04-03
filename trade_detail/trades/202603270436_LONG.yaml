@@ -1,5 +1,5 @@
 id: 18
-datetime_utc8: "202603270436"
+datetime_utc0: "202603270436"
 direction: LONG
 grade: A
 
@@ -36,7 +36,7 @@ thesis: |
   Asia ≥1:3 thresholds.
 
 adjustments: []
-  # - datetime_utc8: "YYYYMMDDHHMM"
+  # - datetime_utc0: "YYYYMMDDHHMM"
   #   type: SL_MOVE   # SL_MOVE / TP_ADJUST / SIZE_REDUCE
   #   from: <old_value>
   #   to: <new_value>

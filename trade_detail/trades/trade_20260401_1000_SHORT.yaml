@@ -1,6 +1,6 @@
 id: trade_20260401_1000_SHORT
 date: "2026-04-01"
-time_utc8: "10:00"
+time_utc0: "10:00"
 instrument: BTC-USDT-SWAP
 direction: SHORT
 grade: A
@@ -42,12 +42,12 @@ context:
   atr_4h: 1259.7
   asia_min_sl: 250
 
-expiry_utc8: "14:00"
+expiry_utc0: "14:00"
 exit_reason: null
 adjustments: []
 
 close:
-  time_utc8: "11:05"
+  time_utc0: "11:05"
   exit_reason: SL
   exit_px: ~68050
   actual_loss_usd: -29.81

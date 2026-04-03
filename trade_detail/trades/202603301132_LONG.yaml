@@ -25,13 +25,13 @@ open:
   order_type: limit
   ord_id: "3434082736391806976"
   original_ord_id: "3433931128139898880"
-  datetime_utc8: "202603301247"
-  fill_datetime_utc8: "202603301504"
+  datetime_utc0: "202603301247"
+  fill_datetime_utc0: "202603301504"
   session: EU
 close:
   status: CLOSED
   close_price: 67554
-  close_datetime_utc8: "202603301704"
+  close_datetime_utc0: "202603301704"
   exit_reason: SL
   raw_pnl: 28.32
   entry_fee: -1.08
@@ -41,12 +41,12 @@ close:
   pnl_pct: 2.82
 adjustments:
   - type: TRAIL_SL
-    datetime_utc8: "202603301608"
+    datetime_utc0: "202603301608"
     old_sl: 66900
     new_sl: 67434
     reason: "5m confirmed HL at 15:55 (L:67,454). SL_candidate 67,434 > entry+trail(67,400). Locks in +$18.72 profit."
   - type: TRAIL_SL
-    datetime_utc8: "202603301615"
+    datetime_utc0: "202603301615"
     old_sl: 67434
     new_sl: 67554
     reason: "5m confirmed HL at 16:00 (L:67,574). SL tightened to 67,554. Locks in +$28.32 profit."

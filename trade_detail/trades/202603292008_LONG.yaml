@@ -1,5 +1,5 @@
 id: 17
-datetime_utc8: "202603292008"
+datetime_utc0: "202603292008"
 direction: LONG
 grade: A
 
@@ -17,7 +17,7 @@ open:
 close:
   status: CLOSED
   close_price: 66640
-  close_datetime_utc8: "202603292108"
+  close_datetime_utc0: "202603292108"
   raw_pnl: -17.04
   entry_fee: -5.33972
   close_fee: -5.3312
