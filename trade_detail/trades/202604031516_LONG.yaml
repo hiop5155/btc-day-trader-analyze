@@ -18,7 +18,7 @@ open:
   note: "Contracts reduced 26→18 (Rule 15 leverage cap: 26c=19.4x > 15x max)"
 
 close:
-  status: PENDING
+  status: CANCELLED
 
 adjustments: []
 
@@ -32,3 +32,4 @@ thesis: |
   before 186pt impulse > 1.5×ATR_5m=130pt). OI rising cycle-over-cycle (+878
   BTC) with price → genuine accumulation. F7 buying pressure (cum_delta=+24,596).
   EU session. R:R=2.1. Contracts capped at 18 (Rule 15).
+cancel_reason: "TP stale — price ran to 67,099 while limit at 66,740 unfilled; TP 66,950 now below market"
