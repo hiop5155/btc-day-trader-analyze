@@ -1,0 +1,51 @@
+id: 48
+datetime_utc8: "202604030901"
+direction: SHORT
+grade: A
+
+open:
+  entry: 66800
+  sl: 66578
+  tp: 66400
+  contracts: 10
+  notional_usd: 6680.0
+  risk_usd: 26.31
+  risk_pct: 3.0
+  actual_risk_pct: 3.0
+  order_id: "3445229778581282816"
+  algo_id: "3445251433942487040"
+  expiry_utc8: "202604031301"
+
+close:
+  status: CLOSED
+  fill_datetime_utc8: "202604030914"
+  fill_price: 66800.0
+  close_datetime_utc8: "202604030949"
+  close_price: 66579.0
+  raw_pnl: 22.10
+  entry_fee: -1.336
+  close_fee: -3.329
+  funding_fee: null
+  pnl_usd: 17.44
+  pnl_pct: 1.99
+  exit_reason: SL_HIT
+  cancel_reason: null
+
+score: 41
+score_breakdown: "F1:7 F2:7 F3:8 F4:5 F5:5 F6:3 F7:5 F8:0 F9:1"
+
+thesis: |
+  4H BEARISH (CO=−139.6pt). 1H MSB SHORT confirmed: 08:00 1H closed at 66,755
+  below prior 1H low 66,814.5. Series of lower highs and lower lows since 08:00
+  open (66,974 → 66,675). F7 strongly bearish (cum_delta=−11,935).
+  Entry at 08:35 5m bearish OB zone (66,797–66,878) on pullback.
+  SL above 4H high 66,974 + buffer at 67,050 (250pt, Asia minimum).
+  TP below 66,682.7/66,555.2 support cluster at 66,400 (R:R 1.6x).
+  Normal risk tier (daily −1.22%) → 3% → 10 contracts.
+
+adjustments:
+  - type: SL_MOVE
+    datetime_utc8: "202604030947"
+    old_sl: 67050
+    new_sl: 66578
+    reason: "TRAIL: LH confirmed 09:40 H=66558.4 + 20pt; profit 298.3pt > threshold 214pt"
