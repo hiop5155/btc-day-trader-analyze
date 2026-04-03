@@ -5,7 +5,7 @@ grade: A
 
 open:
   entry: 66870
-  sl: 67000
+  sl: 66870
   tp: 66300
   contracts: 18
   notional_usd: 12036.6
@@ -60,3 +60,8 @@ adjustments:
     old_sl: 66950
     new_sl: 67000
     reason: "User amended — above 1H[17:00] H=66,986; 130pt SL more robust vs ATR_5m=83.4"
+  - type: BREAKEVEN_MOVE
+    datetime_utc8: "202604031830"
+    old_sl: 67000
+    new_sl: 66870
+    reason: "Rule 8-pre: sl_dist=130pt <=150pt; profit=150.9pt >= sl_dist=130pt. Trade risk-free."
