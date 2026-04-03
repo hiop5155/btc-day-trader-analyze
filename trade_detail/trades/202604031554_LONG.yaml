@@ -1,0 +1,56 @@
+id: 50
+datetime_utc8: "202604031554"
+direction: LONG
+grade: A+
+
+open:
+  entry: 66640
+  sl: 66500
+  tp: 67200
+  contracts: 18
+  notional_usd: 11995.2
+  risk_usd: 25.20
+  risk_pct: 2.82
+  actual_risk_pct: 2.82
+  order_id: "3446054651914313728"
+  algo_id: "3446054651882639360"
+  expiry_utc8: "202604032345"
+  note: "Contracts reduced 28→18 (A+ 4.5% risk = 28c at 19.7x; 20c failed 51008 margin; 18c = 13.5x ✓)"
+
+close:
+  status: OPEN
+  exit_reason: ""
+  close_price: null
+  close_datetime_utc8: ""
+  pnl_usd: null
+  pnl_pct: null
+  mae: null
+  mfe: null
+
+score:
+  total: 50
+  grade: A+
+  F1: 7
+  F2: 7
+  F3: 8
+  F4: 10
+  F5: 5
+  F6: 5
+  F7: 5
+  F8: 0
+  F9: 3
+
+context:
+  price_at_entry: 67003.8
+  atr_5m: 101.3
+  atr_15m: 163.4
+  bias_4h: BULLISH
+  co_4h: +450.6
+  session: EU
+  reason: >
+    4H BULLISH (CO=+450.6pt). Breakout above Asia range to 67,239 peak; pull back
+    to 15m OB zone 66,575-66,670. LONG limit at 66,640 (upper OB).
+    F7 cum_delta=+88,525 (massive buy pressure). OI +10,029 BTC (genuine accumulation).
+    Trade placed after Phase 6 review at 15:49 UTC+8 (16:00 window).
+
+adjustments: []
