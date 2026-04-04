@@ -19,18 +19,18 @@ open:
   note: "Grade A+ 50/65. EU session, Saturday A+ gate cleared. 4H BULLISH CO=+154.4. 1H MSB UP (06:00-07:00H closed ~67,000 > 05:00-06:00H high ~66,900). Breakout retest at sr_4h[1].h=66,954.7 (OB zone 66,937-66,954). OI +3,095 accumulation (F6=5). cum_delta +18,681 >> threshold 1,372 (F7=5). Limit 66,955 filled at 66,918.4 (better by 36.6pt > 0.2xATR_5m=6.9pt). Rule 24: SL amended 66,903->66,866 (52pt from fill). Rule 15: capped 73->18 contracts (14.2x leverage). Partial TP at 67,134 for 4 contracts set (algoId 3448888575725932544)."
 
 close:
-  status: OPEN
-  exit_reason: null
-  close_price: null
-  close_datetime_utc0: null
-  raw_pnl: null
+  status: CLOSED
+  exit_reason: TRAIL_SL
+  close_price: 67129.6
+  close_datetime_utc0: "202604041433"
+  raw_pnl: 37.7826
   entry_fee: -6.02
-  close_fee: null
-  funding_fee: null
-  pnl_usd: null
-  pnl_pct: null
-  mae: null
-  mfe: null
+  close_fee: -6.0416
+  funding_fee: 0
+  pnl_usd: 25.721
+  pnl_pct: 2.91
+  mae: 44.5
+  mfe: 331.6
 
 score:
   total: 50
