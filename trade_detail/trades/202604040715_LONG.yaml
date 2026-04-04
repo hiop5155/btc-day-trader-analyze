@@ -68,6 +68,11 @@ adjustments:
     old_sl: 66903
     new_sl: 66866
     reason: "Rule 24: fill 66918.4 better than limit 66955 by 36.6pt (> 0.2xATR_5m 6.9pt). SL maintained at 52pt from fill."
+  - type: BREAKEVEN_MOVE
+    datetime_utc0: "202604041047"
+    old_sl: 66866
+    new_sl: 66918.4
+    reason: "Step 8-pre: profit_pt=105.5 >= sl_distance=52.4pt. SL moved to entry (breakeven). Trade now risk-free (worst case = fees only)."
 
 partial_tp:
   price: 67134
