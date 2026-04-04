@@ -78,3 +78,9 @@ partial_tp:
   price: 67134
   contracts: 4
   algo_id: "3448888575725932544"
+  fill_price: 67123.8
+  fill_datetime_utc0: "202604041049"
+  raw_pnl: 8.2146
+  close_fee: -1.3425
+  ord_id: "3449306799137579009"
+  contracts_remaining: 14
