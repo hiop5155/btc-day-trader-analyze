@@ -73,6 +73,11 @@ adjustments:
     old_sl: 66866
     new_sl: 66918.4
     reason: "Step 8-pre: profit_pt=105.5 >= sl_distance=52.4pt. SL moved to entry (breakeven). Trade now risk-free (worst case = fees only)."
+  - type: TRAIL_SL_MOVE
+    datetime_utc0: "202604041432"
+    old_sl: 66918.4
+    new_sl: 67133.5
+    reason: "Step 8 trail: profit_pt=219.9pt >= 200pt threshold. Confirmed HL @ 14:20 (low=67153.5 > 14:15 low=67152.6), confirmed by 14:25 HH (67174.5 > 67170.0). sl_cand=67153.5-20=67133.5 > min_threshold=67118.4."
 
 partial_tp:
   price: 67134
