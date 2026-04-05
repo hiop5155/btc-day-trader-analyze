@@ -31,6 +31,13 @@ score:
   F8: 0
   F9: 3
 
+adjustments:
+  - datetime_utc0: "202604051330"
+    type: BREAKEVEN_MOVE
+    from: 66831
+    to: 66787
+    note: "profit 60.6pt ≥ sl_distance 44.6pt; trade risk-free. algoId 3452492627705597952 amended."
+
 context:
   price_at_entry: 66786.4
   atr_5m: 35.1
