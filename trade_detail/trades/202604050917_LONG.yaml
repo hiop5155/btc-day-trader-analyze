@@ -14,12 +14,18 @@ open:
   actual_risk_pct: 1.20
   order_id: "3452028960080093184"
   algo_id: "3452028960048418816"
-  fill_datetime_utc0: "202604051210"
+  fill_datetime_utc0: "202604051211"
   expiry_utc0: "202604051317"
   note: "Grade A 47/65. EU session, Sunday. 4H BULLISH (CO=+105.8). 1H MSB UP confirmed (08:00H c=66,894 > 07:00H h=66,888). Asia crash low 66,572 → recovery breakout above 66,880 key resistance. 09:05 candle swept 66,861 (18pt below 66,880), recovered — support validated. Retest of broken resistance as new support. F1=7(4H BULL+MSB UP), F2=7(1H MSB UP), F3=7(retest zone), F4=10(R:R 4.9:1), F5=5(funding -0.01% shorts paying), F6=3(OI+1870 w/rising price), F7=5(cum_delta+17941), F8=0(10pt from sr_4h[1].l=66880), F9=3(EU). Limit 66,888 pending fill, price ran to 66,950. SL 66,833 (below 66,861 wick). TP 67,155 (sr_4h[0].h crash candle high, R:R 4.9:1). Expiry 13:17 UTC+0 (4h Grade A)."
 
 close:
-  status: OPEN
+  status: SL_HIT
+  exit_price: 66833
+  exit_datetime_utc0: "202604051230"
+  pnl_usd: -10.45
+  fee_usd: -8.89
+  net_usd: -19.34
+  net_pct: -2.21
 
 score:
   total: 47
