@@ -16,6 +16,7 @@ open:
   algo_id: "3452492627705597952"
   fill_datetime_utc0: "202604051307"
   expiry_utc0: "202604051707"
+  entry_fee: -6.34471
   note: "Grade A 47/65. EU session, Sunday. 4H BEARISH (CO=−174.8). 1H MSB DOWN confirmed (12:00H c=66,756 < 11:00H l=66,938). Price retraced from 13:00 high 66,838 to 66,786 region. Limit sell 66,778 placed; filled immediately at 66,786.4 (8.4pt better fill). Rule 24: SL adjusted to 66,831 (44.6pt above fill, maintaining ~45pt distance). TP 66,572 (sr_4h from Asia session crash low 04:00H l=66,572). R:R 4.8:1. Rule 0e: 4H BEARISH → SHORT needs A(≥40) ✓. F1=7(4H BEAR+MSB DOWN), F2=7(1H MSB DOWN), F3=7(retest zone), F4=10(R:R 4.8:1), F5=5(next funding 16:00), F6=3(OI context), F7=5(cum_delta bearish), F8=0(near sr_4h), F9=3(EU). OCO algo 3452492627705597952: SL 66,831 / TP 66,572."
 
 score:
@@ -30,6 +31,18 @@ score:
   F7: 5
   F8: 0
   F9: 3
+
+close:
+  status: SL_HIT
+  exit_price: 66795.7
+  exit_datetime_utc0: "202604051333"
+  raw_pnl: -1.77
+  entry_fee: -6.34471
+  close_fee: -6.34555
+  funding_fee: 0
+  pnl_usd: -14.46
+  pnl_pct: -1.66
+  exit_reason: SL
 
 adjustments:
   - datetime_utc0: "202604051330"
