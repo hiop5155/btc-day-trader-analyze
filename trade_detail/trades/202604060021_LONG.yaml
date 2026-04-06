@@ -18,7 +18,17 @@ open:
   note: "Filled at limit 69,020 during 01:00 candle (L=68,850). OCO active: SL 68,688 / TP 69,587. Bullish FVG bottom entry (FVG 69,020-69,300 from 00:00 impulse). Asia min SL 332pt."
 
 close:
-  status: OPEN
+  status: CLOSED
+  datetime_utc0: "2026-04-06 09:14"
+  close_price: 69634.9
+  exit_reason: TP
+  ord_id: "3454914113890639872"
+  pnl_usd: 39.34
+  pnl_pct: 4.68
+  entry_fee: -0.97
+  close_fee: -2.44
+  funding_fee: -0.30
+  note: "TP triggered at 69,587, filled 69,634.9 (+47.9pt favorable fill). 09:10 impulse candle +478pt (69,283→69,762) blasted through TP. 7 contracts. Fees: entry -$0.97, close -$2.44, funding -$0.30."
 
 thesis: |
   4H BULLISH (CO +150pt, prev 4H +1,673pt). 00:00 UTC+0 Asia open impulse +580pt to
