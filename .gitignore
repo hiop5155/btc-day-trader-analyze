@@ -13,3 +13,4 @@ nginx-btc-site.conf
 .cache/
 .parcel-cache/
 npm-debug.log*
+review/
