@@ -1,13 +1,11 @@
 import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-
-const tradeModules = import.meta.glob('../../trade_detail/trades/*.yaml', { eager: true })
+import { rawTrades, getDt } from './trades'
 
 function buildTrades() {
-  return Object.values(tradeModules)
-    .map(mod => mod.default ?? mod)
-    .filter(t => t && t.datetime_utc8)
-    .sort((a, b) => String(b.datetime_utc8).localeCompare(String(a.datetime_utc8)))
+  return rawTrades
+    .filter(t => t && getDt(t))
+    .sort((a, b) => String(getDt(b)).localeCompare(String(getDt(a))))
 }
 
 function formatDt(dt) {
@@ -86,7 +84,7 @@ function TradeCard({ trade }) {
           <DirectionBadge direction={trade.direction} />
           <GradeBadge grade={trade.grade} />
           <StatusBadge status={status} pnl={pnl} />
-          <span className="trade-card-dt">{formatDt(trade.datetime_utc8)}</span>
+          <span className="trade-card-dt">{formatDt(trade.datetime_utc0 ?? trade.datetime_utc8)}</span>
         </div>
         <div className="trade-card-right">
           <span style={{ fontWeight: 700, color: pnlColor, fontSize: '0.9rem' }}>{pnlText}</span>
@@ -170,7 +168,7 @@ function TradeCard({ trade }) {
               <div className="trade-detail-section-title">{t('trades.adjustments')}</div>
               {trade.adjustments.map((adj, i) => (
                 <div key={i} style={{ fontSize: '0.82rem', color: 'var(--text-body)', marginBottom: 6, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                  <span style={{ color: 'var(--text-muted)' }}>{formatDt(adj.datetime_utc8)}</span>
+                  <span style={{ color: 'var(--text-muted)' }}>{formatDt(adj.datetime_utc0 ?? adj.datetime_utc8)}</span>
                   <span style={{ fontWeight: 600 }}>{adj.type}</span>
                   <span>{adj.from} → {adj.to}</span>
                   {adj.note && <span style={{ color: 'var(--text-muted)' }}>({adj.note})</span>}
@@ -188,7 +186,7 @@ export default function TradeList() {
   const { t } = useTranslation()
   const trades = useMemo(() => buildTrades(), [])
 
-  const totalClosed = trades.filter(t => t.close?.status === 'CLOSED')
+  const totalClosed = trades.filter(t => t.close?.status && t.close.status !== 'OPEN')
   const totalPnl = totalClosed.reduce((sum, t) => sum + (t.close?.pnl_usd ?? 0), 0)
   const wins = totalClosed.filter(t => (t.close?.pnl_usd ?? 0) > 0).length
   const winRate = totalClosed.length > 0 ? (wins / totalClosed.length * 100).toFixed(0) : 0

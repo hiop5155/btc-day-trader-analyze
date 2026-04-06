@@ -4,19 +4,18 @@ import './App.css'
 import PnlTable from './PnlTable'
 import TradeList from './TradeList'
 
-const mdModules = import.meta.glob('@md/**/*.md', { eager: true })
+// Lazy-load MD reports: only fetch content when user clicks
+const mdModules = import.meta.glob('@md/**/*.md')  // no eager — returns () => Promise
 
-// Parse files to group them by timestamp
-const parsedEntries = Object.entries(mdModules).map(([filePath, mod]) => {
+// Build index (metadata only, no HTML loaded yet)
+const parsedEntries = Object.entries(mdModules).map(([filePath, loader]) => {
   const filename = filePath.split('/').pop()
   const name = filename.replace('.md', '')
   const isEn = filePath.includes('/en/')
 
-  // Match timestamp (first 12 digits)
   const match = name.match(/^(\d{12})/)
   const timestamp = match ? match[1] : name
 
-  // Extract tag (remove timestamp and lang suffix if present)
   let tag = name.replace(/^(\d{12})_/, '')
   if (isEn && tag.endsWith('_en')) {
     tag = tag.slice(0, -3)
@@ -25,7 +24,8 @@ const parsedEntries = Object.entries(mdModules).map(([filePath, mod]) => {
   return {
     filename,
     name,
-    html: mod.html,
+    html: null,       // loaded on demand
+    _loader: loader,  // () => Promise<{ html }>
     type: 'markdown',
     timestamp,
     tag,
@@ -166,14 +166,21 @@ function App() {
   }, [entries, selectedTs])
 
   const [isListOpen, setIsListOpen] = useState(true)
-  const [isLoading, setIsLoading] = useState(false)
+  const [loadedHtml, setLoadedHtml] = useState({})  // cache: { timestamp: html }
 
-  // Simulation: Trigger thinking state when switching reports or changing language
+  // Lazy-load MD content when selected entry changes
   useEffect(() => {
-    setIsLoading(true)
-    const timer = setTimeout(() => setIsLoading(false), 600)
-    return () => clearTimeout(timer)
-  }, [selectedTs, lang])
+    if (!selected || selected.type !== 'markdown') return
+    if (loadedHtml[selected.timestamp]) return
+    if (selected._loader) {
+      selected._loader().then(mod => {
+        setLoadedHtml(prev => ({ ...prev, [selected.timestamp]: mod.html }))
+      })
+    }
+  }, [selected])
+
+  // Derive loading state synchronously — no flash of empty content
+  const isLoading = selected?.type === 'markdown' && !loadedHtml[selected.timestamp]
 
   // Dark mode: default is light ('light'), persisted in localStorage
   const [theme, setTheme] = useState(() => {
@@ -281,7 +288,7 @@ function App() {
             ) : (
               <div
                 className="markdown-body"
-                dangerouslySetInnerHTML={{ __html: selected.html }}
+                dangerouslySetInnerHTML={{ __html: loadedHtml[selected.timestamp] || selected.html || '' }}
               />
             )}
             <PnlTable />

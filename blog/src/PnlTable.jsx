@@ -1,17 +1,13 @@
 import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-
-const tradeModules = import.meta.glob('../../trade_detail/trades/*.yaml', { eager: true })
+import { rawTrades, toDateStr, getDt, isClosed } from './trades'
 
 function buildDailyData() {
   const daily = {}
-  for (const mod of Object.values(tradeModules)) {
-    const t = mod.default ?? mod
-    const status = t?.close?.status
+  for (const t of rawTrades) {
     const pnl = t?.close?.pnl_usd
-    const dt = String(t?.datetime_utc8 ?? '')
-    if (status === 'CLOSED' && pnl != null && dt.length >= 8) {
-      const date = `${dt.slice(0, 4)}-${dt.slice(4, 6)}-${dt.slice(6, 8)}`
+    const date = toDateStr(getDt(t))
+    if (isClosed(t) && pnl != null && date) {
       daily[date] = (daily[date] ?? 0) + pnl
     }
   }
