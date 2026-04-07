@@ -2,7 +2,7 @@ trade_id: 57
 date: "2026-04-07"
 time_utc0: "02:10"
 direction: SHORT
-status: OPEN
+status: CLOSED
 
 entry:
   type: limit
@@ -20,6 +20,12 @@ exit:
   sl_ord_px: market
   tp_trigger_px: 67703
   tp_ord_px: market
+  close_px: 68912.7
+  close_time_utc0: "04:48"
+  exit_reason: SL_HIT
+  slippage_pt: 2.7
+  pnl_usd: -28.75
+  hold_time_min: 148
   adjustments:
     - time_utc0: "03:46"
       type: MANUAL_SL_WIDEN
