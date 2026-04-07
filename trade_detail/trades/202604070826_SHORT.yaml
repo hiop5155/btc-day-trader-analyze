@@ -3,6 +3,7 @@ date: "2026-04-07"
 time_utc0: "08:26"
 direction: SHORT
 status: CLOSED
+grade: A
 
 entry:
   type: limit
