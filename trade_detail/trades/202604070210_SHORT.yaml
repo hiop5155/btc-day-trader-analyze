@@ -1,88 +1,58 @@
-trade_id: 57
-date: "2026-04-07"
-time_utc0: "02:10"
+datetime_utc0: "2026-04-07 02:10"
 direction: SHORT
-status: CLOSED
 grade: A
+score: 43
+order_id: "3456963789657694208"
 
-entry:
-  type: limit
-  px: 68550
-  sz: 7
-  order_id: "3456963789657694208"
-  fill_px: 68550
-  fill_time_utc0: "02:20"
-  fill_quality: exact_maker
-  rule24_check: "diff=0pt < 0.2×ATR_5m=24pt → no amendment"
-  oco_algo_id: "3456988921962696704"
-
-exit:
-  sl_trigger_px: 68910
-  sl_ord_px: market
-  tp_trigger_px: 67703
-  tp_ord_px: market
-  close_px: 68912.7
-  close_time_utc0: "04:48"
-  exit_reason: SL_HIT
-  slippage_pt: 2.7
-  pnl_usd: -28.75
-  hold_time_min: 148
-  adjustments:
-    - time_utc0: "03:46"
-      type: MANUAL_SL_WIDEN
-      old_sl: 68889
-      new_sl: 68910
-      reason: "User request — +21pt buffer above 07:00 UTC+8 (23:00 UTC+0) 1H HOD 68,887.7"
-      new_sl_distance_pt: 360
-      new_risk_usd: 25.20
-
-risk:
-  sl_distance_pt: 339
-  tp_distance_pt: 847
-  rr: 2.50
+open:
+  entry: 68550
+  sl: 68889
+  tp: 67703
+  contracts: 7
+  leverage: 5.7
   risk_usd: 23.73
   risk_pct: 2.83
-  equity_sod: 839.14
+  algo_id: "3456988921962696704"
+  fill_datetime_utc0: "2026-04-07 02:20"
+  entry_fee: -0.9597
+  note: "Asia session SHORT. 01:00 1H SHORT MSB (C=68,368 below prior low 68,690). Pullback to 01:00 1H bearish OB 68,368–68,743 (~50% at 68,556, limit 68,550). SL above 01:00 1H HOD 68,868.7 + 20pt = 68,889. TP at Dead Zone low 67,703. 4H BEARISH CO -387pt."
 
-signal:
-  score: 43
-  max: 62
-  grade: A
-  f1: 7   # 4H BEARISH -387pt CO; trend-following pullback to bearish OB
-  f2: 7   # 01:00 1H C=68,368.1 < 68,690 prior low → SHORT MSB confirmed
-  f3: 8   # 01:00 1H bearish OB 68,368–68,743, with-trend, ~50% entry at 68,556
-  f4: 7   # R:R 2.50:1
-  f5: 5   # Funding -0.00559% ≥ -0.01% threshold
-  f6: 3   # OI stale; no bias
-  f7: 5   # Bearish cum_delta -287
-  f8: 0   # 193pt from S/R < 0.5×ATR_4H ~498pt
-  f9: 1   # Asia session
+close:
+  status: CLOSED
+  close_price: 68912.7
+  fill_datetime_utc0: "2026-04-07 04:48"
+  exit_reason: SL
+  raw_pnl: -25.39
+  close_fee: -2.41
+  funding_fee: 0.0
+  pnl_usd: -28.75
+  pnl_pct: -3.43
 
-context:
-  session: Asia (00:00–07:00 UTC+0)
-  day: Tuesday
-  atr_5m: 137
-  atr_1h_est: 370
-  funding_rate: -0.00559
-  oi: 3157999
-  price_at_order: 68456.5
-  four_h_trend: BEARISH
-  four_h_co: -387
-  msb_candle: "01:00 1H close 68,368.1 below prior low 68,690"
-  ob_zone: "68,368–68,743 (01:00 1H bearish OB)"
-  rule_checks:
-    rule12_asia_min_sl: 250
-    actual_sl_distance: 339
-    rule12_pass: true
-    rule17_cooldown: null
-    rule21_dead_zone: false
-    rule25_gap: 93.5
-    rule25_gap_vs_atr: "93.5 < 137 BUT SELL LIMIT above market = passive maker, no immediate taker risk"
+thesis: |
+  4H BEARISH (CO -387pt). 01:00 1H SHORT MSB: close 68,368.1 broke below prior
+  swing low 68,690 (321.9pt displacement). Entry at pullback to 01:00 1H bearish
+  OB (68,368–68,743), targeting ~50% OB midpoint at 68,556 rounded to 68,550.
+  SL above 01:00 1H HOD 68,868.7 + 20pt buffer = 68,889. TP = Dead Zone sweep
+  low 67,703. Asia session (stop-hunt risk). R:R 2.50:1. Funding -0.00559% (SHORT
+  favorable). Score 43/62 Grade A.
+  04:00 1H swept to 68,510 (39pt below entry) then V-bounced; 04:30 rapid rally
+  to 68,958 hit SL. Rule 16 triggered (Asia losing SHORT → direction locked).
+  Rule 17 triggered (zone [68,050–69,050] until 06:45 UTC+0).
 
-notes: >
-  F2 SHORT MSB confirmed on 01:00 1H candle close at 68,368.1 (321.9pt below prior low 68,690).
-  Entry set as pullback to 01:00 1H bearish OB (~50% level at 68,556, rounded to 68,550).
-  SL above 01:00 1H HOD 68,868.7 + 20pt buffer = 68,889.
-  TP targets Dead Zone sweep low 67,703 area.
-  Previous order attempt failed with "Missing required parameter instId" — fixed by adding --instId BTC-USDT-SWAP.
-  Also needed --slOrdPx=-1 --tpOrdPx=-1 for market execution on SL/TP triggers.
+adjustments:
+  - datetime_utc0: "2026-04-07 03:46"
+    type: SL_MOVE
+    from: 68889
+    to: 68910
+    note: "User request — +21pt buffer above 07:00 UTC+8 (23:00 UTC+0) 1H HOD 68,887.7"
+
+score_breakdown:
+  F1_sweep_trend: 7
+  F2_msb: 7
+  F3_entry_zone: 8
+  F4_rr: 7
+  F5_funding: 5
+  F6_oi: 3
+  F7_volume_delta: 5
+  F8_anti_chase: 0
+  F9_session: 1

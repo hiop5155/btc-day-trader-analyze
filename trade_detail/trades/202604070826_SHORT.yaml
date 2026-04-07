@@ -1,86 +1,54 @@
-trade_id: 58
-date: "2026-04-07"
-time_utc0: "08:26"
+datetime_utc0: "2026-04-07 08:26"
 direction: SHORT
-status: CLOSED
 grade: A
+score: 43
+order_id: "3457717172723212288"
 
-entry:
-  type: limit
-  px: 68800
-  sz: 17
-  order_id: "3457717172723212288"
-  fill_px: 68800
-  fill_time_utc0: "08:32"
-  fill_quality: exact_maker
-  rule24_check: "diff=0pt < 0.2×ATR_5m=17.8pt → no amendment"
-  oco_algo_id: "3457728705349816320"
-
-exit:
-  sl_trigger_px: 68882
-  sl_ord_px: market
-  tp_trigger_px: 67700
-  tp_ord_px: market
-  close_px: 68885
-  close_time_utc0: "08:44"
-  exit_reason: SL_HIT
-  slippage_pt: 3
-  pnl_usd: -22.65
-  hold_time_min: 12
-  adjustments: []
-
-risk:
-  sl_distance_pt: 82
-  tp_distance_pt: 1100
-  rr: 13.41
+open:
+  entry: 68800
+  sl: 68882
+  tp: 67700
+  contracts: 17
+  leverage: 14.4
   risk_usd: 13.94
   risk_pct: 1.72
-  equity_sod: 810.39
+  algo_id: "3457728705349816320"
+  fill_datetime_utc0: "2026-04-07 08:32"
+  entry_fee: -2.3392
+  note: "EU session SHORT. Double 1H MSB (06:00+07:00 1H close below 05:00 1H low 68,588). Entry near 05:00 1H bearish OB top (68,632–68,815) at 68,800. SL 68,882 (82pt from entry; from limit_px). TP 67,700. 4H NEUTRAL at placement (CO +58.8pt), turned BULLISH by fill. Leverage capped at 17 contracts (14.4×). Rule 0g cleared at 08:00."
 
-signal:
-  score: 43
-  max: 62
-  grade: A
-  f1: 8   # EU open spike to 68,843.5 tested OB top 68,815 + 08:00 1H multi-test rejection at OB upper boundary
-  f2: 7   # Double 1H SHORT MSB: 06:00 C=68,546 + 07:00 C=68,585 both below 05:00 1H low 68,588
-  f3: 5   # 05:00 1H bearish OB 68,632–68,815; 4H NEUTRAL → cap at 5
-  f4: 7   # R:R 13.4:1 BUT SL_dist=82pt < 1.5×ATR_5m=133.5pt → tight-SL downgrade to 7
-  f5: 5   # Funding -0.00559% ≥ -0.01% threshold → SHORT-aligned
-  f6: 3   # OI 3,047,505 (slight decline from 3,157,999); flat/slight diverge
-  f7: 5   # Bearish cum_delta confirmed over last 10 5m candles
-  f8: 0   # Entry 68,800 within 15pt of OB top 68,815 → within 0.5×ATR_4H of S/R → structural entry
-  f9: 3   # EU session (07:00–13:30 UTC+0)
+close:
+  status: CLOSED
+  close_price: 68885
+  fill_datetime_utc0: "2026-04-07 08:44"
+  exit_reason: SL
+  raw_pnl: -14.45
+  close_fee: -5.855
+  funding_fee: 0.0
+  pnl_usd: -22.65
+  pnl_pct: -2.79
 
-context:
-  session: EU (07:00–13:30 UTC+0)
-  day: Tuesday
-  atr_5m: 89
-  atr_1h_est: 370
-  funding_rate: -0.00559
-  oi: 3047505
-  price_at_order: 68750.1
-  four_h_trend: NEUTRAL
-  four_h_co: +58.8
-  four_h_live_at_fill: "+221.6pt (EU spike — 4H moving BULLISH since fill)"
-  msb_candle: "06:00 1H C=68,546 + 07:00 1H C=68,585, both below 05:00 1H low 68,588"
-  ob_zone: "68,632–68,815 (05:00 1H bearish OB)"
-  rule_checks:
-    rule12_asia_min_sl: "N/A (EU session)"
-    rule15_leverage: "17×0.01×68800/810.39 = 14.4× < 15× ✓"
-    rule17_cooldown: null
-    rule21_dead_zone: false
-    rule23_min_sl: "82pt ≥ max(100,89)=100... WAIT"
-    rule25_gap: 49.9
-    rule25_note: "gap 49.9pt < ATR 89pt → Rule 25 applies; SL ref = market_px 68,750; SL = 68,750+132 = 68,882"
+thesis: |
+  4H NEUTRAL at order time (CO +58.8pt). Double 1H SHORT MSB: 06:00 1H close
+  68,546 and 07:00 1H close 68,585 both broke below 05:00 1H low 68,588.
+  05:00 1H bearish OB (68,632–68,815). EU open spike at 08:00 tested OB top
+  (68,843 wick vs 68,815 OB top) with rejection — entry at 68,800 near OB
+  resistance. SL = limit_px + 82pt = 68,882. TP = prior structure low 67,700.
+  R:R 13.4:1 (tight SL → F4 downgraded). Rule 0g cleared (prior 4H CO/range
+  29% > 15%). Rule 25 removed — SL from limit_px not market_px.
+  4H turned BULLISH (+329pt CO) during 12-min hold; EU buying overwhelmed
+  SHORT structure. SL hit at 68,885 (+3pt slippage).
+  Rule 17 triggered (zone [68,300–69,300] until 10:30 UTC+0).
 
-notes: >
-  Rule 0g cleared at 08:00 UTC+0: prior 4H (04:00-08:00) CO=-159.7pt / H-L=550.4pt = 29% > 15% → not doji.
-  Rule 16 cleared at 07:02 UTC+0 (Asia session ended).
-  Entry at 68,800 via SELL LIMIT with OCO attached via inline flags (--tpTriggerPx --slTriggerPx).
-  OCO algo order confirmed: 3457728705349816320 (TP 67,700 / SL 68,882).
-  4H CO was +58.8pt (NEUTRAL) at order placement time; moved to +221.6pt (BULLISH) by 08:34 due to EU spike.
-  Rule 25 applies: gap from market (68,750) to limit (68,800) = 49.9pt < ATR 89pt.
-  SL placed from market reference: 68,750 + 132 = 68,882 (Rule 23: 132pt ≥ max(100,89)=100pt ✓).
-  SL from entry only 82pt → tight SL → F4 downgraded and breakeven SL move rule active (Step 8-pre).
-  WARNING: Rule 23 min_sl = max(100, 1.0×ATR_5m=89) = 100pt. Actual SL dist from entry = 82pt < 100pt.
-  However Rule 25 market-reference dist = 132pt ≥ 100pt — Rule 23 satisfied from market reference perspective.
+adjustments: []
+
+score_breakdown:
+  F1_sweep_trend: 8
+  F2_msb: 7
+  F3_entry_zone: 5
+  F4_rr: 7
+  F5_funding: 5
+  F6_oi: 3
+  F7_volume_delta: 5
+  F8_anti_chase: 0
+  F9_session: 3
