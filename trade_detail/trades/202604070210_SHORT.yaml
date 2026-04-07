@@ -16,10 +16,18 @@ entry:
   oco_algo_id: "3456988921962696704"
 
 exit:
-  sl_trigger_px: 68889
+  sl_trigger_px: 68910
   sl_ord_px: market
   tp_trigger_px: 67703
   tp_ord_px: market
+  adjustments:
+    - time_utc0: "03:46"
+      type: MANUAL_SL_WIDEN
+      old_sl: 68889
+      new_sl: 68910
+      reason: "User request — +21pt buffer above 07:00 UTC+8 (23:00 UTC+0) 1H HOD 68,887.7"
+      new_sl_distance_pt: 360
+      new_risk_usd: 25.20
 
 risk:
   sl_distance_pt: 339
