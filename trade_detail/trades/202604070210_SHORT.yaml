@@ -2,13 +2,18 @@ trade_id: 57
 date: "2026-04-07"
 time_utc0: "02:10"
 direction: SHORT
-status: PENDING
+status: OPEN
 
 entry:
   type: limit
   px: 68550
   sz: 7
   order_id: "3456963789657694208"
+  fill_px: 68550
+  fill_time_utc0: "02:20"
+  fill_quality: exact_maker
+  rule24_check: "diff=0pt < 0.2×ATR_5m=24pt → no amendment"
+  oco_algo_id: "3456988921962696704"
 
 exit:
   sl_trigger_px: 68889
