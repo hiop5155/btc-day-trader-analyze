@@ -1,0 +1,68 @@
+trade_id: 57
+date: "2026-04-07"
+time_utc0: "02:10"
+direction: SHORT
+status: PENDING
+
+entry:
+  type: limit
+  px: 68550
+  sz: 7
+  order_id: "3456963789657694208"
+
+exit:
+  sl_trigger_px: 68889
+  sl_ord_px: market
+  tp_trigger_px: 67703
+  tp_ord_px: market
+
+risk:
+  sl_distance_pt: 339
+  tp_distance_pt: 847
+  rr: 2.50
+  risk_usd: 23.73
+  risk_pct: 2.83
+  equity_sod: 839.14
+
+signal:
+  score: 43
+  max: 62
+  grade: A
+  f1: 7   # 4H BEARISH -387pt CO; trend-following pullback to bearish OB
+  f2: 7   # 01:00 1H C=68,368.1 < 68,690 prior low → SHORT MSB confirmed
+  f3: 8   # 01:00 1H bearish OB 68,368–68,743, with-trend, ~50% entry at 68,556
+  f4: 7   # R:R 2.50:1
+  f5: 5   # Funding -0.00559% ≥ -0.01% threshold
+  f6: 3   # OI stale; no bias
+  f7: 5   # Bearish cum_delta -287
+  f8: 0   # 193pt from S/R < 0.5×ATR_4H ~498pt
+  f9: 1   # Asia session
+
+context:
+  session: Asia (00:00–07:00 UTC+0)
+  day: Tuesday
+  atr_5m: 137
+  atr_1h_est: 370
+  funding_rate: -0.00559
+  oi: 3157999
+  price_at_order: 68456.5
+  four_h_trend: BEARISH
+  four_h_co: -387
+  msb_candle: "01:00 1H close 68,368.1 below prior low 68,690"
+  ob_zone: "68,368–68,743 (01:00 1H bearish OB)"
+  rule_checks:
+    rule12_asia_min_sl: 250
+    actual_sl_distance: 339
+    rule12_pass: true
+    rule17_cooldown: null
+    rule21_dead_zone: false
+    rule25_gap: 93.5
+    rule25_gap_vs_atr: "93.5 < 137 BUT SELL LIMIT above market = passive maker, no immediate taker risk"
+
+notes: >
+  F2 SHORT MSB confirmed on 01:00 1H candle close at 68,368.1 (321.9pt below prior low 68,690).
+  Entry set as pullback to 01:00 1H bearish OB (~50% level at 68,556, rounded to 68,550).
+  SL above 01:00 1H HOD 68,868.7 + 20pt buffer = 68,889.
+  TP targets Dead Zone sweep low 67,703 area.
+  Previous order attempt failed with "Missing required parameter instId" — fixed by adding --instId BTC-USDT-SWAP.
+  Also needed --slOrdPx=-1 --tpOrdPx=-1 for market execution on SL/TP triggers.
