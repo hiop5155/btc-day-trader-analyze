@@ -1,33 +1,48 @@
 id: 12
-datetime_utc0: "202603261833"
+datetime_utc0: 2026-03-26 18:33
 direction: SHORT
 grade: A
-
+score: 0
+order_id: '3423183506869542912'
 open:
-  entry: 69640
-  sl: 69716
-  tp1: 69488
-  tp2: 69390        # optional, near day low 69,366
+  entry: 69640.0
+  sl: 69716.0
+  tp: 0.0
   contracts: 2
-  notional_usd: 1392.80        # 69640 × 2 × 0.01
-  risk_usd: 1.52               # 2 contracts × 76pt × $0.01
-  risk_pct: 0.77               # 1.52 / 198.22 equity (margin-constrained; position-size capped at 2ct by 10x leverage)
-  order_id: "3423183506869542912"
-  algo_id: null                # TP/SL attached inline; no separate OCO algo order
-  fill_time_utc0: null         # PENDING limit fill at 69,640
-
+  leverage: 1.0
+  risk_usd: 1.52
+  risk_pct: 0.77
+  algo_id: ''
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CANCELLED
   close_price: null
-  pnl_usd: 0
-  pnl_pct: 0
-  exit_reason: MANUAL   # Entry zone became stale (price dropped 130pt; limit replaced with id:13)
-
+  fill_datetime_utc0: null
+  exit_reason: MANUAL
+  raw_pnl: null
+  close_fee: null
+  funding_fee: null
+  pnl_usd: 0.0
+  pnl_pct: 0.0
 thesis: |
   15m sweep to 69,694.3 (above prior 15m high 69,607.3 = sell-side liquidity grab).
   5m MSB confirmed: close 69,591 < swing low 69,620.7 formed post-sweep.
   4H strongly bearish (O=70,092 C≈69,600, −492pt) + funding 0.0000860 (shorts dominant).
   Limit SELL at 69,640 (pullback into FVG/resistance zone 69,608–69,620).
   SL=69,716 (sweep extreme 69,694.3 + 22pt), TP1=69,488 (R:R=2.0:1), TP2=69,390 (near day low).
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

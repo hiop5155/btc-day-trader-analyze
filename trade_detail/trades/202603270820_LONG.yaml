@@ -1,31 +1,31 @@
 id: 20
-datetime_utc0: "202603270820"
+datetime_utc0: 2026-03-27 08:20
 direction: LONG
 grade: A
-
+score: 0
+order_id: '3424847163458281472'
 open:
-  entry: 68840
-  sl: 68670
-  tp1: 69180
-  tp2: 69350          # optional R:R 3.0
+  entry: 68840.0
+  sl: 68670.0
+  tp: 0.0
   contracts: 13
-  notional_usd: 8949.2        # 68840 × 13 × 0.01
-  risk_usd: 22.10             # 13 × 170pt × $0.01
-  risk_pct: 2.42              # 22.10 / 912.93; target 3% but margin-limited at 13 contracts
-  order_id: "3424847163458281472"
-  algo_id: "3424847864210919424"   # OCO TP 69,180 / SL 68,670 (last-price trigger)
-
+  leverage: 1.0
+  risk_usd: 22.1
+  risk_pct: 2.42
+  algo_id: '3424847864210919424'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  close_price: 68668          # actual fill: ordId 3424878747943133188, fillPx 68668; SL trigger 68,670, 2pt slippage
+  close_price: 68668.0
+  fill_datetime_utc0: null
+  exit_reason: SL
   raw_pnl: null
-  entry_fee: null
   close_fee: null
-  pnl_usd: -28.61             # actual equity change: 912.93 → 884.32 (incl. all fees + slippage)
-  pnl_pct: -3.13              # -28.61 / 912.93
-  exit_reason: SL             # 08:35 5m dropped from 68,709 to L=68,501.3; SL triggered at 68,670
-  funding_fee: 0              # held 08:15–08:35 UTC+8; no funding settlement (next 16:00 UTC+8)
-
+  funding_fee: 0.0
+  pnl_usd: -28.61
+  pnl_pct: -3.13
 thesis: |
   EU open sweep-and-recover setup. 08:00 UTC+8 5m opened at 68,799.5 and dipped
   to L=68,684.9. 08:05 5m swept lower (L=68,750.1) then rocketed — C=68,915,
@@ -34,5 +34,17 @@ thesis: |
   FVG pullback zone 68,819.5–68,853.4 from impulse candle. Limit entry 68,840
   (FVG midpoint). SL below 08:00 cycle low 68,684.9 (170pt dist). Funding
   +0.0000807 below neutral — long-favoring. R:R 2.0:1 meets EU ≥1:2 threshold.
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

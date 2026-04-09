@@ -1,34 +1,46 @@
 id: 10
-datetime_utc0: "202603272119"
+datetime_utc0: 2026-03-27 21:19
 direction: SHORT
 grade: A
-
+score: 0
+order_id: '3426416283555422208'
 open:
-  entry: 66560
-  sl: 66720
-  tp: 66050
+  entry: 66560.0
+  sl: 66720.0
+  tp: 66050.0
   contracts: 17
-  notional_usd: 11315.2
-  risk_usd: 27.20
+  leverage: 1.0
+  risk_usd: 27.2
   risk_pct: 3.0
-  actual_risk_pct: 3.0
-  order_id: "3426416283555422208"
-
+  algo_id: ''
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  close_price: 66050
+  close_price: 66050.0
+  fill_datetime_utc0: null
+  exit_reason: TP
   raw_pnl: null
-  entry_fee: null
   close_fee: null
   funding_fee: null
   pnl_usd: 81.59
   pnl_pct: 8.91
-  exit_reason: TP
-  exit_datetime_utc0: "2026-03-27 21:57"
-
 thesis: |
   4H bearish reversal, 15m rejection candle at 66,688 (lower high vs 66,815).
   Orderbook flipped from 15:1 bid to 1:1 (buyers exhausted). OI rising into decline.
   Entry on limit at 66,560 below failed bounce zone.
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

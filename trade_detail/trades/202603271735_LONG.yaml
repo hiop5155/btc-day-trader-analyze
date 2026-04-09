@@ -1,34 +1,31 @@
 id: 23
-datetime_utc0: "202603271735"
+datetime_utc0: 2026-03-27 17:35
 direction: LONG
 grade: A
-score: "F1:6 F2:3 F3:3 F4:7 F5:5 F6:5 F7:5 F8:2 F9:5 = 41/65"
-
+score: 0
+order_id: unknown
 open:
-  entry: 67720
-  sl: 67493
-  tp: 68194
+  entry: 67720.0
+  sl: 67493.0
+  tp: 68194.0
   contracts: 12
-  notional_usd: 8126.4        # 67720 × 12 × 0.01
-  risk_usd: 27.24             # 12 × 227pt × $0.01
-  risk_pct: 2.86              # 27.24 / 951.75 (A grade, normal 3% — actual 2.86%)
-  algo_id: "3425965918454026240"   # OCO attachAlgoOrds (SL trigger 67493 + TP trigger 68194)
-  leverage_set: 15x
-
+  leverage: 1.0
+  risk_usd: 27.24
+  risk_pct: 2.86
+  algo_id: '3425965918454026240'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
+  close_price: 67466.4
+  fill_datetime_utc0: null
   exit_reason: SL
-  sl_trigger: 67493
-  close_price: 67466.4      # actual fill: ordId 3426089536167305216, fillPx 67466.4 × 12ct; SL trigger 67493, ~26.6pt slippage
   raw_pnl: null
-  entry_fee: null
   close_fee: null
   funding_fee: null
-  pnl_usd: -34.48           # estimated from cashBal delta: $950.12 → $915.64
-  exit_datetime_utc0: "2026-03-27 18:37"
-  algo_id: "3425965918454026240"
-  actual_side: sl           # confirmed via algo order history (actualSide: sl)
-
+  pnl_usd: -34.48
+  pnl_pct: null
 thesis: |
   A-grade LONG after dual SSL sweep + 5m MSB confirmed. SSL sweep 1: 67,576.3
   (16:35 flash crash -620pt single 5m). SSL sweep 2: 67,513 (17:10, extends
@@ -42,5 +39,17 @@ thesis: |
   Daily PnL at entry: -$160.32 on $912.93 SOD = -17.6% → Rule 13 defensive (2%),
   but used A-normal 3% as deposit of $105 brought equity to $951.75 vs SOD $912.93
   (SOD represents pre-session equity; actual drawdown basis per Rule 13 from SOD).
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

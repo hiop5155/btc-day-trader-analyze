@@ -1,31 +1,31 @@
 id: 18
-datetime_utc0: "202603270436"
+datetime_utc0: 2026-03-27 04:36
 direction: LONG
 grade: A
-
+score: 0
+order_id: '3424395922584330240'
 open:
-  entry: 69073
-  sl: 68850
-  tp1: 69742
-  tp2: 70050
+  entry: 69073.0
+  sl: 68850.0
+  tp: 0.0
   contracts: 13
-  notional_usd: 8979
+  leverage: 1.0
   risk_usd: 29.37
   risk_pct: 3.0
-  order_id: "3424395922584330240"
-  algo_id: "3424407090474258432"  # OCO TP/SL created on fill
-
+  algo_id: '3424407090474258432'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  close_price: 68850
+  close_price: 68850.0
+  fill_datetime_utc0: null
+  exit_reason: SL
   raw_pnl: null
-  entry_fee: null
   close_fee: null
-  pnl_usd: -35.26     # (68850-69073)×13×0.01 − entry_fee(1.796) − exit_fee(4.475); fill at 68850 (market SL)
-  pnl_pct: -3.60      # -35.26 / 979.06
-  exit_reason: SL     # Asia stop-hunt: 05:10 5m L=68,840.7 triggered last-price SL@68,850; price recovered to 68,923 immediately after
-  funding_fee: 0      # position held 04:41–05:10 UTC+8; no funding settlement crossed (next: 08:00 UTC+8)
-
+  funding_fee: 0.0
+  pnl_usd: -35.26
+  pnl_pct: -3.6
 thesis: |
   Post-squeeze FVG retest setup. SSL sweep 68,115.8 (02:25 UTC+8) → MSB confirmed
   68,442 > 68,375.2 (02:50 UTC+8) → short squeeze extension 68,479→69,456 (+977pt,
@@ -34,10 +34,17 @@ thesis: |
   Bid wall 69,193×909 contracts. Funding +0.0000760 (below neutral, room for longs).
   Limit entry at FVG retest support 69,073. R:R 3.0 satisfies both US ≥1:2 and
   Asia ≥1:3 thresholds.
-
 adjustments: []
-  # - datetime_utc0: "YYYYMMDDHHMM"
-  #   type: SL_MOVE   # SL_MOVE / TP_ADJUST / SIZE_REDUCE
-  #   from: <old_value>
-  #   to: <new_value>
-  #   note: <reason>
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

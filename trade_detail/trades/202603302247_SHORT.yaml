@@ -1,40 +1,43 @@
-trade_id: "202603302247_SHORT"
+id: 59
+datetime_utc0: 2026-03-30 22:47
 direction: SHORT
-grade: A # 47/65
-score:
-  F1_sweep: 10
-  F2_msb: 10
-  F3_entry: 5
+grade: A
+score: 47
+order_id: '3435291450683645952'
+open:
+  entry: 67400.0
+  sl: 67770.0
+  tp: 66500.0
+  contracts: 7
+  leverage: 5.32
+  risk_usd: 25.9
+  risk_pct: 3.0
+  algo_id: ''
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
+close:
+  status: CLOSED
+  close_price: 67770.0
+  fill_datetime_utc0: null
+  exit_reason: SL
+  raw_pnl: -25.9
+  close_fee: -2.37
+  funding_fee: 0.0
+  pnl_usd: -29.36
+  pnl_pct: -3.31
+thesis: BSL sweep 68,199 + 4H MSB (67,054 < 67,331). OI -338 longs liquidating. Limit at broken 67,405 support retest.
+adjustments: []
+score_breakdown:
+  F1_sweep_trend: 10
+  F2_msb: 7
+  F3_entry_zone: 5
   F4_rr: 7
   F5_funding: 5
   F6_oi: 0
-  F7_orderbook: 5
-  F8_antichase: 0
+  F7_volume_delta: 5
+  F8_anti_chase: 0
   F9_session: 5
-  total: 47
-  max: 65
-thesis: "BSL sweep 68,199 + 4H MSB (67,054 < 67,331). OI -338 longs liquidating. Limit at broken 67,405 support retest."
-open:
-  entry: 67400
-  sl: 67770
-  tp: 66500
-  contracts: 7
-  risk_pct: 3.0
-  risk_usd: 25.90
-  leverage: 5.32
-  order_type: limit
-  ord_id: "3435291450683645952"
-  datetime_utc0: "202603302247"
-  session: US
-close:
-  status: CLOSED
-  close_price: 67770
-  close_datetime_utc0: "202603302255"
-  exit_reason: SL
-  raw_pnl: -25.90
-  entry_fee: -0.94
-  close_fee: -2.37
-  funding_fee: 0
-  pnl_usd: -29.36
-  pnl_pct: -3.31
-adjustments: []
+  max: 62
+structure_id: null
+structure_id_dict: null

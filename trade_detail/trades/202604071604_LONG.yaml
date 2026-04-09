@@ -1,0 +1,53 @@
+id: 72
+datetime_utc0: 2026-04-07 16:04
+direction: LONG
+grade: A
+score: 43
+order_id: '3458645681402503168'
+open:
+  entry: 67830.0
+  sl: 67660.0
+  tp: 68614.0
+  contracts: 13
+  leverage: 12
+  risk_usd: 23.63
+  risk_pct: 3.0
+  algo_id: '3458645681370828800'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: LONG pullback into 1H BEARISH OB 67721-68041 (14:00 candle); 4H BULLISH +110pt; F1=8 sweep; F8=5 anti-chase
+close:
+  status: CANCELLED
+  close_price: null
+  fill_datetime_utc0: null
+  exit_reason: RESCORE_FAIL
+  raw_pnl: null
+  close_fee: null
+  funding_fee: null
+  pnl_usd: null
+  pnl_pct: null
+thesis: LONG limit 67830 into 1H BEARISH OB zone 67721-68041 (anchor 14:00). 4H BULLISH (+110pt), price swept down to 67680
+  at 15:05 and recovered to 68249. Entry on retest of the OB zone. SL below swing low 67660 (170pt), TP 68614 at 4H SR high
+  (R:R 4.61). F1=8 sweep confirmed, F3=8 OB zone entry, F8=5 no-chase (price retraced). F2=0 no MSB. F6=0 OI diverging (price
+  down vs OI up). Grade A 43/62.
+adjustments: []
+score_breakdown:
+  F1_sweep_trend: 8
+  F2_msb: 0
+  F3_entry_zone: 8
+  F4_rr: 7
+  F5_funding: 5
+  F6_oi: 0
+  F7_volume_delta: 5
+  F8_anti_chase: 5
+  F9_session: 5
+  max: 62
+structure_id: 1H_BEARISH_OB_67721_68041_at_2026-04-07T14:00
+structure_id_dict:
+  tf: 1H
+  bias_4h: BEARISH
+  type: OB
+  level1: 67721.1
+  level2: 68041.8
+  anchor_ts_ms: 1775570400000
+  anchor_iso: 2026-04-07T14:00

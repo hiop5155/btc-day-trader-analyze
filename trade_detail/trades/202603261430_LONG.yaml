@@ -1,31 +1,31 @@
 id: 8
-datetime_utc0: "202603261430"
+datetime_utc0: 2026-03-26 14:30
 direction: LONG
 grade: A
-
+score: 0
+order_id: '3422697182186135552'
 open:
-  entry: 70040
-  sl: 69720
-  tp1: 71000
-  tp2: null
+  entry: 70040.0
+  sl: 69720.0
+  tp: 0.0
   contracts: 1
-  notional_usd: 700.40        # 70040 × 1 × 0.01
-  risk_usd: 3.20              # 1 contract × 320pt × $0.01 (ex-fees)
-  risk_pct: 1.66              # 3.20 / 193.33 equity at open
-  order_id: "3422697182186135552"
-  algo_id: "3422697182154461184"
-
+  leverage: 1.0
+  risk_usd: 3.2
+  risk_pct: 1.66
+  algo_id: '3422697182154461184'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  close_price: 69999
+  close_price: 69999.0
+  fill_datetime_utc0: null
+  exit_reason: MANUAL
   raw_pnl: null
-  entry_fee: null
   close_fee: null
   funding_fee: null
-  pnl_usd: -0.90   # (69999-70040)×0.01 − 0.14008 open_fee − 0.34999 close_fee
-  pnl_pct: -0.47   # -0.90 / 192.43
-  exit_reason: MANUAL   # Background loop (06:35 UTC / 14:35 UTC+8) closed via swap_close_position: 4H bearish counter-trend assessment; SL at 69,720 was attached but not triggered (close_price 69,999 > SL)
-
+  pnl_usd: -0.9
+  pnl_pct: -0.47
 thesis: |
   Sweep: 69,833.7 (14:00 UTC+8, 103K ct volume) — final cascade flush.
   MSB confirmed: 14:15 5m close 70,109.9 > trigger 70,080.
@@ -33,5 +33,17 @@ thesis: |
   OI cumulative +513 BTC (29,355→29,869) in two cycles = aggressive buying at bottom.
   Entry limit at OB zone (post-double-retest). 2% risk cap (equity $193.33 < $200).
   Asia R:R = 960/320 = 3.0:1 ≥ 1:3 ✓
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

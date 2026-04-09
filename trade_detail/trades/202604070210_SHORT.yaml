@@ -1,33 +1,33 @@
-datetime_utc0: "2026-04-07 02:10"
+id: 69
+datetime_utc0: 2026-04-07 02:10
 direction: SHORT
 grade: A
 score: 43
-order_id: "3456963789657694208"
-
+order_id: '3456963789657694208'
 open:
-  entry: 68550
-  sl: 68889
-  tp: 67703
+  entry: 68550.0
+  sl: 68889.0
+  tp: 67703.0
   contracts: 7
   leverage: 5.7
   risk_usd: 23.73
   risk_pct: 2.83
-  algo_id: "3456988921962696704"
-  fill_datetime_utc0: "2026-04-07 02:20"
+  algo_id: '3456988921962696704'
+  fill_datetime_utc0: 2026-04-07 02:20
   entry_fee: -0.9597
-  note: "Asia session SHORT. 01:00 1H SHORT MSB (C=68,368 below prior low 68,690). Pullback to 01:00 1H bearish OB 68,368–68,743 (~50% at 68,556, limit 68,550). SL above 01:00 1H HOD 68,868.7 + 20pt = 68,889. TP at Dead Zone low 67,703. 4H BEARISH CO -387pt."
-
+  note: Asia session SHORT. 01:00 1H SHORT MSB (C=68,368 below prior low 68,690). Pullback to 01:00 1H bearish OB 68,368–68,743
+    (~50% at 68,556, limit 68,550). SL above 01:00 1H HOD 68,868.7 + 20pt = 68,889. TP at Dead Zone low 67,703. 4H BEARISH
+    CO -387pt.
 close:
   status: CLOSED
   close_price: 68912.7
-  fill_datetime_utc0: "2026-04-07 04:48"
+  fill_datetime_utc0: 2026-04-07 04:48
   exit_reason: SL
   raw_pnl: -25.39
   close_fee: -2.41
   funding_fee: 0.0
   pnl_usd: -28.75
   pnl_pct: -3.43
-
 thesis: |
   4H BEARISH (CO -387pt). 01:00 1H SHORT MSB: close 68,368.1 broke below prior
   swing low 68,690 (321.9pt displacement). Entry at pullback to 01:00 1H bearish
@@ -38,14 +38,13 @@ thesis: |
   04:00 1H swept to 68,510 (39pt below entry) then V-bounced; 04:30 rapid rally
   to 68,958 hit SL. Rule 16 triggered (Asia losing SHORT → direction locked).
   Rule 17 triggered (zone [68,050–69,050] until 06:45 UTC+0).
-
 adjustments:
-  - datetime_utc0: "2026-04-07 03:46"
-    type: SL_MOVE
-    from: 68889
-    to: 68910
-    note: "User request — +21pt buffer above 07:00 UTC+8 (23:00 UTC+0) 1H HOD 68,887.7"
-
+- datetime_utc0: 2026-04-07 03:46
+  type: TRAIL_SL
+  field: sl
+  from: 68889.0
+  to: 68910.0
+  note: User request — +21pt buffer above 07:00 UTC+8 (23:00 UTC+0) 1H HOD 68,887.7
 score_breakdown:
   F1_sweep_trend: 7
   F2_msb: 7
@@ -56,3 +55,6 @@ score_breakdown:
   F7_volume_delta: 5
   F8_anti_chase: 0
   F9_session: 1
+  max: 62
+structure_id: null
+structure_id_dict: null

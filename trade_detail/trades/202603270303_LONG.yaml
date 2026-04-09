@@ -1,28 +1,31 @@
 id: 17
-datetime_utc0: "202603270303"
+datetime_utc0: 2026-03-27 03:03
 direction: LONG
 grade: A
-
+score: 0
+order_id: '3424210384728317952'
 open:
-  entry: 68300
-  sl: 68065
-  tp1: 68770
-  tp2: 69000
+  entry: 68300.0
+  sl: 68065.0
+  tp: 0.0
   contracts: 12
-  notional_usd: 8196
+  leverage: 1.0
   risk_usd: 29.37
   risk_pct: 3.0
-  order_id: "3424210384728317952"
-  algo_id: "3424210537604190208"
-
+  algo_id: '3424210537604190208'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CANCELLED
   close_price: null
-  pnl_usd: 0
-  pnl_pct: 0
-  exit_reason: ORDER_NEVER_FILLED  # limit 68,300 not reached; price surged to 68,649 without fill (closest: 68,323.1). OCO cancelled to prevent unintended SHORT.
-  funding_fee: 0
-
+  fill_datetime_utc0: null
+  exit_reason: EXPIRED
+  raw_pnl: null
+  close_fee: null
+  funding_fee: 0.0
+  pnl_usd: 0.0
+  pnl_pct: 0.0
 thesis: |
   Double-bottom sweep 68,133→68,115.8 on 02:20–02:25 UTC+8 5m candles.
   MSB confirmed: 02:50 5m closed 68,442.1 > 68,375.2 (prior swing high trigger).
@@ -30,5 +33,17 @@ thesis: |
   at 68,301–68,303 (institutional accumulation). OI rising +15.3 BTC with price
   recovery = new longs entering. US session, R:R 2:1 ✓. Limit entry at OB/FVG
   pullback zone (68,175–68,300).
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

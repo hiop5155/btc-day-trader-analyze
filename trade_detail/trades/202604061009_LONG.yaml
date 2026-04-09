@@ -1,34 +1,33 @@
-datetime_utc0: "2026-04-06 10:09"
+id: 68
+datetime_utc0: 2026-04-06 10:09
 direction: LONG
 grade: A
 score: 43
-order_id: "3455029266627911680"
-
+order_id: '3455029266627911680'
 open:
-  entry: 69450
-  sl: 69145
-  tp: 70276
+  entry: 69450.0
+  sl: 69145.0
+  tp: 70276.0
   contracts: 8
-  leverage: 15
-  risk_usd: 24.40
+  leverage: 15.0
+  risk_usd: 24.4
   risk_pct: 2.77
-  expiry_utc0: "2026-04-06 14:09"
-  algo_id: "3455029266596237312"
-  fill_datetime_utc0: "2026-04-06 12:11"
+  algo_id: '3455029266596237312'
+  fill_datetime_utc0: 2026-04-06 12:11
   entry_fee: -1.11
-  note: "Limit buy at 69,450 into post-impulse FVG (69,288–69,598 from 09:10 impulse). Filled 12:11 UTC+0 at exact limit price (no slippage). OCO active: SL 69,145 / TP 70,276. EU session. HOD 70,276 as TP target. 4H rolled BEARISH at 12:00 (CO -145pt) after fill."
-
+  note: 'Limit buy at 69,450 into post-impulse FVG (69,288–69,598 from 09:10 impulse). Filled 12:11 UTC+0 at exact limit price
+    (no slippage). OCO active: SL 69,145 / TP 70,276. EU session. HOD 70,276 as TP target. 4H rolled BEARISH at 12:00 (CO
+    -145pt) after fill.'
 close:
   status: CLOSED
   close_price: 69157.9
-  fill_datetime_utc0: "2026-04-06 14:04"
+  fill_datetime_utc0: 2026-04-06 14:04
   exit_reason: SL
   raw_pnl: -23.3716
   close_fee: -2.7663
   funding_fee: 0.0
   pnl_usd: -27.25
-  pnl_pct: -3.10
-
+  pnl_pct: -3.1
 thesis: |
   4H BULLISH (CO +715pt live, prev 4H doji -25.2pt). 09:10 impulse +478pt
   (69,283→69,762) created FVG 69,288–69,598. 1H MSB: 09:00 1H candle H=70,276
@@ -39,14 +38,17 @@ thesis: |
   EU session. Daily move 1.13% (no 0f block). 0g doji was bearish — LONG is
   against doji direction, no A+ required.
   Score 43/65 (F1:7 F2:7 F3:8 F4:5 F5:5 F6:3 F7:5 F8:0 F9:3).
-
+adjustments: []
 score_breakdown:
-  F1_trend_alignment: 7
-  F2_msb_confirmation: 7
+  F1_sweep_trend: 7
+  F2_msb: 7
   F3_entry_zone: 8
-  F4_momentum: 5
-  F5_volume: 5
-  F6_funding: 3
-  F7_session_bias: 5
-  F8_atr_filter: 0
-  F9_risk_reward: 3
+  F4_rr: 3
+  F5_funding: 3
+  F6_oi: 0
+  F7_volume_delta: 5
+  F8_anti_chase: 0
+  F9_session: 5
+  max: 62
+structure_id: null
+structure_id_dict: null

@@ -1,33 +1,31 @@
 id: 22
-datetime_utc0: "202603271522"
+datetime_utc0: 2026-03-27 15:22
 direction: LONG
 grade: A+
-
+score: 0
+order_id: '3425696841435406342'
 open:
-  entry: 68720
-  sl: 68570
-  tp1: 69052
-  tp2: 69164          # optional — prior 4H high
+  entry: 68720.0
+  sl: 68570.0
+  tp: 0.0
   contracts: 21
-  notional_usd: 14431.2       # 68720 × 21 × 0.01
-  risk_usd: 31.50             # 21 × 150pt × $0.01
-  risk_pct: 3.15              # 31.50 / 1001.54 (capped: uncapped formula = 5%, 15x leverage limit reduces from 33→21 contracts)
-  order_id: "3425696841435406342"
-  leverage_set: 15x           # raised from 10x to 15x (Rule 15 allows up to 15x); required for 21 contracts
-
+  leverage: 1.0
+  risk_usd: 31.5
+  risk_pct: 3.15
+  algo_id: ''
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  fill_price: 68720              # limit order filled ~15:33 UTC+8 (15:30 5m L:68,684.1 swept through 68,720)
-  close_price: 68531.0           # actual fill: 4 sub-fills at 68,530.9(×13.47ct) + 68,531.0(×7.53ct) = weighted avg 68,531.0; SL trigger 68,570, ~39pt slippage; ordId 3425733880662941697
-  sl_trigger: 68570
-  raw_pnl: null
-  entry_fee: null
-  close_fee: null
-  pnl_usd: -49.79                # actual equity change 1001.54 → 951.75 (incl. maker entry fee + taker SL fee + slippage)
-  pnl_pct: -4.97                 # 49.79 / 1001.54
+  close_price: 68531.0
+  fill_datetime_utc0: null
   exit_reason: SL
-  funding_fee: 0                 # position held ~7 min (15:33–15:40), no settlement crossed
-
+  raw_pnl: null
+  close_fee: null
+  funding_fee: 0.0
+  pnl_usd: -49.79
+  pnl_pct: -4.97
 thesis: |
   Post-pullback A+ LONG re-entry into 15m FVG zone. 15:10 5m +243.9pt explosive
   breakout (O:68,586 H:68,887.3 C:68,829.9) created new session high 68,887.3,
@@ -38,5 +36,17 @@ thesis: |
   TP1 = 69,052 (SOD). R/R = 332/150 = 2.21:1 (net ~2.18:1 after ~$0.95 funding cost).
   All A+ conditions: daily SSL 68,258 swept at 12:05 + 4H MSB + funding +0.0000655 ≤ 0.01%.
   OI +31.4 BTC since last cycle. Funding settlement at 16:00 UTC+8 (~44 min).
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

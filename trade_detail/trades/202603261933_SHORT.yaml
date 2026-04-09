@@ -1,33 +1,31 @@
 id: 14
-datetime_utc0: "202603261933"
+datetime_utc0: 2026-03-26 19:33
 direction: SHORT
 grade: A
-
+score: 0
+order_id: '3423303529931956224'
 open:
-  entry: 69420
-  sl: 69575
-  tp1: 69100
-  tp2: 68900
+  entry: 69420.0
+  sl: 69575.0
+  tp: 0.0
   contracts: 2
-  notional_usd: 1388.40        # 69420 × 2 × 0.01
-  risk_usd: 3.10               # 2 contracts × 155pt × $0.01
-  risk_pct: 1.56               # 3.10 / 198.25 equity (margin-constrained at 10x)
-  order_id: "3423303529931956224"
-  algo_id: "3423319531673358336"  # OCO algo auto-created via tpTriggerPx/slTriggerPx
-  fill_time_utc0: "202603261941"  # filled at 19:40 candle H=69,422.8
-
+  leverage: 1.0
+  risk_usd: 3.1
+  risk_pct: 1.56
+  algo_id: '3423319531673358336'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  close_price: 69586.71        # avgPx from exchange (ordId 3423569056856236033)
-  close_time_utc0: "202603262145"   # fillTime 1774532708750 = 13:45 UTC = 21:45 UTC+8
+  close_price: 69586.71
+  fill_datetime_utc0: null
+  exit_reason: SL
   raw_pnl: null
-  entry_fee: null
   close_fee: null
   funding_fee: null
-  pnl_usd: -4.31              # (69420−69586.71)×2×0.01 − entry_fee 0.278 − close_fee 0.696
-  pnl_pct: -2.17              # -4.31 / 198.25 equity at open
-  exit_reason: SL             # OCO algo triggered @ last=69575, market filled 69586.71
-
+  pnl_usd: -4.31
+  pnl_pct: -2.17
 thesis: |
   Sell-side sweep 69,694.3 (18:20 UTC+8) + 5m MSB confirmed (18:50 UTC+8, close < 69,480).
   New day low 69,156 (SWAP) at 19:25 UTC+8 — buy-side sweep through all prior support.
@@ -35,5 +33,17 @@ thesis: |
   Price recovering from 69,156 into FVG → limit SELL at 69,420 (mid-FVG pullback).
   4H O=70,092 C=69,382 (−710pt, massively bearish). OI +168 BTC this cycle. Funding 0.0000619 (today's extreme low).
   SL=69,575 (above swing high 69,549.5 + 25pt). TP1=69,100 (below day low 69,156; R:R=2.06:1).
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

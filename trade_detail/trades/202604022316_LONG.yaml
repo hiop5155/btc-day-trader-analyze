@@ -1,39 +1,31 @@
 id: 46
-datetime_utc0: "202604022316"
+datetime_utc0: 2026-04-02 23:16
 direction: LONG
 grade: A
-
+score: 47
+order_id: '3444050881059708928'
 open:
-  entry: 66700
-  sl: 66999
-  tp: 67500
+  entry: 66700.0
+  sl: 66999.0
+  tp: 67500.0
   contracts: 18
-  notional_usd: 12006.0
-  risk_usd: 37.80
+  leverage: 1.0
+  risk_usd: 37.8
   risk_pct: 4.37
-  actual_risk_pct: 4.37
-  order_id: "3444050881059708928"
-  algo_id: "3444054088361971712"
-  expiry_utc0: "202604030316"
-
+  algo_id: '3444054088361971712'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  fill_datetime_utc0: "202604022320"
-  fill_price: 66700.0
-  close_datetime_utc0: "202604030100"
   close_price: 66991.9
+  fill_datetime_utc0: '202604022320'
+  exit_reason: SL
   raw_pnl: 52.54
-  entry_fee: -2.4012
   close_fee: -6.03
   funding_fee: 0.603
   pnl_usd: 44.71
   pnl_pct: 5.17
-  exit_reason: SL_HIT
-  cancel_reason: null
-
-score: 47
-score_breakdown: "F1:7 F2:7 F3:8 F4:10 F5:5 F6:0 F7:5 F8:0 F9:5"
-
 thesis: |
   4H strongly BULLISH (CO=+603.5pt). V-bounce from 65,653 reached 67,077 high at 22:45.
   Price pulling back in consolidation (22:50–23:10) with double-bottom at 66,666.
@@ -41,10 +33,23 @@ thesis: |
   SL below 22:50 structure low 66,623 with buffer at 66,490 (210pt).
   TP 67,500 targeting new 4H high (R:R 3.81x). Boost tier (daily +10.03%) → 4.5% risk.
   Funding −0.00462% → LONG receives at 00:00 UTC+8. Rule 17 clear (prior exit was profitable trail).
-
 adjustments:
-  - type: SL_MOVE
-    datetime_utc0: "202604030046"
-    old_sl: 66490
-    new_sl: 66999
-    reason: "Manual SL move by user (trail); position locked in profit (SL above entry 66700)"
+- datetime_utc0: 2026-04-03 00:46
+  type: TRAIL_SL
+  field: sl
+  from: 66490.0
+  to: 66999.0
+  note: Manual SL move by user (trail); position locked in profit (SL above entry 66700)
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

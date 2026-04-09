@@ -1,38 +1,48 @@
 id: 11
-datetime_utc0: "202603261519"
+datetime_utc0: 2026-03-26 15:19
 direction: SHORT
 grade: A
-
+score: 0
+order_id: '3422791188014391298'
 open:
-  entry: 70060
-  sl: 70180
-  tp1: 69700
-  tp2: null
+  entry: 70060.0
+  sl: 70180.0
+  tp: 0.0
   contracts: 2
-  notional_usd: 1401.20        # 70060 × 2 × 0.01
-  risk_usd: 2.40               # 2 contracts × 120pt × $0.01
-  risk_pct: 1.25               # 2.40 / 191.69 equity
-  order_id: "3422791188014391298"
-  algo_id: "3422799732350390272"     # OCO live: TP 69700 / SL 70180
-  fill_time_utc0: "202603261523"    # cTime 1774509781091 = UTC 07:23:01 = 15:23 UTC+8
-
+  leverage: 1.0
+  risk_usd: 2.4
+  risk_pct: 1.25
+  algo_id: '3422799732350390272'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  close_price: 69686.8          # OCO TP triggered at last=69700, filled (taker) at 69686.8
-  close_time_utc0: "202603261731"   # fillTime 1774517482792 = UTC 09:31:22 = 17:31 UTC+8
+  close_price: 69686.8
+  fill_datetime_utc0: null
+  exit_reason: TP
   raw_pnl: null
-  entry_fee: null
   close_fee: null
-  pnl_usd: 6.63                 # gross 7.464 − open_fee 0.280 − close_fee 0.697 + funding_fee 0.140 = 6.627
-  pnl_pct: 3.46                 # 6.63 / 191.69 equity at open
-  funding_fee: +0.1401          # 收取：08:00 UTC (16:00 UTC+8) 結算，2 合約空頭，正資金費率
-  exit_reason: TP1              # OCO algo ordId 3423058158517444621
-
+  funding_fee: 0.1401
+  pnl_usd: 6.63
+  pnl_pct: 3.46
 thesis: |
   15m UTC 07:00-07:15 Shooting Star: H=70,153.5（sell-side sweep，掃越前高 70,133/70,118）→ C=70,014。
   5m MSB: ts 1774508700 收盤 70,066.5 < 前收 70,082.7；15m MSB: 70,014 < 前收 70,063.5。
   4H 空頭對齊（O=70,913 C≈70,024，下降高點序列完整）。
   掛限價 SELL 70,060（OB 回測區下緣），SL=70,180（sweep 高 70,153.5+26pt），
   TP1=69,700（R:R=360/120=3.0:1，亞洲盤 ≥ 1:3 ✓）。
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

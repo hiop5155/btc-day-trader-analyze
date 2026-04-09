@@ -1,38 +1,43 @@
-trade_id: 202603312019_SHORT
+id: 63
+datetime_utc0: 2026-03-31 20:19
 direction: SHORT
-status: CLOSED
-
-open:
-  datetime_utc0: "2026-03-31 20:25"
-  order_type: limit
-  entry: 66765
-  sl: 66907
-  tp: 65946
-  contracts: 19
-  sl_distance: 142
-  tp_distance: 819
-  rr: 5.77
-  ordId: "3437889814797443072"
-  algoId: "3437892497576824832"
-  fill_detected_utc0: "2026-03-31 20:30"
-
 grade: A
 score: 41
-score_detail: "F1:7 F2:0 F3:8 F4:10 F5:5 F6:3 F7:5 F8:0 F9:3"
-session: EU
-risk_pct: 3.0
-equity_at_entry: 906.34
-
-adjustments: []
-
+order_id: unknown
+open:
+  entry: 66765.0
+  sl: 66907.0
+  tp: 65946.0
+  contracts: 19
+  leverage: 1.0
+  risk_usd: 0.0
+  risk_pct: 0.0
+  algo_id: '3437892497576824832'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  datetime_utc0: "2026-03-31 20:35"
   close_price: 66927.9
+  fill_datetime_utc0: null
   exit_reason: SL
-  sl_trigger_px: 66907
-  fill_px: 66927.9
-  slippage_pt: 20.9
+  raw_pnl: null
+  close_fee: null
+  funding_fee: null
   pnl_usd: -39.85
-  pnl_pct: -4.40
-  fees_usd: -8.90
+  pnl_pct: -4.4
+thesis: ''
+adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

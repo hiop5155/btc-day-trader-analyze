@@ -1,38 +1,31 @@
 id: 41
-datetime_utc0: "202604011506"
+datetime_utc0: 2026-04-01 15:06
 direction: LONG
 grade: A
-
+score: 0
+order_id: '3440160176654475264'
 open:
-  entry: 69050
-  sl: 68800
-  tp: 69700
+  entry: 69050.0
+  sl: 68800.0
+  tp: 69700.0
   contracts: 9
-  notional_usd: 6214.5
-  risk_usd: 22.50
+  leverage: 1.0
+  risk_usd: 22.5
   risk_pct: 2.77
-  actual_risk_pct: 2.77
-  order_id: "3440160176654475264"
-  algo_id: "3440160176622800896"
-
+  algo_id: '3440160176622800896'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
-  status: SL
-  close_price: 68800
-  close_time: "202604011546"
-  raw_pnl: -22.50
-  entry_fee: -1.2429
-  close_fee: -3.096
-  funding_fee: 0
-  pnl_usd: -26.84
-  pnl_pct: -3.30
+  status: CLOSED
+  close_price: 68800.0
+  fill_datetime_utc0: null
   exit_reason: SL
-  cancel_note: "SL triggered at 15:46:15. Entry filled 15:19 at 69,050 as price
-    fell through limit on downward break. Price ran: 69,315 HOD → 68,633 low in
-    15:00-16:00 1H. 27min hold. Fake breakout pattern: parabolic spike to 69,315
-    then immediate reversal. Post-analysis: daily_move_pct=+3.66% at entry —
-    new 0f rule (Phase 6 update 2026-04-01) would have required A+(≥50); score
-    was 45/65 → WAIT. Rule updated in trade_guide.md."
-
+  raw_pnl: -22.5
+  close_fee: -3.096
+  funding_fee: 0.0
+  pnl_usd: -26.84
+  pnl_pct: -3.3
 thesis: |
   EU session opens (15:00 UTC+8), Rule 16 cleared. Price ran from 68,130 to 69,222
   (4H +1,014pt, strongly BULLISH). 1H MSB confirmed: 14:00-15:00 1H closed at
@@ -42,5 +35,17 @@ thesis: |
   body). Orderbook massively bid-heavy (ratio 4.02, 1,454 bid at 69,147).
   OI recovering +11,136 from short-cover low. Limit at OB retest, R:R=2.6.
   Score: F1=7 F2=7 F3=8 F4=7 F5=5 F6=3 F7=5 F8=0 F9=3 = 45/65 Grade A.
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

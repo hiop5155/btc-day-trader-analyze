@@ -1,33 +1,45 @@
-# Trade #001
 id: 1
-datetime_utc0: "202603251437"
+datetime_utc0: 2026-03-25 14:37
 direction: LONG
 grade: A
-
+score: 0
+order_id: '3419809828949680128'
 open:
-  entry: 71100
-  sl: 70890
-  tp1: 71730
+  entry: 71100.0
+  sl: 70890.0
+  tp: 0.0
   contracts: 1
-  notional_usd: 711.0
-  risk_usd: 2.10
+  leverage: 1.0
+  risk_usd: 2.1
   risk_pct: 1.05
-  order_id: "3419809828949680128"
-  algo_id: "3419809828918005760"
-
+  algo_id: '3419809828918005760'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
   close_price: 70860.0
+  fill_datetime_utc0: null
+  exit_reason: SL
   raw_pnl: null
-  entry_fee: null
   close_fee: null
   funding_fee: null
-  pnl_usd: -2.90        # gross -2.40 − entry_fee 0.1422 − close_fee 0.3543 = −2.8965
+  pnl_usd: -2.9
   pnl_pct: -1.45
-  exit_reason: SL       # SL triggered at 70,890, filled at 70,860 (slippage)
-
 thesis: |
   5m sweep + MSB structure
   Asia session setup, entry limit at 71,100
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

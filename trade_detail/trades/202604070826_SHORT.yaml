@@ -1,33 +1,33 @@
-datetime_utc0: "2026-04-07 08:26"
+id: 70
+datetime_utc0: 2026-04-07 08:26
 direction: SHORT
 grade: A
 score: 43
-order_id: "3457717172723212288"
-
+order_id: '3457717172723212288'
 open:
-  entry: 68800
-  sl: 68882
-  tp: 67700
+  entry: 68800.0
+  sl: 68882.0
+  tp: 67700.0
   contracts: 17
   leverage: 14.4
   risk_usd: 13.94
   risk_pct: 1.72
-  algo_id: "3457728705349816320"
-  fill_datetime_utc0: "2026-04-07 08:32"
+  algo_id: '3457728705349816320'
+  fill_datetime_utc0: 2026-04-07 08:32
   entry_fee: -2.3392
-  note: "EU session SHORT. Double 1H MSB (06:00+07:00 1H close below 05:00 1H low 68,588). Entry near 05:00 1H bearish OB top (68,632–68,815) at 68,800. SL 68,882 (82pt from entry; from limit_px). TP 67,700. 4H NEUTRAL at placement (CO +58.8pt), turned BULLISH by fill. Leverage capped at 17 contracts (14.4×). Rule 0g cleared at 08:00."
-
+  note: EU session SHORT. Double 1H MSB (06:00+07:00 1H close below 05:00 1H low 68,588). Entry near 05:00 1H bearish OB top
+    (68,632–68,815) at 68,800. SL 68,882 (82pt from entry; from limit_px). TP 67,700. 4H NEUTRAL at placement (CO +58.8pt),
+    turned BULLISH by fill. Leverage capped at 17 contracts (14.4×). Rule 0g cleared at 08:00.
 close:
   status: CLOSED
-  close_price: 68885
-  fill_datetime_utc0: "2026-04-07 08:44"
+  close_price: 68885.0
+  fill_datetime_utc0: 2026-04-07 08:44
   exit_reason: SL
   raw_pnl: -14.45
   close_fee: -5.855
   funding_fee: 0.0
   pnl_usd: -22.65
   pnl_pct: -2.79
-
 thesis: |
   4H NEUTRAL at order time (CO +58.8pt). Double 1H SHORT MSB: 06:00 1H close
   68,546 and 07:00 1H close 68,585 both broke below 05:00 1H low 68,588.
@@ -39,9 +39,7 @@ thesis: |
   4H turned BULLISH (+329pt CO) during 12-min hold; EU buying overwhelmed
   SHORT structure. SL hit at 68,885 (+3pt slippage).
   Rule 17 triggered (zone [68,300–69,300] until 10:30 UTC+0).
-
 adjustments: []
-
 score_breakdown:
   F1_sweep_trend: 8
   F2_msb: 7
@@ -52,3 +50,6 @@ score_breakdown:
   F7_volume_delta: 5
   F8_anti_chase: 0
   F9_session: 3
+  max: 62
+structure_id: null
+structure_id_dict: null

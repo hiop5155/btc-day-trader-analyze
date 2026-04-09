@@ -1,39 +1,53 @@
 id: 7
-datetime_utc0: "202603261407"
+datetime_utc0: 2026-03-26 14:07
 direction: SHORT
-grade: B
-
+grade: A
+score: 0
+order_id: '3422641397875826688'
 open:
-  entry: 70000
-  sl: 70380
-  tp1: 68860
-  tp2: null
+  entry: 70000.0
+  sl: 70380.0
+  tp: 0.0
   contracts: 1
-  notional_usd: 700.00        # 70000 × 1 × 0.01
-  risk_usd: 3.80              # 1 contract × 380pt × $0.01 (ex-fees)
-  risk_pct: 1.95              # 3.80 / 194.47 equity at open
-  order_id: "3422641397875826688"
-  algo_id: "3422647766743781376"
-
+  leverage: 1.0
+  risk_usd: 3.8
+  risk_pct: 1.95
+  algo_id: '3422647766743781376'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  close_price: 70065.4        # market close at 14:17 UTC+8; filled via swap_close_position
+  close_price: 70065.4
+  fill_datetime_utc0: null
+  exit_reason: MANUAL
   raw_pnl: null
-  entry_fee: null
   close_fee: null
   funding_fee: null
-  pnl_usd: -1.14              # gross −0.654 − entry_fee 0.14 − exit_fee 0.350327 = −1.144
-  pnl_pct: -0.59              # −1.14 / 194.47 equity at open
-  exit_reason: MANUAL         # Early close: short thesis invalidated by OI +201 BTC + rising lows
-
+  pnl_usd: -1.14
+  pnl_pct: -0.59
 thesis: |
   Loop-placed SHORT at 70,000 round number resistance after crash from 70,913 to 69,833.
   14:00 sweep low 69,833.7 recovered; limit sell at 70,000 filled on V-recovery (14:07 UTC+8).
   OCO: TP 68,860 (1,140pt down) / SL 70,380 (380pt up) = R:R 3:1 ✓
-
 adjustments:
-  - datetime_utc0: "202603261417"
-    type: MANUAL_CLOSE
-    from: "OPEN"
-    to: "CLOSED @ 70065.4"
-    note: "OI +201 BTC surge (29,355→29,556) = aggressive new longs at sweep low; rising lows structure (69,833→69,889→69,951→70,010) = bullish; closed early at −$1.14 vs −$3.80 SL risk"
+- datetime_utc0: 2026-03-26 14:17
+  type: MANUAL_WIDEN
+  field: sl
+  from: 0.0
+  to: 0.0
+  note: OI +201 BTC surge (29,355→29,556) = aggressive new longs at sweep low; rising lows structure (69,833→69,889→69,951→70,010)
+    = bullish; closed early at −$1.14 vs −$3.80 SL risk
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

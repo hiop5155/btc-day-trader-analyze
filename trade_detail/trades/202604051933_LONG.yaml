@@ -1,45 +1,48 @@
-datetime_utc0: "2026-04-05 19:33"
+id: 66
+datetime_utc0: 2026-04-05 19:33
 direction: LONG
 grade: A
 score: 44
-order_id: "3453265606926622720"
-
+order_id: '3453265606926622720'
 open:
-  entry: 67410
-  sl: 67370
-  tp: 67846
-  contracts: 15.68
-  leverage: 15
-  risk_usd: 7.20
+  entry: 67410.0
+  sl: 67370.0
+  tp: 67846.0
+  contracts: 15
+  leverage: 15.0
+  risk_usd: 7.2
   risk_pct: 0.84
-  expiry_utc0: "2026-04-05 23:33"
-  note: "Rule 15 cap applied — 19→18 contracts (15x cap), but limit only partially filled: 15.68/18 contracts."
-
+  algo_id: ''
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: 'Rule 15 cap applied — 19→18 contracts (15x cap), but limit only partially filled: 15.68/18 contracts.'
 close:
   status: CLOSED
-  datetime_utc0: "2026-04-05 19:38"
   close_price: 67366.3
-  sl_trigger_px: 67370
+  fill_datetime_utc0: null
   exit_reason: SL
+  raw_pnl: null
+  close_fee: -5.28
+  funding_fee: null
   pnl_usd: -17.22
   pnl_pct: -2.05
-  close_fee: -5.28
-  note: "SL triggered at 67,370, filled 67,366.3 (slippage -3.7pt). Partial fill 15.68/18 contracts. Total incl. entry+exit fees per OKX. Losing SL: close < entry."
-
 thesis: |
   4H BULLISH (CO +151.3pt). Post-trail-SL exit re-entry. Bullish FVG formed at
   67,400-67,460 from 19:10/19:20 5m impulse (gap 60pt). Entry 67,410 near FVG
   bottom. SL below FVG base 67,370. TP prior session spike high 67,846.
   Dead zone 30min away — Rule 9b will cancel at 20:33 if unfilled.
   Score 44/65 Grade A (F1:4 F2:10 F3:8 F4:10 F5:5 F6:0 F7:2 F8:0 F9:5).
-
+adjustments: []
 score_breakdown:
-  F1_trend_alignment: 4
-  F2_msb_confirmation: 10
+  F1_sweep_trend: 4
+  F2_msb: 7
   F3_entry_zone: 8
-  F4_momentum: 10
-  F5_volume: 5
-  F6_funding: 0
-  F7_session_bias: 2
-  F8_atr_filter: 0
-  F9_risk_reward: 5
+  F4_rr: 5
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 5
+  F8_anti_chase: 0
+  F9_session: 2
+  max: 62
+structure_id: null
+structure_id_dict: null

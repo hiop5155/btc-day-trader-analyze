@@ -1,35 +1,47 @@
 id: 17
-datetime_utc0: "202603292008"
+datetime_utc0: 2026-03-29 20:08
 direction: LONG
 grade: A
-
+score: 0
+order_id: '3432071098297966592'
 open:
   entry: 66746.5
-  sl: 66640
-  tp: 67200
+  sl: 66640.0
+  tp: 67200.0
   contracts: 16
-  notional_usd: 10679.44
+  leverage: 1.0
   risk_usd: 26.51
   risk_pct: 3.0
-  actual_risk_pct: 1.93
-  order_id: "3432071098297966592"
-
+  algo_id: ''
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  close_price: 66640
-  close_datetime_utc0: "202603292108"
+  close_price: 66640.0
+  fill_datetime_utc0: null
+  exit_reason: SL
   raw_pnl: -17.04
-  entry_fee: -5.33972
   close_fee: -5.3312
-  funding_fee: 0
+  funding_fee: 0.0
   pnl_usd: -27.71
   pnl_pct: -3.16
-  exit_reason: SL
-
 thesis: |
   1H bullish MSB confirmed at 20:00 UTC+8 (C:66,777 > prior 1H swing high 66,736.4).
   BSL sweep to 66,956 then pullback to 66,747 = clean OB retest near 1H MSB close.
   OI +78 BTC genuine accumulation + 450-lot bid wall confirmed institutional support.
   Entry at 66,746.5 (better than planned 66,800). R:R = 4.26:1 (SL:66,640 / TP:67,200).
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

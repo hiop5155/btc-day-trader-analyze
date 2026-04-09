@@ -1,41 +1,47 @@
 id: 42
-datetime_utc0: "202604021519"
+datetime_utc0: 2026-04-02 15:19
 direction: LONG
 grade: A
-
+score: 47
+order_id: '3443097593170583553'
 open:
-  entry: 66540
-  sl: 66336
-  tp: 67500
+  entry: 66540.0
+  sl: 66336.0
+  tp: 67500.0
   contracts: 11
-  notional_usd: 7319.4
+  leverage: 1.0
   risk_usd: 23.58
   risk_pct: 3.0
-  actual_risk_pct: 3.0
-  order_id: "3443097593170583553"
-  algo_id: "3443097593138909185"
-  expiry_utc0: "202604021919"
-
+  algo_id: '3443097593138909185'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CANCELLED
   close_price: null
-  raw_pnl: 0
-  entry_fee: null
+  fill_datetime_utc0: null
+  exit_reason: null
+  raw_pnl: 0.0
   close_fee: null
   funding_fee: null
-  pnl_usd: 0
-  pnl_pct: 0
-  exit_reason: CANCELLED
-  cancel_reason: "4H flipped BEARISH (CO=−226pt); orderbook 536.79 (no bids); thesis fully invalidated; pre-emptive cancel before hostile fill"
-  cancel_utc0: "202604021620"
-
-score: 47
-score_breakdown: "F1:7 F2:7 F3:8 F4:10 F5:5 F6:5 F7:2 F8:0 F9:3"
-
+  pnl_usd: 0.0
+  pnl_pct: 0.0
 thesis: |
   4H NEUTRAL→BULLISH flip after sweep of lows (66,175); 1H MSB confirmed above 66,700.
   OB pullback entry at 50% of 14:15 impulse candle (66,531–66,791 base).
   Bid-side OB flip (ratio 0.78 vs 18.92 prev), OI rising +5,270, negative funding earns at 16:00 settlement.
   SL below 13:35 local low (66,366); TP at 4H S/R resistance 67,500. R:R 4.7.
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

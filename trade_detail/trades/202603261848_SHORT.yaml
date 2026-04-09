@@ -1,33 +1,48 @@
 id: 13
-datetime_utc0: "202603261848"
+datetime_utc0: 2026-03-26 18:48
 direction: SHORT
 grade: A
-
+score: 0
+order_id: '3423211811710656512'
 open:
-  entry: 69560
-  sl: 69652
-  tp1: 69376
-  tp2: 69284        # R:R = 276/92 = 3.0:1
+  entry: 69560.0
+  sl: 69652.0
+  tp: 0.0
   contracts: 2
-  notional_usd: 1391.20        # 69560 × 2 × 0.01
-  risk_usd: 1.84               # 2 contracts × 92pt × $0.01
-  risk_pct: 0.93               # 1.84 / 198.24 equity (margin-constrained at 10x)
-  order_id: "3423211811710656512"
-  algo_id: null                # TP/SL attached inline
-  fill_time_utc0: null         # PENDING limit fill at 69,560
-
+  leverage: 1.0
+  risk_usd: 1.84
+  risk_pct: 0.93
+  algo_id: ''
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CANCELLED
   close_price: null
-  pnl_usd: 0
-  pnl_pct: 0
-  exit_reason: MANUAL   # Entry zone stale again (price dropped 90pt to 69,408 without fill); OI+266 BTC squeeze risk
-
+  fill_datetime_utc0: null
+  exit_reason: MANUAL
+  raw_pnl: null
+  close_fee: null
+  funding_fee: null
+  pnl_usd: 0.0
+  pnl_pct: 0.0
 thesis: |
   Continuation of id:12 setup — sell-side sweep 69,694.3 + MSB confirmed.
   Replaced stale 69,640 limit (price dropped 130pt to 69,455 without filling) with
   lower entry at new FVG zone 69,540–69,568 from post-sweep 5m decline.
   SL=69,652 (above local swing high 69,630 + 22pt). TP1=69,376 (just below day low 69,366, R:R=2:1).
   4H bearish (O=70,092 C≈69,510, −582pt) + funding 0.0000812 (shorts dominant).
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

@@ -1,33 +1,46 @@
 id: 16
-datetime_utc0: "202603291517"
+datetime_utc0: 2026-03-29 15:17
 direction: SHORT
 grade: A
-
+score: 0
+order_id: '3431486198008209408'
 open:
-  entry: 66580
-  sl: 66730
-  tp: 66260
+  entry: 66580.0
+  sl: 66730.0
+  tp: 66260.0
   contracts: 12
-  notional_usd: 7989.6
+  leverage: 1.0
   risk_usd: 18.12
   risk_pct: 2.0
-  actual_risk_pct: 2.0
-  order_id: "3431486198008209408"
-
+  algo_id: ''
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
   close_price: 66715.6
-  raw_pnl: -16.27
-  entry_fee: -1.60
-  close_fee: -4.00
-  funding_fee: -0.43
-  pnl_usd: -22.30
-  pnl_pct: -2.46
+  fill_datetime_utc0: null
   exit_reason: SL
-
+  raw_pnl: -16.27
+  close_fee: -4.0
+  funding_fee: -0.43
+  pnl_usd: -22.3
+  pnl_pct: -2.46
 thesis: |
   1H MSB confirmed (66,505 < 66,560). Break-and-retest of 66,560 S/R.
   Orderbook 6.7:1 ask-heavy. 4H bearish (-318pt). EU session F9=3.
   Score 40/65 Grade A. R:R 2.13.
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

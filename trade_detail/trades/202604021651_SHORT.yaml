@@ -1,40 +1,47 @@
 id: 43
-datetime_utc0: "202604021651"
+datetime_utc0: 2026-04-02 16:51
 direction: SHORT
 grade: A
-
+score: 42
+order_id: '3443278857433473024'
 open:
-  entry: 66530
-  sl: 66720
-  tp: 66050
+  entry: 66530.0
+  sl: 66720.0
+  tp: 66050.0
   contracts: 12
-  notional_usd: 7983.6
+  leverage: 1.0
   risk_usd: 23.58
   risk_pct: 3.0
-  actual_risk_pct: 3.0
-  order_id: "3443278857433473024"
-  algo_id: "3443278857401798656"
-  expiry_utc0: "202604022049"
-
+  algo_id: '3443278857401798656'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CANCELLED
   close_price: null
+  fill_datetime_utc0: null
+  exit_reason: RESCORE_FAIL
   raw_pnl: null
-  entry_fee: null
   close_fee: null
   funding_fee: null
   pnl_usd: 0.0
   pnl_pct: 0.0
-  exit_reason: RESCORE_FAIL
-  cancel_reason: "9b triggered (403pt > 1×SL 190pt); rescore 33/65 < 40. New 4H session opened 66,179 declining to 66,009 (NEUTRAL CO=−52pt). Prior-session OB at 66,530 stale; 403pt gap unsupportable."
-
-score: 42
-score_breakdown: "F1:7 F2:7 F3:8 F4:7 F5:5 F6:3 F7:2 F8:0 F9:3"
-
 thesis: |
   4H BEARISH CO=−400pt; 1H MSB bearish confirmed (LL 66,461 < prior lows 66,508/66,519).
   LH at 66,700 (16:30) after HOD 66,898; entry on bounce rejection into bearish OB base 66,519–66,530.
   OB created by 16:35 impulse candle (66,662→66,502). SL above LH 66,700; TP above 4H support 66,175.
   Cancelled prior LONG order (66,540) preserved capital for this reversal setup.
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

@@ -1,39 +1,45 @@
-# Trade #004
 id: 4
-datetime_utc0: "202603252235"
+datetime_utc0: 2026-03-25 22:35
 direction: LONG
-grade: B
-
+grade: A
+score: 0
+order_id: '3420770953308626944'
 open:
   entry: 71504.3
-  sl: 71250
-  tp1: 72250
+  sl: 71250.0
+  tp: 0.0
   contracts: 1
-  notional_usd: 715.04
+  leverage: 1.0
   risk_usd: 2.54
   risk_pct: 1.26
-  order_id: "3420770953308626944"
-  algo_id: "3420770953276952576"
-  margin_mode: isolated
-
+  algo_id: '3420770953276952576'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
   close_price: 71242.2
+  fill_datetime_utc0: null
+  exit_reason: SL
   raw_pnl: null
-  entry_fee: null
   close_fee: null
   funding_fee: null
-  pnl_usd: -3.33        # gross -2.621 − entry_fee 0.3575215 − close_fee 0.356211 = −3.3347
+  pnl_usd: -3.33
   pnl_pct: -1.65
-  exit_reason: SL       # SL triggered at 71,250, filled at 71,242.2 (slippage); TP limit 72,250 auto-cancelled
-
 thesis: |
   Isolated margin mode (unusual — likely manual/test trade outside main agent flow)
   Entry at market ~71,504.3, SL:71,250 TP limit:72,250
-
 adjustments: []
-
-notes: |
-  tdMode: isolated — this trade used isolated margin, unlike other trades which use cross.
-  TP limit order (72,250) was auto-cancelled when SL triggered (OKX behavior with OCO).
-  LESSON: Isolated margin positions are tracked separately from cross positions.
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

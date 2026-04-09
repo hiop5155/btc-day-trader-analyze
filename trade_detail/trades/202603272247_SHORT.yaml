@@ -1,34 +1,46 @@
 id: 11
-datetime_utc0: "202603272247"
+datetime_utc0: 2026-03-27 22:47
 direction: SHORT
 grade: A
-
+score: 0
+order_id: '3426594049164795904'
 open:
-  entry: 65950
-  sl: 66100
-  tp: 65200
+  entry: 65950.0
+  sl: 66100.0
+  tp: 65200.0
   contracts: 19
-  notional_usd: 12530.5
-  risk_usd: 28.50
+  leverage: 1.0
+  risk_usd: 28.5
   risk_pct: 2.86
-  actual_risk_pct: 2.86
-  order_id: "3426594049164795904"
-
+  algo_id: ''
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  close_price: 66100
+  close_price: 66100.0
+  fill_datetime_utc0: null
+  exit_reason: SL
   raw_pnl: null
-  entry_fee: null
   close_fee: null
   funding_fee: null
   pnl_usd: -34.51
   pnl_pct: -3.46
-  exit_reason: SL
-  exit_datetime_utc0: "2026-03-27 23:00"
-
 thesis: |
   5m pullback rejection at 65,972 (lower high) after 65,682 low sweep.
   Orderbook flipped to 2.7:1 ask-heavy. 4H deeply bearish (−834pt).
   Entry on limit at 65,950 below rejected bounce high.
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

@@ -1,91 +1,67 @@
 id: 53
-datetime_utc0: "202604040715"
+datetime_utc0: 2026-04-04 07:15
 direction: LONG
 grade: A+
-
+score: 50
+order_id: '3448886270702346240'
 open:
   entry: 66918.4
-  sl: 66866
-  tp: 67350
+  sl: 66866.0
+  tp: 67350.0
   contracts: 18
-  notional_usd: 12045.31
+  leverage: 1.0
   risk_usd: 9.43
   risk_pct: 1.11
-  actual_risk_pct: 1.11
-  order_id: "3448886270702346240"
-  algo_id: "3448886270737780736"
-  fill_datetime_utc0: "202604040715"
-  expiry_utc0: "202604041515"
-  note: "Grade A+ 50/65. EU session, Saturday A+ gate cleared. 4H BULLISH CO=+154.4. 1H MSB UP (06:00-07:00H closed ~67,000 > 05:00-06:00H high ~66,900). Breakout retest at sr_4h[1].h=66,954.7 (OB zone 66,937-66,954). OI +3,095 accumulation (F6=5). cum_delta +18,681 >> threshold 1,372 (F7=5). Limit 66,955 filled at 66,918.4 (better by 36.6pt > 0.2xATR_5m=6.9pt). Rule 24: SL amended 66,903->66,866 (52pt from fill). Rule 15: capped 73->18 contracts (14.2x leverage). Partial TP at 67,134 for 4 contracts set (algoId 3448888575725932544)."
-
+  algo_id: '3448886270737780736'
+  fill_datetime_utc0: '202604040715'
+  entry_fee: null
+  note: 'Grade A+ 50/65. EU session, Saturday A+ gate cleared. 4H BULLISH CO=+154.4. 1H MSB UP (06:00-07:00H closed ~67,000
+    > 05:00-06:00H high ~66,900). Breakout retest at sr_4h[1].h=66,954.7 (OB zone 66,937-66,954). OI +3,095 accumulation (F6=5).
+    cum_delta +18,681 >> threshold 1,372 (F7=5). Limit 66,955 filled at 66,918.4 (better by 36.6pt > 0.2xATR_5m=6.9pt). Rule
+    24: SL amended 66,903->66,866 (52pt from fill). Rule 15: capped 73->18 contracts (14.2x leverage). Partial TP at 67,134
+    for 4 contracts set (algoId 3448888575725932544).'
 close:
   status: CLOSED
-  exit_reason: TRAIL_SL
   close_price: 67129.6
-  close_datetime_utc0: "202604041433"
+  fill_datetime_utc0: null
+  exit_reason: TRAIL_SL
   raw_pnl: 37.7826
-  entry_fee: -6.02
   close_fee: -6.0416
-  funding_fee: 0
+  funding_fee: 0.0
   pnl_usd: 25.721
   pnl_pct: 2.91
-  mae: 44.5
-  mfe: 331.6
-
-score:
-  total: 50
-  grade: A+
-  F1: 7
-  F2: 7
-  F3: 8
-  F4: 10
-  F5: 5
-  F6: 5
-  F7: 5
-  F8: 0
-  F9: 3
-
-context:
-  price_at_entry: 66918.4
-  atr_5m: 34.5
-  atr_15m: 52.6
-  atr_1h: 132.5
-  bias_4h: BULLISH
-  co_4h: 154.4
-  session: EU
-  reason: >
-    4H BULLISH (CO=+154.4). Price swept 66,734 at 04:15 UTC+0, fully recovered above
-    66,937-66,954 resistance cluster by 06:45. 1H MSB UP confirmed (06:00H closed ~67,000
-    above 05:00H high ~66,900). OI +3,095 accumulation confirms genuine new longs.
-    cum_delta +18,681 shows extreme buy pressure. Breakout retest at sr_4h[1].h=66,954.7
-    with price testing this level as new support. EU session (07:00+) removes Asia 250pt
-    SL constraint. Saturday A+ gate cleared at exactly 50pt. Rule 24 SL amend applied
-    (better fill 66,918.4 vs limit 66,955).
-
+thesis: ''
 adjustments:
-  - type: BETTER_FILL_SL_AMEND
-    datetime_utc0: "202604040715"
-    old_sl: 66903
-    new_sl: 66866
-    reason: "Rule 24: fill 66918.4 better than limit 66955 by 36.6pt (> 0.2xATR_5m 6.9pt). SL maintained at 52pt from fill."
-  - type: BREAKEVEN_MOVE
-    datetime_utc0: "202604041047"
-    old_sl: 66866
-    new_sl: 66918.4
-    reason: "Step 8-pre: profit_pt=105.5 >= sl_distance=52.4pt. SL moved to entry (breakeven). Trade now risk-free (worst case = fees only)."
-  - type: TRAIL_SL_MOVE
-    datetime_utc0: "202604041432"
-    old_sl: 66918.4
-    new_sl: 67133.5
-    reason: "Step 8 trail: profit_pt=219.9pt >= 200pt threshold. Confirmed HL @ 14:20 (low=67153.5 > 14:15 low=67152.6), confirmed by 14:25 HH (67174.5 > 67170.0). sl_cand=67153.5-20=67133.5 > min_threshold=67118.4."
-
-partial_tp:
-  price: 67134
-  contracts: 4
-  algo_id: "3448888575725932544"
-  fill_price: 67123.8
-  fill_datetime_utc0: "202604041049"
-  raw_pnl: 8.2146
-  close_fee: -1.3425
-  ord_id: "3449306799137579009"
-  contracts_remaining: 14
+- datetime_utc0: 2026-04-04 07:15
+  type: BETTER_FILL_AMEND
+  field: sl
+  from: 66903.0
+  to: 66866.0
+  note: 'Rule 24: fill 66918.4 better than limit 66955 by 36.6pt (> 0.2xATR_5m 6.9pt). SL maintained at 52pt from fill.'
+- datetime_utc0: 2026-04-04 10:47
+  type: BREAKEVEN_MOVE
+  field: sl
+  from: 66866.0
+  to: 66918.4
+  note: 'Step 8-pre: profit_pt=105.5 >= sl_distance=52.4pt. SL moved to entry (breakeven). Trade now risk-free (worst case
+    = fees only).'
+- datetime_utc0: 2026-04-04 14:32
+  type: TRAIL_SL
+  field: sl
+  from: 66918.4
+  to: 67133.5
+  note: 'Step 8 trail: profit_pt=219.9pt >= 200pt threshold. Confirmed HL @ 14:20 (low=67153.5 > 14:15 low=67152.6), confirmed
+    by 14:25 HH (67174.5 > 67170.0). sl_cand=67153.5-20=67133.5 > min_threshold=67118.4.'
+score_breakdown:
+  F1_sweep_trend: 7
+  F2_msb: 7
+  F3_entry_zone: 8
+  F4_rr: 10
+  F5_funding: 5
+  F6_oi: 5
+  F7_volume_delta: 5
+  F8_anti_chase: 0
+  F9_session: 3
+  max: 62
+structure_id: null
+structure_id_dict: null

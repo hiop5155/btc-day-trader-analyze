@@ -1,39 +1,31 @@
 id: 48
-datetime_utc0: "202604030901"
+datetime_utc0: 2026-04-03 09:01
 direction: SHORT
 grade: A
-
+score: 41
+order_id: '3445229778581282816'
 open:
-  entry: 66800
-  sl: 66578
-  tp: 66400
+  entry: 66800.0
+  sl: 66578.0
+  tp: 66400.0
   contracts: 10
-  notional_usd: 6680.0
+  leverage: 1.0
   risk_usd: 26.31
   risk_pct: 3.0
-  actual_risk_pct: 3.0
-  order_id: "3445229778581282816"
-  algo_id: "3445251433942487040"
-  expiry_utc0: "202604031301"
-
+  algo_id: '3445251433942487040'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  fill_datetime_utc0: "202604030914"
-  fill_price: 66800.0
-  close_datetime_utc0: "202604030949"
   close_price: 66579.0
-  raw_pnl: 22.10
-  entry_fee: -1.336
+  fill_datetime_utc0: '202604030914'
+  exit_reason: SL
+  raw_pnl: 22.1
   close_fee: -3.329
   funding_fee: null
   pnl_usd: 17.44
   pnl_pct: 1.99
-  exit_reason: SL_HIT
-  cancel_reason: null
-
-score: 41
-score_breakdown: "F1:7 F2:7 F3:8 F4:5 F5:5 F6:3 F7:5 F8:0 F9:1"
-
 thesis: |
   4H BEARISH (CO=−139.6pt). 1H MSB SHORT confirmed: 08:00 1H closed at 66,755
   below prior 1H low 66,814.5. Series of lower highs and lower lows since 08:00
@@ -42,10 +34,23 @@ thesis: |
   SL above 4H high 66,974 + buffer at 67,050 (250pt, Asia minimum).
   TP below 66,682.7/66,555.2 support cluster at 66,400 (R:R 1.6x).
   Normal risk tier (daily −1.22%) → 3% → 10 contracts.
-
 adjustments:
-  - type: SL_MOVE
-    datetime_utc0: "202604030947"
-    old_sl: 67050
-    new_sl: 66578
-    reason: "TRAIL: LH confirmed 09:40 H=66558.4 + 20pt; profit 298.3pt > threshold 214pt"
+- datetime_utc0: 2026-04-03 09:47
+  type: TRAIL_SL
+  field: sl
+  from: 67050.0
+  to: 66578.0
+  note: 'TRAIL: LH confirmed 09:40 H=66558.4 + 20pt; profit 298.3pt > threshold 214pt'
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

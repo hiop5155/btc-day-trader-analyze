@@ -1,39 +1,31 @@
 id: 47
-datetime_utc0: "202604030116"
+datetime_utc0: 2026-04-03 01:16
 direction: LONG
 grade: A
-
+score: 48
+order_id: '3444293039805128704'
 open:
-  entry: 67100
-  sl: 66800
-  tp: 68000
+  entry: 67100.0
+  sl: 66800.0
+  tp: 68000.0
   contracts: 9
-  notional_usd: 6039.0
-  risk_usd: 27.00
+  leverage: 1.0
+  risk_usd: 27.0
   risk_pct: 2.97
-  actual_risk_pct: 2.97
-  order_id: "3444293039805128704"
-  algo_id: "3444322606865190912"
-  expiry_utc0: "202604030516"
-
+  algo_id: '3444322606865190912'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  fill_datetime_utc0: "202604030133"
-  fill_price: 67100.0
-  close_datetime_utc0: "202604030149"
   close_price: 66786.4
+  fill_datetime_utc0: '202604030133'
+  exit_reason: SL
   raw_pnl: -28.224
-  entry_fee: -1.2078
   close_fee: -3.0054
   funding_fee: null
   pnl_usd: -32.43
   pnl_pct: -3.57
-  exit_reason: SL_HIT
-  cancel_reason: null
-
-score: 48
-score_breakdown: "F1:7 F2:7 F3:6 F4:8 F5:5 F6:2 F7:5 F8:3 F9:5"
-
 thesis: |
   4H BULLISH (CO=+535.5pt). V-bounce from 66,820 sweep (01:00) recovered to new 4H high 67,392.
   Limit buy at 67,100 — just above 67,077 previous session high turned support.
@@ -41,5 +33,17 @@ thesis: |
   TP 68,000 (R:R 3.0x), above prior 4H structure highs.
   Trade #46 closed profitably (66,992) before this V-bounce; Rule 17 no cooldown.
   Normal risk tier (daily +2.44%) → 3% → 9 contracts.
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

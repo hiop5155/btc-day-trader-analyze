@@ -1,31 +1,31 @@
 id: 16
-datetime_utc0: "202603270135"
+datetime_utc0: 2026-03-27 01:35
 direction: LONG
 grade: A
-
+score: 0
+order_id: '3424032505604300800'
 open:
-  entry: 68950
-  sl: 68720
-  tp1: 69410
-  tp2: 69625
+  entry: 68950.0
+  sl: 68720.0
+  tp: 0.0
   contracts: 10
-  notional_usd: 6895.00        # 68950 × 10 × 0.01
-  risk_usd: 23.00              # 10 contracts × 230pt × $0.01
-  risk_pct: 2.28               # 23.00 / 1007.07 equity
-  order_id: "3424032505604300800"
-  algo_id: "3424042146465583104"  # OCO attached: TP 69410 / SL 68720
-
+  leverage: 1.0
+  risk_usd: 23.0
+  risk_pct: 2.28
+  algo_id: '3424042146465583104'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  close_price: 68718
+  close_price: 68718.0
+  fill_datetime_utc0: null
+  exit_reason: SL
   raw_pnl: null
-  entry_fee: null
   close_fee: null
-  pnl_usd: -28.01        # (68718-68950)×10×0.01 − 1.379(entry fee) − 3.4359(SL fee)
-  pnl_pct: -2.78         # -28.01 / 1007.07 equity
-  exit_reason: SL        # OCO SL triggered at 68,720; filled @ 68,718 taker
-  funding_fee: 0         # position held ~9 min, no settlement crossing
-
+  funding_fee: 0.0
+  pnl_usd: -28.01
+  pnl_pct: -2.78
 thesis: |
   SWAP sell-side liquidity sweep: 5m candle (23:15 UTC+8 Mar 26) swept to L=68,495.1,
   below 4H SWAP swing low 68,616.7 — significant liquidation event (+4,263 contracts volume).
@@ -33,5 +33,17 @@ thesis: |
   MSB confirmed: 15m candle 01:15 UTC+8 closed at 69,055, breaking above 69,052 range top.
   OB entry zone: last bearish 5m (01:20 UTC+8) body 68,929–68,962; limit at 68,950 (OB mid).
   US session (17:35 UTC). SL below HL (68,791) at 68,720. TP1 at 69,410 R:R=2.0:1 ✓
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

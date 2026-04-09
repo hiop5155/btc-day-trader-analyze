@@ -1,38 +1,46 @@
 id: 15
-datetime_utc0: "202603290259"
+datetime_utc0: 2026-03-29 02:59
 direction: SHORT
 grade: A
-
+score: 0
+order_id: '3429999850923450370'
 open:
-  entry: 66900
-  sl: 67100
-  tp: 66300
+  entry: 66900.0
+  sl: 67100.0
+  tp: 66300.0
   contracts: 8
-  notional_usd: 5352
+  leverage: 1.0
   risk_usd: 17.35
   risk_pct: 2.0
-  actual_risk_pct: 2.0
-  order_id: "3429999850923450370"
-
+  algo_id: ''
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  close_price: 66375
+  close_price: 66375.0
+  fill_datetime_utc0: null
+  exit_reason: TP
   raw_pnl: 41.98
-  entry_fee: -1.07
   close_fee: -2.66
-  funding_fee: 0
+  funding_fee: 0.0
   pnl_usd: 38.25
   pnl_pct: 4.41
-  exit_reason: TP
-
 thesis: |
   15m bearish OB rejection at 66,920 after sweep of 67,294 highs.
   1H MSB confirmed (66,667 < 66,819). 4H bearish (-100.8pt).
   US session F9=5. Score 41/65 Grade A.
-
-partial_tp:
-  price: 66600
-  contracts: 2
-  algoId: "3430033721775624192"
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

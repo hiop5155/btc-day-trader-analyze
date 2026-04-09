@@ -1,0 +1,49 @@
+id: 56
+datetime_utc0: 2026-04-06 19:07
+direction: LONG
+grade: A+
+score: 50
+order_id: '3456107182757470208'
+open:
+  entry: 69617.5
+  sl: 69607.0
+  tp: 70322.0
+  contracts: 16
+  leverage: 15.0
+  risk_usd: 27.68
+  risk_pct: 3.25
+  algo_id: ''
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: Limit at 69,780 (18:50 OB pullback). Immediate taker fill at 69,617.5 (price had already fallen 162.5pt below limit).
+    SL 69,607 set for entry 69,780 — only 10.5pt from actual fill. Rule 24 would have adjusted SL to 69,444.5 but fill+SL
+    triggered within 1 second, no time to amend.
+close:
+  status: CLOSED
+  close_price: 69592.0
+  fill_datetime_utc0: null
+  exit_reason: SL
+  raw_pnl: -4.08
+  close_fee: -4.2943
+  funding_fee: 0.0
+  pnl_usd: -13.94
+  pnl_pct: -1.63
+thesis: |
+  F2=7 confirmed (18:00 1H C=69,849.9 > 17:00 1H HOD 69,777.9 — bullish MSB).
+  Counter-trend LONG after multi-level sweep of 69,225 (17:15 candle) with strong recovery.
+  Score 50/62 (A+): F1=8 sweep+recovery, F2=7 MSB, F3=5 OB, F4=10 R:R 3.13:1,
+  F5=5 funding, F6=5 accumulation, F7=5 bullish delta, F8=0 structural, F9=5 US.
+adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

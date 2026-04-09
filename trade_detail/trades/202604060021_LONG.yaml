@@ -1,35 +1,32 @@
-datetime_utc0: "2026-04-06 00:21"
+id: 67
+datetime_utc0: 2026-04-06 00:21
 direction: LONG
 grade: A
 score: 40
-order_id: "3453851476335484928"
-
+order_id: '3453851476335484928'
 open:
-  entry: 69020
-  sl: 68688
-  tp: 69587
+  entry: 69020.0
+  sl: 68688.0
+  tp: 69587.0
   contracts: 7
-  leverage: 15
+  leverage: 15.0
   risk_usd: 23.24
   risk_pct: 2.76
-  expiry_utc0: "2026-04-06 04:21"
-  algo_id: "3453924774853218304"
-  fill_datetime_utc0: "2026-04-06 01:00"
-  note: "Filled at limit 69,020 during 01:00 candle (L=68,850). OCO active: SL 68,688 / TP 69,587. Bullish FVG bottom entry (FVG 69,020-69,300 from 00:00 impulse). Asia min SL 332pt."
-
+  algo_id: '3453924774853218304'
+  fill_datetime_utc0: 2026-04-06 01:00
+  entry_fee: null
+  note: 'Filled at limit 69,020 during 01:00 candle (L=68,850). OCO active: SL 68,688 / TP 69,587. Bullish FVG bottom entry
+    (FVG 69,020-69,300 from 00:00 impulse). Asia min SL 332pt.'
 close:
   status: CLOSED
-  datetime_utc0: "2026-04-06 09:14"
   close_price: 69634.9
+  fill_datetime_utc0: null
   exit_reason: TP
-  ord_id: "3454914113890639872"
+  raw_pnl: null
+  close_fee: -2.44
+  funding_fee: -0.3
   pnl_usd: 39.34
   pnl_pct: 4.68
-  entry_fee: -0.97
-  close_fee: -2.44
-  funding_fee: -0.30
-  note: "TP triggered at 69,587, filled 69,634.9 (+47.9pt favorable fill). 09:10 impulse candle +478pt (69,283→69,762) blasted through TP. 7 contracts. Fees: entry -$0.97, close -$2.44, funding -$0.30."
-
 thesis: |
   4H BULLISH (CO +150pt, prev 4H +1,673pt). 00:00 UTC+0 Asia open impulse +580pt to
   69,587.9 confirmed 1H MSB (23:00 1H broke 22:00 1H high 68,347). Bullish FVG formed
@@ -38,14 +35,17 @@ thesis: |
   OI accumulation +10,225 (price+OI aligned). Asia session; Rule 12 min SL 332pt.
   Grade A expiry 04:21 UTC+0 (4h).
   Score 40/65 (F1:4 F2:7 F3:8 F4:5 F5:5 F6:5 F7:5 F8:0 F9:1).
-
+adjustments: []
 score_breakdown:
-  F1_trend_alignment: 4
-  F2_msb_confirmation: 7
+  F1_sweep_trend: 4
+  F2_msb: 7
   F3_entry_zone: 8
-  F4_momentum: 5
-  F5_volume: 5
-  F6_funding: 5
-  F7_session_bias: 5
-  F8_atr_filter: 0
-  F9_risk_reward: 1
+  F4_rr: 1
+  F5_funding: 5
+  F6_oi: 0
+  F7_volume_delta: 5
+  F8_anti_chase: 0
+  F9_session: 5
+  max: 62
+structure_id: null
+structure_id_dict: null

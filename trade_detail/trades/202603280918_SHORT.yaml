@@ -1,34 +1,47 @@
 id: 13
-datetime_utc0: "202603280918"
+datetime_utc0: 2026-03-28 09:18
 direction: SHORT
 grade: A+
-
+score: 0
+order_id: '3427863447821312000'
 open:
-  entry: 66200
-  sl: 66320
-  tp: 65600
+  entry: 66200.0
+  sl: 66320.0
+  tp: 65600.0
   contracts: 20
-  notional_usd: 13240.0
-  risk_usd: 24.00
+  leverage: 1.0
+  risk_usd: 24.0
   risk_pct: 2.58
-  actual_risk_pct: 2.58
-  order_id: "3427863447821312000"
-
+  algo_id: ''
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  close_price: 66320
-  raw_pnl: -24.00
-  entry_fee: -2.65
+  close_price: 66320.0
+  fill_datetime_utc0: null
+  exit_reason: SL
+  raw_pnl: -24.0
   close_fee: -6.63
-  funding_fee: 0
+  funding_fee: 0.0
   pnl_usd: -33.28
   pnl_pct: -3.59
-  exit_reason: SL
-
 thesis: |
   Failed breakout: sweep above 66,450 to 66,488 → full reversal.
   1H MSB confirmed (66,064 < 66,256). 4H shooting star forming.
   FVG entry zone 66,118-66,272. Limit at 66,200 for pullback retest.
   R:R 5:1. OI -99 (longs liquidating). Funding -0.0035% aligned.
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

@@ -1,52 +1,56 @@
-trade_id: "202603301132_LONG"
+id: 58
+datetime_utc0: 2026-03-30 11:32
 direction: LONG
-grade: A # 42/65 (re-scored at 12:47 via 9b)
-score:
-  F1_sweep: 4
+grade: A
+score: 42
+order_id: '3434082736391806976'
+open:
+  entry: 67200.0
+  sl: 66900.0
+  tp: 68000.0
+  contracts: 8
+  leverage: 6.24
+  risk_usd: 24.0
+  risk_pct: 3.0
+  algo_id: ''
+  fill_datetime_utc0: '202603301504'
+  entry_fee: null
+  note: ''
+close:
+  status: CLOSED
+  close_price: 67554.0
+  fill_datetime_utc0: null
+  exit_reason: SL
+  raw_pnl: 28.32
+  close_fee: -2.7
+  funding_fee: -0.34
+  pnl_usd: 24.3
+  pnl_pct: 2.82
+thesis: '1H LONG MSB (67,622 > 67,496 > 67,037). 9b re-place: entry shifted to 67,200 (5m OB). OI +74 genuine accumulation.
+  TP raised to 68,000.'
+adjustments:
+- datetime_utc0: 2026-03-30 16:08
+  type: TRAIL_SL
+  field: sl
+  from: 66900.0
+  to: 67434.0
+  note: 5m confirmed HL at 15:55 (L:67,454). SL_candidate 67,434 > entry+trail(67,400). Locks in +$18.72 profit.
+- datetime_utc0: 2026-03-30 16:15
+  type: TRAIL_SL
+  field: sl
+  from: 67434.0
+  to: 67554.0
+  note: 5m confirmed HL at 16:00 (L:67,574). SL tightened to 67,554. Locks in +$28.32 profit.
+score_breakdown:
+  F1_sweep_trend: 4
   F2_msb: 7
-  F3_entry: 8
+  F3_entry_zone: 8
   F4_rr: 7
   F5_funding: 5
   F6_oi: 5
-  F7_orderbook: 5
-  F8_antichase: 0
+  F7_volume_delta: 5
+  F8_anti_chase: 0
   F9_session: 1
-  total: 42
-  max: 65
-thesis: "1H LONG MSB (67,622 > 67,496 > 67,037). 9b re-place: entry shifted to 67,200 (5m OB). OI +74 genuine accumulation. TP raised to 68,000."
-open:
-  entry: 67200
-  sl: 66900
-  tp: 68000
-  contracts: 8
-  risk_pct: 3.0
-  risk_usd: 24.00
-  leverage: 6.24
-  order_type: limit
-  ord_id: "3434082736391806976"
-  original_ord_id: "3433931128139898880"
-  datetime_utc0: "202603301247"
-  fill_datetime_utc0: "202603301504"
-  session: EU
-close:
-  status: CLOSED
-  close_price: 67554
-  close_datetime_utc0: "202603301704"
-  exit_reason: SL
-  raw_pnl: 28.32
-  entry_fee: -1.08
-  close_fee: -2.70
-  funding_fee: -0.34
-  pnl_usd: 24.30
-  pnl_pct: 2.82
-adjustments:
-  - type: TRAIL_SL
-    datetime_utc0: "202603301608"
-    old_sl: 66900
-    new_sl: 67434
-    reason: "5m confirmed HL at 15:55 (L:67,454). SL_candidate 67,434 > entry+trail(67,400). Locks in +$18.72 profit."
-  - type: TRAIL_SL
-    datetime_utc0: "202603301615"
-    old_sl: 67434
-    new_sl: 67554
-    reason: "5m confirmed HL at 16:00 (L:67,574). SL tightened to 67,554. Locks in +$28.32 profit."
+  max: 62
+structure_id: null
+structure_id_dict: null

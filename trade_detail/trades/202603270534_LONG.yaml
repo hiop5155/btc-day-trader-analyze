@@ -1,31 +1,31 @@
 id: 19
-datetime_utc0: "202603270534"
+datetime_utc0: 2026-03-27 05:34
 direction: LONG
 grade: A
-
+score: 0
+order_id: '3424513096338595840'
 open:
-  entry: 68940
-  sl: 68800
-  tp1: 69360
-  tp2: 69742
+  entry: 68940.0
+  sl: 68800.0
+  tp: 0.0
   contracts: 13
-  notional_usd: 8962
-  risk_usd: 18.20
+  leverage: 1.0
+  risk_usd: 18.2
   risk_pct: 1.93
-  order_id: "3424513096338595840"
-  algo_id: "3424547821050400768"  # OCO activated on fill (TP 69,360 / SL 68,800)
-
+  algo_id: '3424547821050400768'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  close_price: 68750.7   # OCO SL market fill @ 06:24 UTC+8; trigger 68,800, slippage −49.3pt (fast drop 06:20 5m)
-  raw_pnl: null
-  entry_fee: null
-  close_fee: null
-  pnl_usd: -30.87        # (68750.7−68940)×13×0.01 − entry_fee(1.792) − exit_fee(4.469); funding_fee 0
-  pnl_pct: -3.27         # -30.87 / 943.80
+  close_price: 68750.7
+  fill_datetime_utc0: null
   exit_reason: SL
-  funding_fee: 0         # held 05:51–06:24 UTC+8; no settlement point crossed (next: 08:00 UTC+8)
-
+  raw_pnl: null
+  close_fee: null
+  funding_fee: 0.0
+  pnl_usd: -30.87
+  pnl_pct: -3.27
 thesis: |
   Asia stop-hunt re-entry. Trade #18 SL triggered at 05:10 UTC+8 (L=68,840.7 sweep),
   price immediately recovered to 69,108 within 10 min (+268pt) — confirmed stop-hunt.
@@ -36,10 +36,17 @@ thesis: |
   Limit entry at OB support 68,940. SL below sweep extreme 68,841 − buffer → 68,800 (59pt).
   TP1 = 68,940 + 420 = 69,360 (R:R = 420/140 = 3.0, satisfies Asia ≥ 1:3).
   Margin-limited at 13 contracts → effective risk 1.93% (target 3%, acceptable).
-
 adjustments: []
-  # - datetime_utc0: "YYYYMMDDHHMM"
-  #   type: SL_MOVE   # SL_MOVE / TP_ADJUST / SIZE_REDUCE
-  #   from: <old_value>
-  #   to: <new_value>
-  #   note: <reason>
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

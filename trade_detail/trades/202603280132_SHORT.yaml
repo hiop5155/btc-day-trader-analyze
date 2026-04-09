@@ -1,34 +1,47 @@
 id: 12
-datetime_utc0: "202603280132"
+datetime_utc0: 2026-03-28 01:32
 direction: SHORT
 grade: A
-
+score: 0
+order_id: '3426925354586955776'
 open:
-  entry: 65880
-  sl: 66150
-  tp: 65200
+  entry: 65880.0
+  sl: 66150.0
+  tp: 65200.0
   contracts: 10
-  notional_usd: 6588.0
-  risk_usd: 27.00
-  risk_pct: 2.80
-  actual_risk_pct: 2.80
-  order_id: "3426925354586955776"
-
+  leverage: 1.0
+  risk_usd: 27.0
+  risk_pct: 2.8
+  algo_id: ''
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  close_price: 66150
+  close_price: 66150.0
+  fill_datetime_utc0: null
+  exit_reason: SL
   raw_pnl: -27.84
-  entry_fee: -1.32
   close_fee: -3.31
-  funding_fee: 0
+  funding_fee: 0.0
   pnl_usd: -32.47
   pnl_pct: -3.38
-  exit_reason: SL
-
 thesis: |
   66,268 bounce rejected — clean pullback-then-failure structure.
   5m lower highs 66,268→66,089→65,927→65,834. Orderbook 4.4:1 ask-heavy.
   4H bearish (−234pt). Asia session but structure strong (F1:7 F2:7).
   Entry limit at 65,880 after rejection confirmation.
-
 adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

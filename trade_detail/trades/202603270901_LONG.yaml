@@ -1,31 +1,31 @@
 id: 21
-datetime_utc0: "202603270901"
+datetime_utc0: 2026-03-27 09:01
 direction: LONG
 grade: A
-
+score: 0
+order_id: '3424938504393547776'
 open:
-  entry: 68700
-  sl: 68480
-  tp1: 69140
-  tp2: 69360          # optional R:R 3.0
+  entry: 68700.0
+  sl: 68480.0
+  tp: 0.0
   contracts: 12
-  notional_usd: 8244.0        # 68700 × 12 × 0.01
-  risk_usd: 26.40             # 12 × 220pt × $0.01
-  risk_pct: 2.98              # 26.40 / 884.32
-  order_id: "3424938504393547776"
-  algo_id: "3424942648065789952"   # OCO TP 69,140 / SL 68,480 (last-price trigger; standalone after fill)
-
+  leverage: 1.0
+  risk_usd: 26.4
+  risk_pct: 2.98
+  algo_id: '3424942648065789952'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CLOSED
-  close_price: 68850          # OCO trailing SL triggered 09:35 UTC+8; fill confirmed at 68,850 (no slippage)
+  close_price: 68850.0
+  fill_datetime_utc0: null
+  exit_reason: SL
   raw_pnl: null
-  entry_fee: null
   close_fee: null
-  pnl_usd: +12.22             # actual equity change 884.32 → 896.54 (incl. entry+exit fees)
-  pnl_pct: +1.38              # 12.22 / 884.32
-  exit_reason: SL             # trailing SL at 68,850 hit during 09:35 dip to L=68,814.3; price recovered immediately
-  funding_fee: 0              # held 09:01–09:35 UTC+8; no funding settlement (next 16:00 UTC+8)
-
+  funding_fee: 0.0
+  pnl_usd: 12.22
+  pnl_pct: 1.38
 thesis: |
   Post-sweep recovery LONG. 08:35 UTC+8 5m single candle swept SSL to 68,501.3
   (−208pt from open, cleared all Asia-session lows). Immediate recovery: 08:40
@@ -35,10 +35,23 @@ thesis: |
   midpoint 68,700. SL 20pt below sweep extreme 68,501.3 = 68,480 (220pt distance).
   OI +70.8 BTC during recovery = new longs confirming. Funding +0.0000921 (below
   neutral +0.0001). EU session R:R 2.0:1 meets ≥1:2 threshold.
-
 adjustments:
-  - ts: "202603270930"
-    type: TRAILING_SL
-    old_sl: 68480
-    new_sl: 68850          # 09:25 confirmed HL L=68,870 − 20 = 68,850; above breakeven 68,748
-    reason: "09:25 5m HL=68,870 confirmed (H=68,930.7 > prev H=68,908.9); SL_candidate=68,850 > old_sl=68,480 ✓"
+- datetime_utc0: ''
+  type: TRAIL_SL
+  field: sl
+  from: 68480.0
+  to: 68850.0
+  note: 09:25 5m HL=68,870 confirmed (H=68,930.7 > prev H=68,908.9); SL_candidate=68,850 > old_sl=68,480 ✓
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 0
+  F3_entry_zone: 0
+  F4_rr: 0
+  F5_funding: 0
+  F6_oi: 0
+  F7_volume_delta: 0
+  F8_anti_chase: 0
+  F9_session: 0
+  max: 62
+structure_id: null
+structure_id_dict: null

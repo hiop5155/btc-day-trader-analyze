@@ -1,41 +1,44 @@
-trade_id: "202603310100_SHORT"
+id: 60
+datetime_utc0: 2026-03-31 01:00
 direction: SHORT
-grade: A # 47/65
-score:
-  F1_sweep: 7
-  F2_msb: 10
-  F3_entry: 8
-  F4_rr: 7
-  F5_funding: 5
-  F6_oi: 3
-  F7_orderbook: 2
-  F8_antichase: 0
-  F9_session: 5
-  total: 47
-  max: 65
-thesis: "4H MSB confirmed (LL 67,181 < prior 4H L 67,331). Pullback to broken support 67,331-67,405 (now resistance). 4H BEARISH -242pt. BSL sweep 68,199 structure intact. Rule 17 cleared (133min)."
+grade: A
+score: 47
+order_id: '3435569084214763528'
 open:
-  entry: 67400
-  sl: 67530
-  tp: 67050
+  entry: 67400.0
+  sl: 67530.0
+  tp: 67050.0
   contracts: 18
-  risk_pct: 2.74
-  risk_usd: 23.40
   leverage: 14.1
-  order_type: limit
-  ord_id: "3435569084214763528"
-  datetime_utc0: "202603310100"
-  session: US
+  risk_usd: 23.4
+  risk_pct: 2.74
+  algo_id: ''
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: ''
 close:
   status: CANCELLED
   close_price: null
-  close_datetime_utc0: "202603310215"
-  exit_reason: RESCORE_FAIL_9B
-  raw_pnl: 0
-  entry_fee: 0
-  close_fee: 0
-  funding_fee: 0
-  pnl_usd: 0
-  pnl_pct: 0
+  fill_datetime_utc0: null
+  exit_reason: RESCORE_FAIL
+  raw_pnl: 0.0
+  close_fee: 0.0
+  funding_fee: 0.0
+  pnl_usd: 0.0
+  pnl_pct: 0.0
+thesis: 4H MSB confirmed (LL 67,181 < prior 4H L 67,331). Pullback to broken support 67,331-67,405 (now resistance). 4H BEARISH
+  -242pt. BSL sweep 68,199 structure intact. Rule 17 cleared (133min).
 adjustments: []
-notes: "Never filled. Limit 67400 was 615pt above market at 9b eval (02:15 UTC+8). Original TP 67050 blown through. Re-score: F1=0/F3=0/F8=2-BLOCKED, total 35/65 < 40. 4H doji gate also failed (requires A+≥50)."
+score_breakdown:
+  F1_sweep_trend: 7
+  F2_msb: 7
+  F3_entry_zone: 8
+  F4_rr: 7
+  F5_funding: 5
+  F6_oi: 3
+  F7_volume_delta: 2
+  F8_anti_chase: 0
+  F9_session: 5
+  max: 62
+structure_id: null
+structure_id_dict: null
