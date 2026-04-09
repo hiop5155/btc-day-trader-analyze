@@ -1,0 +1,15 @@
+[2026-04-08 13:36:13Z] ALERT: 4min stale — sending notification
+[2026-04-08 13:36:14Z] alert sent + backoff stamped
+[2026-04-08 13:36:19Z] loop stale (4min) but already alerted 0min ago — backoff
+[2026-04-08 15:18:01Z] ALERT: 105min stale — sending notification
+[2026-04-08 15:18:03Z] alert sent + backoff stamped
+[2026-04-08 15:19:01Z] loop stale (106min) but already alerted 0min ago — backoff
+[2026-04-08 15:20:01Z] loop stale (107min) but already alerted 1min ago — backoff
+[2026-04-08 16:10:49Z] loop stale (30min) miss #1/2 — waiting for confirmation
+[2026-04-08 16:11:01Z] loop stale (30min) hit miss threshold (2/2) — escalating
+[2026-04-08 16:11:01Z] recovery 1/2: spawning run_cycle.sh directly
+[2026-04-08 16:11:03Z] recovery 1/2 successful — fresh phase3.log written, no alert
+[2026-04-08 16:15:15Z] no status file yet (cold-start? skipping)
+[2026-04-08 16:16:12Z] unhealthy [UNHEALTHY phase=complete errors={'exec': 'OkxError 51400'}] miss #1/2 — waiting for confirmation
+[2026-04-08 16:16:12Z] unhealthy [DRYRUN] miss #1/2 — waiting for confirmation
+[2026-04-08 16:16:12Z] unhealthy [STATE_MISMATCH state_ts=202604080000 phase3_ts=202604081615] miss #1/2 — waiting for confirmation
