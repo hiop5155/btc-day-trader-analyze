@@ -1,0 +1,59 @@
+{
+  "ts_utc": "2026-04-10 16:05:03",
+  "session": "US",
+  "price": 72481.7,
+  "bias_4h": "NEUTRAL",
+  "long_total": 32,
+  "short_total": 41,
+  "long_grade": "WAIT",
+  "short_grade": "A",
+  "action": {
+    "type": "SHORT",
+    "reason": "A score=41/62 rr=3.05",
+    "direction": "SHORT",
+    "entry": 72953.2,
+    "sl": 73308.0,
+    "tp": 71868.8,
+    "contracts": 6,
+    "grade": "A",
+    "score": 41,
+    "risk_pct": 3.0,
+    "risk_usd": 23.63,
+    "leverage": 5.56,
+    "required_leverage": 6,
+    "rr": 3.05,
+    "score_breakdown": {
+      "F1_sweep_trend": 8,
+      "F2_msb": 0,
+      "F3_entry_zone": 8,
+      "F4_rr": 10,
+      "F5_funding": 5,
+      "F6_oi": 0,
+      "F7_volume_delta": 5,
+      "F8_anti_chase": 0,
+      "F9_session": 5
+    },
+    "structure_id": "1H_BULLISH_OB_72791_73125_at_2026-04-10T14:00",
+    "structure_id_dict": {
+      "tf": "1H",
+      "bias_4h": "BULLISH",
+      "type": "OB",
+      "level1": 72791.3,
+      "level2": 73125.5,
+      "anchor_ts_ms": 1775829600000,
+      "anchor_iso": "2026-04-10T14:00"
+    },
+    "thesis": "SHORT A score=41/62 RR=3.05 bias_4h=NEUTRAL session=US sl_dist=354.8pt",
+    "direction_blocks": {
+      "LONG": [
+        "0c-3_sl_too_tight(153.8<201.2)"
+      ],
+      "SHORT": []
+    }
+  },
+  "exec_result": {
+    "executed": true,
+    "ord_id": "3467337300217651200",
+    "algo_id": "3467337300185976832"
+  }
+}

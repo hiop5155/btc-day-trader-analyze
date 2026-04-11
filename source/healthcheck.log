@@ -13,3 +13,5 @@
 [2026-04-08 16:16:12Z] unhealthy [UNHEALTHY phase=complete errors={'exec': 'OkxError 51400'}] miss #1/2 — waiting for confirmation
 [2026-04-08 16:16:12Z] unhealthy [DRYRUN] miss #1/2 — waiting for confirmation
 [2026-04-08 16:16:12Z] unhealthy [STATE_MISMATCH state_ts=202604080000 phase3_ts=202604081615] miss #1/2 — waiting for confirmation
+[2026-04-09 19:53:01Z] unhealthy [UNHEALTHY phase=complete errors={'exec': 'okx exited non-zero | rc=1 | cmd=okx swap place --instId BTC-USDT-SWAP --side buy --ordType limit --sz 12 --px 71842.0 --tdMode cross --posSide long --tpTriggerPx 72518.3 --tpOrdPx -1 --slTriggerPx 71646.7 --slOrdPx -1 --json'}] miss #1/2 — waiting for confirmation
+[2026-04-10 09:43:01Z] unhealthy [UNHEALTHY phase=complete errors={'exec': 'okx exited non-zero | rc=1 | cmd=okx swap place --instId BTC-USDT-SWAP --side buy --ordType limit --sz 14 --px 71527.0 --tdMode cross --posSide long --tpTriggerPx 72258.0 --tpOrdPx -1 --slTriggerPx 71368.9 --slOrdPx -1 --json'}] miss #1/2 — waiting for confirmation

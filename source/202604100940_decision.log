@@ -1,0 +1,59 @@
+{
+  "ts_utc": "2026-04-10 09:40:00",
+  "session": "EU",
+  "price": 71802.5,
+  "bias_4h": "BULLISH",
+  "long_total": 40,
+  "short_total": 16,
+  "long_grade": "A",
+  "short_grade": "WAIT",
+  "action": {
+    "type": "LONG",
+    "reason": "A score=40/62 rr=4.61",
+    "direction": "LONG",
+    "entry": 71527.0,
+    "sl": 71368.9,
+    "tp": 72258.0,
+    "contracts": 14,
+    "grade": "A",
+    "score": 40,
+    "risk_pct": 3.0,
+    "risk_usd": 23.63,
+    "leverage": 12.71,
+    "rr": 4.61,
+    "score_breakdown": {
+      "F1_sweep_trend": 4,
+      "F2_msb": 0,
+      "F3_entry_zone": 8,
+      "F4_rr": 10,
+      "F5_funding": 5,
+      "F6_oi": 0,
+      "F7_volume_delta": 5,
+      "F8_anti_chase": 5,
+      "F9_session": 3
+    },
+    "structure_id": "1H_BEARISH_OB_71541_71915_at_2026-04-09T23:00",
+    "structure_id_dict": {
+      "tf": "1H",
+      "bias_4h": "BEARISH",
+      "type": "OB",
+      "level1": 71541.9,
+      "level2": 71915.5,
+      "anchor_ts_ms": 1775775600000,
+      "anchor_iso": "2026-04-09T23:00"
+    },
+    "thesis": "LONG A score=40/62 RR=4.61 bias_4h=BULLISH session=EU sl_dist=158.1pt",
+    "direction_blocks": {
+      "LONG": [],
+      "SHORT": [
+        "0c-2_F4=0_rr=0.45"
+      ]
+    }
+  },
+  "exec_result": {
+    "executed": false,
+    "error": "okx exited non-zero | rc=1 | cmd=okx swap place --instId BTC-USDT-SWAP --side buy --ordType limit --sz 14 --px 71527.0 --tdMode cross --posSide long --tpTriggerPx 72258.0 --tpOrdPx -1 --slTriggerPx 71368.9 --slOrdPx -1 --json",
+    "sCode": null,
+    "sMsg": null
+  }
+}

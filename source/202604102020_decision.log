@@ -1,0 +1,18 @@
+{
+  "ts_utc": "2026-04-10 20:20:02",
+  "session": "DEAD",
+  "price": 73234.9,
+  "bias_4h": "NEUTRAL",
+  "long_total": 21,
+  "short_total": 29,
+  "long_grade": "WAIT",
+  "short_grade": "WAIT",
+  "action": {
+    "type": "WAIT",
+    "reason": "HOLDING_HEALTHY entry=72953.2 sl=73308.0 mark=73234.9"
+  },
+  "exec_result": {
+    "executed": false,
+    "reason": "WAIT"
+  }
+}

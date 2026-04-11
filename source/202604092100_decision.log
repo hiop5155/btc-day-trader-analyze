@@ -1,0 +1,18 @@
+{
+  "ts_utc": "2026-04-09 21:00:02",
+  "session": "DEAD",
+  "price": 72374.8,
+  "bias_4h": "BULLISH",
+  "long_total": 32,
+  "short_total": 15,
+  "long_grade": "WAIT",
+  "short_grade": "WAIT",
+  "action": {
+    "type": "WAIT",
+    "reason": "DEAD_ZONE (UTC 20-24)"
+  },
+  "exec_result": {
+    "executed": false,
+    "reason": "WAIT"
+  }
+}
