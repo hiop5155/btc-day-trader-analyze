@@ -1,0 +1,864 @@
+── 2026-04-11 00:00:01Z run_cycle ──
+2026-04-11T00:00:01.726447+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1652ms fetch)
+
+── 2026-04-11 00:05:01Z run_cycle ──
+2026-04-11T00:05:02.087721+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1521ms fetch)
+
+── 2026-04-11 00:10:01Z run_cycle ──
+2026-04-11T00:10:02.107676+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1882ms fetch)
+
+── 2026-04-11 00:15:01Z run_cycle ──
+2026-04-11T00:15:01.546729+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1556ms fetch)
+
+── 2026-04-11 00:20:01Z run_cycle ──
+2026-04-11T00:20:01.799480+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1669ms fetch)
+
+── 2026-04-11 00:25:01Z run_cycle ──
+2026-04-11T00:25:02.134371+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1535ms fetch)
+
+── 2026-04-11 00:30:01Z run_cycle ──
+2026-04-11T00:30:02.242852+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1526ms fetch)
+
+── 2026-04-11 00:35:01Z run_cycle ──
+2026-04-11T00:35:01.489418+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1725ms fetch)
+
+── 2026-04-11 00:40:01Z run_cycle ──
+2026-04-11T00:40:01.849196+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1762ms fetch)
+
+── 2026-04-11 00:45:01Z run_cycle ──
+2026-04-11T00:45:02.188265+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1535ms fetch)
+
+── 2026-04-11 00:50:02Z run_cycle ──
+2026-04-11T00:50:02.342633+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1623ms fetch)
+
+── 2026-04-11 00:55:01Z run_cycle ──
+2026-04-11T00:55:01.617999+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1853ms fetch)
+
+── 2026-04-11 01:00:01Z run_cycle ──
+2026-04-11T01:00:02.087667+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1667ms fetch)
+
+── 2026-04-11 01:05:01Z run_cycle ──
+2026-04-11T01:05:01.465291+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1610ms fetch)
+
+── 2026-04-11 01:10:01Z run_cycle ──
+2026-04-11T01:10:01.656021+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1646ms fetch)
+
+── 2026-04-11 01:15:01Z run_cycle ──
+2026-04-11T01:15:01.819672+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1651ms fetch)
+
+── 2026-04-11 01:20:01Z run_cycle ──
+2026-04-11T01:20:02.142731+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1635ms fetch)
+
+── 2026-04-11 01:25:02Z run_cycle ──
+2026-04-11T01:25:02.370933+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1615ms fetch)
+
+── 2026-04-11 01:30:01Z run_cycle ──
+2026-04-11T01:30:01.560740+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1647ms fetch)
+
+── 2026-04-11 01:35:01Z run_cycle ──
+2026-04-11T01:35:01.840305+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1716ms fetch)
+
+── 2026-04-11 01:40:01Z run_cycle ──
+2026-04-11T01:40:02.142275+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1635ms fetch)
+
+── 2026-04-11 01:45:01Z run_cycle ──
+2026-04-11T01:45:01.496187+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1776ms fetch)
+
+── 2026-04-11 01:50:01Z run_cycle ──
+2026-04-11T01:50:01.899050+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1670ms fetch)
+
+── 2026-04-11 01:55:01Z run_cycle ──
+2026-04-11T01:55:02.368788+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1577ms fetch)
+
+── 2026-04-11 02:00:01Z run_cycle ──
+2026-04-11T02:00:01.641296+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1798ms fetch)
+
+── 2026-04-11 02:05:01Z run_cycle ──
+2026-04-11T02:05:02.113053+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1565ms fetch)
+
+── 2026-04-11 02:10:01Z run_cycle ──
+2026-04-11T02:10:02.361722+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1959ms fetch)
+
+── 2026-04-11 02:15:01Z run_cycle ──
+2026-04-11T02:15:02.003500+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1682ms fetch)
+
+── 2026-04-11 02:20:02Z run_cycle ──
+2026-04-11T02:20:02.370275+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1583ms fetch)
+
+── 2026-04-11 02:25:01Z run_cycle ──
+2026-04-11T02:25:01.493612+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1705ms fetch)
+
+── 2026-04-11 02:30:01Z run_cycle ──
+2026-04-11T02:30:01.917958+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1652ms fetch)
+
+── 2026-04-11 02:35:01Z run_cycle ──
+2026-04-11T02:35:01.769832+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1586ms fetch)
+
+── 2026-04-11 02:40:01Z run_cycle ──
+2026-04-11T02:40:02.005045+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1555ms fetch)
+
+── 2026-04-11 02:45:01Z run_cycle ──
+2026-04-11T02:45:02.184064+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1614ms fetch)
+
+── 2026-04-11 02:50:00Z run_cycle ──
+2026-04-11T02:50:00.673271+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1530ms fetch)
+
+── 2026-04-11 02:55:00Z run_cycle ──
+2026-04-11T02:55:00.587826+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1548ms fetch)
+
+── 2026-04-11 03:00:00Z run_cycle ──
+2026-04-11T03:00:00.462094+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1796ms fetch)
+
+── 2026-04-11 03:05:00Z run_cycle ──
+2026-04-11T03:05:00.867045+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1609ms fetch)
+
+── 2026-04-11 03:10:00Z run_cycle ──
+2026-04-11T03:10:01.190527+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1656ms fetch)
+
+── 2026-04-11 03:15:01Z run_cycle ──
+2026-04-11T03:15:01.567383+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1681ms fetch)
+
+── 2026-04-11 03:20:01Z run_cycle ──
+2026-04-11T03:20:02.204203+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1608ms fetch)
+
+── 2026-04-11 03:25:00Z run_cycle ──
+2026-04-11T03:25:00.997680+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1692ms fetch)
+
+── 2026-04-11 03:30:01Z run_cycle ──
+2026-04-11T03:30:02.264167+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1593ms fetch)
+
+── 2026-04-11 03:35:00Z run_cycle ──
+2026-04-11T03:35:00.762390+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1691ms fetch)
+
+── 2026-04-11 03:40:00Z run_cycle ──
+2026-04-11T03:40:00.594936+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1548ms fetch)
+
+── 2026-04-11 03:45:00Z run_cycle ──
+2026-04-11T03:45:00.635449+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1610ms fetch)
+
+── 2026-04-11 03:50:00Z run_cycle ──
+2026-04-11T03:50:00.723220+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1711ms fetch)
+
+── 2026-04-11 03:55:00Z run_cycle ──
+2026-04-11T03:55:01.078639+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1627ms fetch)
+
+── 2026-04-11 04:00:01Z run_cycle ──
+2026-04-11T04:00:01.948902+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1673ms fetch)
+
+── 2026-04-11 04:05:01Z run_cycle ──
+2026-04-11T04:05:02.004661+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1693ms fetch)
+
+── 2026-04-11 04:10:00Z run_cycle ──
+2026-04-11T04:10:00.868513+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1578ms fetch)
+
+── 2026-04-11 04:15:00Z run_cycle ──
+2026-04-11T04:15:00.571934+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1583ms fetch)
+
+── 2026-04-11 04:20:01Z run_cycle ──
+2026-04-11T04:20:02.083046+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1690ms fetch)
+
+── 2026-04-11 04:25:01Z run_cycle ──
+2026-04-11T04:25:00.784647+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1671ms fetch)
+
+── 2026-04-11 04:30:01Z run_cycle ──
+2026-04-11T04:30:02.020005+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1759ms fetch)
+
+── 2026-04-11 04:35:01Z run_cycle ──
+2026-04-11T04:35:02.218295+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1655ms fetch)
+
+── 2026-04-11 04:40:00Z run_cycle ──
+2026-04-11T04:40:00.495495+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1711ms fetch)
+
+── 2026-04-11 04:45:02Z run_cycle ──
+2026-04-11T04:45:02.411312+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1656ms fetch)
+
+── 2026-04-11 04:50:01Z run_cycle ──
+2026-04-11T04:50:02.277068+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1665ms fetch)
+
+── 2026-04-11 04:55:01Z run_cycle ──
+2026-04-11T04:55:01.839545+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1536ms fetch)
+
+── 2026-04-11 05:00:02Z run_cycle ──
+2026-04-11T05:00:02.273221+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1655ms fetch)
+
+── 2026-04-11 05:05:00Z run_cycle ──
+2026-04-11T05:05:00.673782+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1763ms fetch)
+
+── 2026-04-11 05:10:00Z run_cycle ──
+2026-04-11T05:10:00.535482+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1704ms fetch)
+
+── 2026-04-11 05:15:01Z run_cycle ──
+2026-04-11T05:15:01.732528+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1649ms fetch)
+
+── 2026-04-11 05:20:00Z run_cycle ──
+2026-04-11T05:20:00.522025+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1791ms fetch)
+
+── 2026-04-11 05:25:00Z run_cycle ──
+2026-04-11T05:25:00.471906+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1602ms fetch)
+
+── 2026-04-11 05:30:01Z run_cycle ──
+2026-04-11T05:30:02.103673+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1555ms fetch)
+
+── 2026-04-11 05:35:01Z run_cycle ──
+2026-04-11T05:35:01.509100+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1708ms fetch)
+
+── 2026-04-11 05:40:01Z run_cycle ──
+2026-04-11T05:40:01.987795+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1697ms fetch)
+
+── 2026-04-11 05:45:01Z run_cycle ──
+2026-04-11T05:45:02.046307+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1545ms fetch)
+
+── 2026-04-11 05:50:00Z run_cycle ──
+2026-04-11T05:50:00.917698+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1749ms fetch)
+
+── 2026-04-11 05:55:01Z run_cycle ──
+2026-04-11T05:55:01.794250+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1589ms fetch)
+
+── 2026-04-11 06:00:00Z run_cycle ──
+2026-04-11T05:59:59.406127+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (2022ms fetch)
+
+── 2026-04-11 06:05:01Z run_cycle ──
+2026-04-11T06:05:01.578357+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1676ms fetch)
+
+── 2026-04-11 06:10:01Z run_cycle ──
+2026-04-11T06:10:02.126291+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1667ms fetch)
+
+── 2026-04-11 06:15:01Z run_cycle ──
+2026-04-11T06:15:01.613091+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1643ms fetch)
+
+── 2026-04-11 06:20:01Z run_cycle ──
+2026-04-11T06:20:01.946107+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1782ms fetch)
+
+── 2026-04-11 06:25:02Z run_cycle ──
+2026-04-11T06:25:02.417697+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1700ms fetch)
+
+── 2026-04-11 06:30:01Z run_cycle ──
+2026-04-11T06:30:01.532254+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1648ms fetch)
+
+── 2026-04-11 06:35:01Z run_cycle ──
+2026-04-11T06:35:01.510844+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1846ms fetch)
+
+── 2026-04-11 06:40:01Z run_cycle ──
+2026-04-11T06:40:01.538033+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1639ms fetch)
+
+── 2026-04-11 06:45:01Z run_cycle ──
+2026-04-11T06:45:02.161648+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1607ms fetch)
+
+── 2026-04-11 06:50:01Z run_cycle ──
+2026-04-11T06:50:01.752428+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1772ms fetch)
+
+── 2026-04-11 06:55:01Z run_cycle ──
+2026-04-11T06:55:02.280788+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1605ms fetch)
+
+── 2026-04-11 07:00:01Z run_cycle ──
+2026-04-11T07:00:01.711462+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1827ms fetch)
+
+── 2026-04-11 07:05:01Z run_cycle ──
+2026-04-11T07:05:01.948290+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1670ms fetch)
+
+── 2026-04-11 07:10:00Z run_cycle ──
+2026-04-11T07:09:59.917227+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1680ms fetch)
+
+── 2026-04-11 07:15:01Z run_cycle ──
+2026-04-11T07:15:01.870609+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1766ms fetch)
+
+── 2026-04-11 07:20:01Z run_cycle ──
+2026-04-11T07:20:01.432555+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1646ms fetch)
+
+── 2026-04-11 07:25:01Z run_cycle ──
+2026-04-11T07:25:02.145267+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1727ms fetch)
+
+── 2026-04-11 07:30:01Z run_cycle ──
+2026-04-11T07:30:01.504158+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1635ms fetch)
+
+── 2026-04-11 07:35:01Z run_cycle ──
+2026-04-11T07:35:01.603806+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1860ms fetch)
+
+── 2026-04-11 07:40:01Z run_cycle ──
+2026-04-11T07:40:02.054390+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1652ms fetch)
+
+── 2026-04-11 07:45:01Z run_cycle ──
+2026-04-11T07:45:01.921186+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1607ms fetch)
+
+── 2026-04-11 07:50:01Z run_cycle ──
+2026-04-11T07:50:01.780885+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1916ms fetch)
+
+── 2026-04-11 07:55:01Z run_cycle ──
+2026-04-11T07:55:01.785132+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1782ms fetch)
+
+── 2026-04-11 08:00:01Z run_cycle ──
+2026-04-11T08:00:02.212823+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1733ms fetch)
+
+── 2026-04-11 08:05:01Z run_cycle ──
+2026-04-11T08:05:01.898527+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1697ms fetch)
+
+── 2026-04-11 08:10:01Z run_cycle ──
+2026-04-11T08:10:01.731239+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1669ms fetch)
+
+── 2026-04-11 08:15:01Z run_cycle ──
+2026-04-11T08:15:02.286004+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1689ms fetch)
+
+── 2026-04-11 08:20:01Z run_cycle ──
+2026-04-11T08:20:02.224886+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1766ms fetch)
+
+── 2026-04-11 08:25:01Z run_cycle ──
+2026-04-11T08:25:02.134765+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1666ms fetch)
+
+── 2026-04-11 08:30:01Z run_cycle ──
+2026-04-11T08:30:02.247620+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1746ms fetch)
+
+── 2026-04-11 08:35:01Z run_cycle ──
+2026-04-11T08:35:01.969947+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1621ms fetch)
+
+── 2026-04-11 08:40:01Z run_cycle ──
+2026-04-11T08:40:02.334185+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1629ms fetch)
+
+── 2026-04-11 08:45:01Z run_cycle ──
+2026-04-11T08:45:01.985769+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1737ms fetch)
+
+── 2026-04-11 08:50:01Z run_cycle ──
+2026-04-11T08:50:02.162024+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1793ms fetch)
+
+── 2026-04-11 08:55:01Z run_cycle ──
+2026-04-11T08:55:02.248828+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1608ms fetch)
+
+── 2026-04-11 09:00:01Z run_cycle ──
+2026-04-11T09:00:02.021009+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1671ms fetch)
+
+── 2026-04-11 09:05:00Z run_cycle ──
+2026-04-11T09:05:00.604364+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1739ms fetch)
+
+── 2026-04-11 09:10:01Z run_cycle ──
+2026-04-11T09:10:01.742726+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1642ms fetch)
+
+── 2026-04-11 09:15:01Z run_cycle ──
+2026-04-11T09:15:02.136000+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (2159ms fetch)
+
+── 2026-04-11 09:20:01Z run_cycle ──
+2026-04-11T09:20:01.739016+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1806ms fetch)
+
+── 2026-04-11 09:25:01Z run_cycle ──
+2026-04-11T09:25:01.490895+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1672ms fetch)
+
+── 2026-04-11 09:30:01Z run_cycle ──
+2026-04-11T09:30:02.243639+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1588ms fetch)
+
+── 2026-04-11 09:35:01Z run_cycle ──
+2026-04-11T09:35:01.755549+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1724ms fetch)
+
+── 2026-04-11 09:40:01Z run_cycle ──
+2026-04-11T09:40:02.227173+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1728ms fetch)
+
+── 2026-04-11 09:45:01Z run_cycle ──
+2026-04-11T09:45:02.189588+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1761ms fetch)
+
+── 2026-04-11 09:50:02Z run_cycle ──
+2026-04-11T09:50:02.421095+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1675ms fetch)
+
+── 2026-04-11 09:55:01Z run_cycle ──
+2026-04-11T09:55:01.399285+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1733ms fetch)
+
+── 2026-04-11 10:00:01Z run_cycle ──
+2026-04-11T10:00:02.242265+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1706ms fetch)
+
+── 2026-04-11 10:05:01Z run_cycle ──
+2026-04-11T10:05:02.249909+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1694ms fetch)
+
+── 2026-04-11 10:10:01Z run_cycle ──
+2026-04-11T10:10:01.488590+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1697ms fetch)
+
+── 2026-04-11 10:15:01Z run_cycle ──
+2026-04-11T10:15:02.042944+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1596ms fetch)
+
+── 2026-04-11 10:20:01Z run_cycle ──
+2026-04-11T10:20:01.698389+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1721ms fetch)
+
+── 2026-04-11 10:25:01Z run_cycle ──
+2026-04-11T10:25:01.478563+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1673ms fetch)
+
+── 2026-04-11 10:30:01Z run_cycle ──
+2026-04-11T10:30:02.027976+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1678ms fetch)
+
+── 2026-04-11 10:35:02Z run_cycle ──
+2026-04-11T10:35:02.351141+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1643ms fetch)
+
+── 2026-04-11 10:40:01Z run_cycle ──
+2026-04-11T10:40:01.484727+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1906ms fetch)
+
+── 2026-04-11 10:45:00Z run_cycle ──
+2026-04-11T10:44:58.740427+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1713ms fetch)
+
+── 2026-04-11 10:50:01Z run_cycle ──
+2026-04-11T10:50:01.488495+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1667ms fetch)
+
+── 2026-04-11 10:55:01Z run_cycle ──
+2026-04-11T10:55:02.281461+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1612ms fetch)
+
+── 2026-04-11 11:00:01Z run_cycle ──
+2026-04-11T11:00:01.693722+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1514ms fetch)
+
+── 2026-04-11 11:05:01Z run_cycle ──
+2026-04-11T11:05:01.658309+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1763ms fetch)
+
+── 2026-04-11 11:10:01Z run_cycle ──
+2026-04-11T11:10:01.920388+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1699ms fetch)
+
+── 2026-04-11 11:15:01Z run_cycle ──
+2026-04-11T11:15:01.998953+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1625ms fetch)
+
+── 2026-04-11 11:20:01Z run_cycle ──
+2026-04-11T11:20:01.744771+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1787ms fetch)
+
+── 2026-04-11 11:25:01Z run_cycle ──
+2026-04-11T11:25:01.537495+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1954ms fetch)
+
+── 2026-04-11 11:30:02Z run_cycle ──
+2026-04-11T11:30:02.381538+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1778ms fetch)
+
+── 2026-04-11 11:35:01Z run_cycle ──
+2026-04-11T11:35:01.712621+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1746ms fetch)
+
+── 2026-04-11 11:40:01Z run_cycle ──
+2026-04-11T11:40:02.049850+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1564ms fetch)
+
+── 2026-04-11 11:45:01Z run_cycle ──
+2026-04-11T11:45:01.983832+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1748ms fetch)
+
+── 2026-04-11 11:50:01Z run_cycle ──
+2026-04-11T11:50:02.044049+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1738ms fetch)
+
+── 2026-04-11 11:55:01Z run_cycle ──
+2026-04-11T11:55:01.832694+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1865ms fetch)
+
+── 2026-04-11 12:00:01Z run_cycle ──
+2026-04-11T12:00:01.673380+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1684ms fetch)
+
+── 2026-04-11 12:05:01Z run_cycle ──
+2026-04-11T12:05:02.127036+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1773ms fetch)
+
+── 2026-04-11 12:10:01Z run_cycle ──
+2026-04-11T12:10:01.722505+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1784ms fetch)
+
+── 2026-04-11 12:15:01Z run_cycle ──
+2026-04-11T12:15:02.078167+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1764ms fetch)
+
+── 2026-04-11 12:20:01Z run_cycle ──
+2026-04-11T12:20:01.428477+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1736ms fetch)
+
+── 2026-04-11 12:25:01Z run_cycle ──
+2026-04-11T12:25:01.721106+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (2235ms fetch)
+
+── 2026-04-11 12:30:01Z run_cycle ──
+2026-04-11T12:30:02.296275+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1749ms fetch)
+
+── 2026-04-11 12:35:01Z run_cycle ──
+2026-04-11T12:35:02.240542+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1664ms fetch)
+
+── 2026-04-11 12:40:01Z run_cycle ──
+2026-04-11T12:40:02.010758+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1851ms fetch)
+
+── 2026-04-11 12:45:01Z run_cycle ──
+2026-04-11T12:45:01.845147+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1722ms fetch)
+
+── 2026-04-11 12:50:01Z run_cycle ──
+2026-04-11T12:50:01.397452+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1578ms fetch)
+
+── 2026-04-11 12:55:01Z run_cycle ──
+2026-04-11T12:55:01.431834+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1800ms fetch)
+
+── 2026-04-11 13:00:01Z run_cycle ──
+2026-04-11T13:00:01.951213+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1724ms fetch)
+
+── 2026-04-11 13:05:01Z run_cycle ──
+2026-04-11T13:05:02.295291+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1644ms fetch)
+
+── 2026-04-11 13:10:01Z run_cycle ──
+2026-04-11T13:10:02.001521+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1971ms fetch)
+
+── 2026-04-11 13:15:01Z run_cycle ──
+2026-04-11T13:15:01.836649+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1797ms fetch)
+
+── 2026-04-11 13:20:02Z run_cycle ──
+2026-04-11T13:20:02.381286+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1778ms fetch)
+
+── 2026-04-11 13:25:01Z run_cycle ──
+2026-04-11T13:25:02.180651+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1766ms fetch)
+
+── 2026-04-11 13:30:01Z run_cycle ──
+2026-04-11T13:30:01.867911+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1949ms fetch)
+
+── 2026-04-11 13:35:01Z run_cycle ──
+2026-04-11T13:35:02.286805+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1745ms fetch)
+
+── 2026-04-11 13:40:01Z run_cycle ──
+2026-04-11T13:40:02.054668+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1756ms fetch)
+
+── 2026-04-11 13:45:02Z run_cycle ──
+2026-04-11T13:45:02.384283+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1723ms fetch)
+
+── 2026-04-11 13:50:01Z run_cycle ──
+2026-04-11T13:50:02.114840+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1734ms fetch)
+
+── 2026-04-11 13:55:01Z run_cycle ──
+2026-04-11T13:55:01.755835+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1781ms fetch)
+
+── 2026-04-11 14:00:01Z run_cycle ──
+2026-04-11T14:00:01.985838+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1818ms fetch)
+
+── 2026-04-11 14:05:01Z run_cycle ──
+2026-04-11T14:05:02.128916+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1794ms fetch)
+
+── 2026-04-11 14:10:02Z run_cycle ──
+2026-04-11T14:10:02.385819+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1920ms fetch)
+
+── 2026-04-11 14:15:02Z run_cycle ──
+2026-04-11T14:15:02.371181+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1709ms fetch)
+
+── 2026-04-11 14:20:01Z run_cycle ──
+2026-04-11T14:20:02.138320+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1737ms fetch)
+
+── 2026-04-11 14:25:01Z run_cycle ──
+2026-04-11T14:25:02.302145+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1838ms fetch)
+
+── 2026-04-11 14:30:01Z run_cycle ──
+2026-04-11T14:30:02.249011+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1719ms fetch)
+
+── 2026-04-11 14:35:02Z run_cycle ──
+2026-04-11T14:35:02.394334+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1798ms fetch)
+
+── 2026-04-11 14:40:01Z run_cycle ──
+2026-04-11T14:40:01.858505+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1885ms fetch)
+
+── 2026-04-11 14:45:01Z run_cycle ──
+2026-04-11T14:45:01.594107+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1825ms fetch)
+
+── 2026-04-11 14:50:01Z run_cycle ──
+2026-04-11T14:50:01.452827+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1675ms fetch)
+
+── 2026-04-11 14:55:01Z run_cycle ──
+2026-04-11T14:55:02.274791+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1863ms fetch)
+
+── 2026-04-11 15:00:01Z run_cycle ──
+2026-04-11T15:00:02.076024+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1778ms fetch)
+
+── 2026-04-11 15:05:00Z run_cycle ──
+2026-04-11T15:05:00.634126+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1839ms fetch)
+
+── 2026-04-11 15:10:01Z run_cycle ──
+2026-04-11T15:10:01.905521+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1797ms fetch)
+
+── 2026-04-11 15:15:02Z run_cycle ──
+2026-04-11T15:15:02.415106+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1901ms fetch)
+
+── 2026-04-11 15:20:01Z run_cycle ──
+2026-04-11T15:20:01.829277+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1738ms fetch)
+
+── 2026-04-11 15:25:01Z run_cycle ──
+2026-04-11T15:25:01.512316+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1834ms fetch)
+
+── 2026-04-11 15:30:01Z run_cycle ──
+2026-04-11T15:30:02.078765+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1757ms fetch)
+
+── 2026-04-11 15:35:02Z run_cycle ──
+2026-04-11T15:35:02.370579+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1847ms fetch)
+
+── 2026-04-11 15:40:01Z run_cycle ──
+2026-04-11T15:40:01.564465+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1876ms fetch)
+
+── 2026-04-11 15:45:01Z run_cycle ──
+2026-04-11T15:45:01.711484+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1929ms fetch)
+
+── 2026-04-11 15:50:01Z run_cycle ──
+2026-04-11T15:50:02.100365+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1705ms fetch)
+
+── 2026-04-11 15:55:01Z run_cycle ──
+2026-04-11T15:55:02.184015+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1805ms fetch)
+
+── 2026-04-11 16:00:02Z run_cycle ──
+2026-04-11T16:00:02.419229+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1722ms fetch)
+
+── 2026-04-11 16:05:01Z run_cycle ──
+2026-04-11T16:05:01.959222+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1769ms fetch)
+
+── 2026-04-11 16:10:01Z run_cycle ──
+2026-04-11T16:10:01.413933+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (2409ms fetch)
+
+── 2026-04-11 16:15:01Z run_cycle ──
+2026-04-11T16:15:01.571063+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (2083ms fetch)
+
+── 2026-04-11 16:20:01Z run_cycle ──
+2026-04-11T16:20:02.118730+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1733ms fetch)
+
+── 2026-04-11 16:25:01Z run_cycle ──
+2026-04-11T16:25:02.105537+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1789ms fetch)
+
+── 2026-04-11 16:30:01Z run_cycle ──
+2026-04-11T16:30:02.282120+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1781ms fetch)
+
+── 2026-04-11 16:35:01Z run_cycle ──
+2026-04-11T16:35:02.131063+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1749ms fetch)
+
+── 2026-04-11 16:40:01Z run_cycle ──
+2026-04-11T16:40:01.980333+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1715ms fetch)
+
+── 2026-04-11 16:45:01Z run_cycle ──
+2026-04-11T16:45:01.674730+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1645ms fetch)
+
+── 2026-04-11 16:50:01Z run_cycle ──
+2026-04-11T16:50:02.149638+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1744ms fetch)
+
+── 2026-04-11 16:55:01Z run_cycle ──
+2026-04-11T16:55:01.489360+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1878ms fetch)
+
+── 2026-04-11 17:00:01Z run_cycle ──
+2026-04-11T17:00:01.948888+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1848ms fetch)
+
+── 2026-04-11 17:05:01Z run_cycle ──
+2026-04-11T17:05:01.727198+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1717ms fetch)
+
+── 2026-04-11 17:10:01Z run_cycle ──
+2026-04-11T17:10:02.331348+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1662ms fetch)
+
+── 2026-04-11 17:15:01Z run_cycle ──
+2026-04-11T17:15:01.723524+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1706ms fetch)
+
+── 2026-04-11 17:20:01Z run_cycle ──
+2026-04-11T17:20:01.845991+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (2043ms fetch)
+
+── 2026-04-11 17:25:01Z run_cycle ──
+2026-04-11T17:25:02.295505+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1789ms fetch)
+
+── 2026-04-11 17:30:01Z run_cycle ──
+2026-04-11T17:30:02.237366+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1833ms fetch)
+
+── 2026-04-11 17:35:01Z run_cycle ──
+2026-04-11T17:35:01.689128+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1876ms fetch)
+
+── 2026-04-11 17:40:01Z run_cycle ──
+2026-04-11T17:40:02.450230+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1815ms fetch)
+
+── 2026-04-11 17:45:01Z run_cycle ──
+2026-04-11T17:45:01.974351+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1742ms fetch)
+
+── 2026-04-11 17:50:01Z run_cycle ──
+2026-04-11T17:50:02.261754+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1765ms fetch)
+
+── 2026-04-11 17:55:02Z run_cycle ──
+2026-04-11T17:55:02.474896+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1791ms fetch)
+
+── 2026-04-11 18:00:01Z run_cycle ──
+2026-04-11T18:00:01.506985+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1708ms fetch)
+
+── 2026-04-11 18:05:01Z run_cycle ──
+2026-04-11T18:05:01.550278+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1828ms fetch)
+
+── 2026-04-11 18:10:01Z run_cycle ──
+2026-04-11T18:10:01.774703+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1863ms fetch)
+
+── 2026-04-11 18:15:01Z run_cycle ──
+2026-04-11T18:15:01.955716+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1747ms fetch)
+
+── 2026-04-11 18:20:01Z run_cycle ──
+2026-04-11T18:20:01.770431+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1870ms fetch)
+
+── 2026-04-11 18:25:01Z run_cycle ──
+2026-04-11T18:25:01.860664+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1929ms fetch)
+
+── 2026-04-11 18:30:01Z run_cycle ──
+2026-04-11T18:29:58.994379+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (2217ms fetch)
+
+── 2026-04-11 18:35:01Z run_cycle ──
+2026-04-11T18:35:01.909573+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1819ms fetch)
+
+── 2026-04-11 18:40:01Z run_cycle ──
+2026-04-11T18:40:01.492687+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1807ms fetch)
+
+── 2026-04-11 18:45:01Z run_cycle ──
+2026-04-11T18:45:01.862952+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1690ms fetch)
+
+── 2026-04-11 18:50:02Z run_cycle ──
+2026-04-11T18:50:02.488804+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1795ms fetch)
+
+── 2026-04-11 18:55:01Z run_cycle ──
+2026-04-11T18:55:01.902827+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1745ms fetch)
+
+── 2026-04-11 19:00:01Z run_cycle ──
+2026-04-11T19:00:02.248577+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1860ms fetch)
+
+── 2026-04-11 19:05:01Z run_cycle ──
+2026-04-11T19:05:01.772674+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1773ms fetch)
+
+── 2026-04-11 19:10:01Z run_cycle ──
+2026-04-11T19:10:01.937864+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1814ms fetch)
+
+── 2026-04-11 19:15:01Z run_cycle ──
+2026-04-11T19:15:02.250180+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1927ms fetch)
+
+── 2026-04-11 19:20:01Z run_cycle ──
+2026-04-11T19:20:01.616461+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1911ms fetch)
+
+── 2026-04-11 19:25:01Z run_cycle ──
+2026-04-11T19:25:01.736181+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1971ms fetch)
+
+── 2026-04-11 19:30:01Z run_cycle ──
+2026-04-11T19:30:02.152255+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1956ms fetch)
+
+── 2026-04-11 19:35:02Z run_cycle ──
+2026-04-11T19:35:02.390923+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1899ms fetch)
+
+── 2026-04-11 19:40:01Z run_cycle ──
+2026-04-11T19:40:01.460135+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1719ms fetch)
+
+── 2026-04-11 19:45:02Z run_cycle ──
+2026-04-11T19:45:02.482425+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1887ms fetch)
+
+── 2026-04-11 19:50:01Z run_cycle ──
+2026-04-11T19:50:01.553116+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1623ms fetch)
+
+── 2026-04-11 19:55:02Z run_cycle ──
+2026-04-11T19:55:02.425120+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (NO_VALID_DIRECTION) | ~WAIT | (1743ms fetch)
+
+── 2026-04-11 20:00:01Z run_cycle ──
+2026-04-11T20:00:01.479378+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1649ms fetch)
+
+── 2026-04-11 20:05:01Z run_cycle ──
+2026-04-11T20:05:02.116755+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1685ms fetch)
+
+── 2026-04-11 20:10:01Z run_cycle ──
+2026-04-11T20:10:01.955171+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1745ms fetch)
+
+── 2026-04-11 20:15:01Z run_cycle ──
+2026-04-11T20:15:02.051335+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1839ms fetch)
+
+── 2026-04-11 20:20:01Z run_cycle ──
+2026-04-11T20:20:02.094171+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1811ms fetch)
+
+── 2026-04-11 20:25:01Z run_cycle ──
+2026-04-11T20:25:02.005751+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1638ms fetch)
+
+── 2026-04-11 20:30:01Z run_cycle ──
+2026-04-11T20:30:02.150236+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1821ms fetch)
+
+── 2026-04-11 20:35:01Z run_cycle ──
+2026-04-11T20:35:02.143486+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1789ms fetch)
+
+── 2026-04-11 20:40:01Z run_cycle ──
+2026-04-11T20:40:02.221077+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1644ms fetch)
+
+── 2026-04-11 20:45:01Z run_cycle ──
+2026-04-11T20:45:02.145328+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1773ms fetch)
+
+── 2026-04-11 20:50:01Z run_cycle ──
+2026-04-11T20:50:02.117212+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1689ms fetch)
+
+── 2026-04-11 20:55:01Z run_cycle ──
+2026-04-11T20:55:02.054892+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1699ms fetch)
+
+── 2026-04-11 20:59:58Z run_cycle ──
+2026-04-11T20:59:59.148395+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1914ms fetch)
+
+── 2026-04-11 21:05:01Z run_cycle ──
+2026-04-11T21:05:02.272178+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1697ms fetch)
+
+── 2026-04-11 21:10:01Z run_cycle ──
+2026-04-11T21:10:02.055326+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1806ms fetch)
+
+── 2026-04-11 21:15:01Z run_cycle ──
+2026-04-11T21:15:02.009709+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1726ms fetch)
+
+── 2026-04-11 21:20:01Z run_cycle ──
+2026-04-11T21:20:02.140689+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1742ms fetch)
+
+── 2026-04-11 21:25:01Z run_cycle ──
+2026-04-11T21:25:02.114013+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1682ms fetch)
+
+── 2026-04-11 21:30:01Z run_cycle ──
+2026-04-11T21:30:02.010162+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1804ms fetch)
+
+── 2026-04-11 21:35:01Z run_cycle ──
+2026-04-11T21:35:02.062298+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1799ms fetch)
+
+── 2026-04-11 21:40:01Z run_cycle ──
+2026-04-11T21:40:02.106191+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1737ms fetch)
+
+── 2026-04-11 21:45:01Z run_cycle ──
+2026-04-11T21:45:01.966858+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1647ms fetch)
+
+── 2026-04-11 21:50:01Z run_cycle ──
+2026-04-11T21:50:01.914879+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1690ms fetch)
+
+── 2026-04-11 21:55:01Z run_cycle ──
+2026-04-11T21:55:01.789024+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1766ms fetch)
+
+── 2026-04-11 22:00:01Z run_cycle ──
+2026-04-11T22:00:01.869164+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1815ms fetch)
+
+── 2026-04-11 22:05:01Z run_cycle ──
+2026-04-11T22:05:01.920144+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1715ms fetch)
+
+── 2026-04-11 22:10:01Z run_cycle ──
+2026-04-11T22:10:01.871148+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1763ms fetch)
+
+── 2026-04-11 22:15:01Z run_cycle ──
+2026-04-11T22:15:02.025700+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1784ms fetch)
+
+── 2026-04-11 22:20:01Z run_cycle ──
+2026-04-11T22:20:02.064654+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1721ms fetch)
+
+── 2026-04-11 22:25:01Z run_cycle ──
+2026-04-11T22:25:01.998569+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1744ms fetch)
+
+── 2026-04-11 22:30:01Z run_cycle ──
+2026-04-11T22:30:01.967503+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1773ms fetch)
+
+── 2026-04-11 22:35:01Z run_cycle ──
+2026-04-11T22:35:01.923563+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1787ms fetch)
+
+── 2026-04-11 22:40:01Z run_cycle ──
+2026-04-11T22:40:01.936242+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1760ms fetch)
+
+── 2026-04-11 22:45:01Z run_cycle ──
+2026-04-11T22:45:01.792475+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1940ms fetch)
+
+── 2026-04-11 22:50:01Z run_cycle ──
+2026-04-11T22:50:02.134584+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1750ms fetch)
+
+── 2026-04-11 22:55:01Z run_cycle ──
+2026-04-11T22:55:02.070656+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1735ms fetch)
+
+── 2026-04-11 23:00:01Z run_cycle ──
+2026-04-11T23:00:02.080803+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (2022ms fetch)
+
+── 2026-04-11 23:05:01Z run_cycle ──
+2026-04-11T23:05:02.264365+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1819ms fetch)
+
+── 2026-04-11 23:10:02Z run_cycle ──
+2026-04-11T23:10:02.387770+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1839ms fetch)
+
+── 2026-04-11 23:15:01Z run_cycle ──
+2026-04-11T23:15:01.546446+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1691ms fetch)
+
+── 2026-04-11 23:20:02Z run_cycle ──
+2026-04-11T23:20:02.334605+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1623ms fetch)
+
+── 2026-04-11 23:25:01Z run_cycle ──
+2026-04-11T23:25:02.183641+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1678ms fetch)
+
+── 2026-04-11 23:30:01Z run_cycle ──
+2026-04-11T23:30:02.179501+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1888ms fetch)
+
+── 2026-04-11 23:35:01Z run_cycle ──
+2026-04-11T23:35:02.177855+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1783ms fetch)
+
+── 2026-04-11 23:40:02Z run_cycle ──
+2026-04-11T23:40:02.407749+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1731ms fetch)
+
+── 2026-04-11 23:45:02Z run_cycle ──
+2026-04-11T23:45:02.469482+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1817ms fetch)
+
+── 2026-04-11 23:50:01Z run_cycle ──
+2026-04-11T23:50:01.541519+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1786ms fetch)
+
+── 2026-04-11 23:55:01Z run_cycle ──
+2026-04-11T23:55:01.389950+00:00 | pause=OK | state=FLAT | eq=$758.46 | action=WAIT | (DEAD_ZONE (UTC 20-24)) | ~WAIT | (1685ms fetch)
+
