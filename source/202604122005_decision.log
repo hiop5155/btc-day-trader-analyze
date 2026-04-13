@@ -1,0 +1,18 @@
+{
+  "ts_utc": "2026-04-12 20:05:03",
+  "session": "DEAD",
+  "price": 71049.9,
+  "bias_4h": "NEUTRAL",
+  "long_total": 18,
+  "short_total": 41,
+  "long_grade": "WAIT",
+  "short_grade": "A",
+  "action": {
+    "type": "WAIT",
+    "reason": "PENDING_HEALTHY ord=3473185870967693312 px=70751.7 grade=A"
+  },
+  "exec_result": {
+    "executed": false,
+    "reason": "WAIT"
+  }
+}

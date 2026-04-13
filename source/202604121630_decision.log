@@ -1,0 +1,59 @@
+{
+  "ts_utc": "2026-04-12 16:30:03",
+  "session": "US",
+  "price": 70895.9,
+  "bias_4h": "NEUTRAL",
+  "long_total": 40,
+  "short_total": 32,
+  "long_grade": "A",
+  "short_grade": "WAIT",
+  "action": {
+    "type": "LONG",
+    "reason": "A score=40/62 rr=3.59",
+    "direction": "LONG",
+    "entry": 70751.7,
+    "sl": 70550.0,
+    "tp": 71477.7,
+    "contracts": 11,
+    "grade": "A",
+    "score": 40,
+    "risk_pct": 3.0,
+    "risk_usd": 22.75,
+    "leverage": 10.26,
+    "required_leverage": 11,
+    "rr": 3.59,
+    "score_breakdown": {
+      "F1_sweep_trend": 4,
+      "F2_msb": 0,
+      "F3_entry_zone": 8,
+      "F4_rr": 10,
+      "F5_funding": 5,
+      "F6_oi": 3,
+      "F7_volume_delta": 5,
+      "F8_anti_chase": 0,
+      "F9_session": 5
+    },
+    "structure_id": "1H_BEARISH_OB_71411_71631_at_2026-04-12T04:00",
+    "structure_id_dict": {
+      "tf": "1H",
+      "bias_4h": "BEARISH",
+      "type": "OB",
+      "level1": 71411.0,
+      "level2": 71631.9,
+      "anchor_ts_ms": 1775966400000,
+      "anchor_iso": "2026-04-12T04:00"
+    },
+    "thesis": "LONG A score=40/62 RR=3.59 bias_4h=NEUTRAL session=US sl_dist=201.7pt",
+    "direction_blocks": {
+      "LONG": [],
+      "SHORT": [
+        "0c-2_F4=0_rr=0.91"
+      ]
+    }
+  },
+  "exec_result": {
+    "executed": true,
+    "ord_id": "3473185870967693312",
+    "algo_id": "3473185870936018944"
+  }
+}
