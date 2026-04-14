@@ -1,0 +1,19 @@
+[2026-04-08 13:32:48Z] daily_sod start (date=20260408)
+[2026-04-08 13:32:49Z] ERROR: failed to parse balance JSON
+[2026-04-08 13:33:02Z] daily_sod start (date=20260408)
+[2026-04-08 13:33:03Z] current equity: $787.7418060771665
+[2026-04-08 13:33:03Z] /home/dami/btc-day-trader-agent/.daily_open_equity_20260408 already exists (787.7418060771665) — skipping
+[2026-04-08 13:33:03Z] /home/dami/btc-day-trader-agent/.daily_original_equity_20260408 already exists (787.7418060771665) — skipping
+[2026-04-08 13:33:03Z] daily_sod done
+[2026-04-08 16:00:01Z] daily_sod start (date=20260408)
+[2026-04-08 16:00:01Z] ERROR: okx balance call failed (rc=127)
+[2026-04-09 16:00:02Z] daily_sod start (date=20260409)
+[2026-04-09 16:00:02Z] ERROR: okx balance call failed (rc=127)
+[2026-04-10 16:00:01Z] daily_sod start (date=20260410)
+[2026-04-10 16:00:01Z] ERROR: okx balance call failed (rc=127)
+[2026-04-11 16:00:02Z] daily_sod start (date=20260411)
+[2026-04-11 16:00:02Z] ERROR: okx balance call failed (rc=127)
+[2026-04-12 16:00:01Z] daily_sod start (date=20260412)
+[2026-04-12 16:00:01Z] ERROR: okx balance call failed (rc=127)
+[2026-04-13 16:00:01Z] daily_sod start (date=20260413)
+[2026-04-13 16:00:01Z] ERROR: okx balance call failed (rc=127)
