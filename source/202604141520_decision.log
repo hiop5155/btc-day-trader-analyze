@@ -1,0 +1,59 @@
+{
+  "ts_utc": "2026-04-14 15:20:02",
+  "session": "US",
+  "price": 74743.0,
+  "bias_4h": "BULLISH",
+  "long_total": 40,
+  "short_total": 41,
+  "long_grade": "A",
+  "short_grade": "A",
+  "action": {
+    "type": "LONG",
+    "reason": "A score=40/62 rr=4.09",
+    "direction": "LONG",
+    "entry": 74577.2,
+    "sl": 74230.0,
+    "tp": 76000.0,
+    "contracts": 6,
+    "grade": "A",
+    "score": 40,
+    "risk_pct": 3.0,
+    "risk_usd": 22.75,
+    "leverage": 5.9,
+    "required_leverage": 7,
+    "rr": 4.09,
+    "score_breakdown": {
+      "F1_sweep_trend": 0,
+      "F2_msb": 7,
+      "F3_entry_zone": 8,
+      "F4_rr": 7,
+      "F5_funding": 5,
+      "F6_oi": 3,
+      "F7_volume_delta": 0,
+      "F8_anti_chase": 5,
+      "F9_session": 5
+    },
+    "structure_id": "1H_BEARISH_OB_74127_74407_at_2026-04-14T05:00",
+    "structure_id_dict": {
+      "tf": "1H",
+      "bias_4h": "BEARISH",
+      "type": "OB",
+      "level1": 74127.2,
+      "level2": 74407.0,
+      "anchor_ts_ms": 1776142800000,
+      "anchor_iso": "2026-04-14T05:00"
+    },
+    "thesis": "LONG A score=40/62 RR=4.09 bias_4h=BULLISH session=US sl_dist=347.2pt",
+    "direction_blocks": {
+      "LONG": [],
+      "SHORT": [
+        "NEEDS_APLUS_0e_0f_0g(grade=A)"
+      ]
+    }
+  },
+  "exec_result": {
+    "executed": true,
+    "ord_id": "3478843161591111680",
+    "algo_id": "3478843161559437312"
+  }
+}

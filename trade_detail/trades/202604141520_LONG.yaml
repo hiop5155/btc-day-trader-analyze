@@ -1,0 +1,50 @@
+id: 75
+datetime_utc0: 2026-04-14 15:20
+direction: LONG
+grade: A
+score: 40
+order_id: '3478843161591111680'
+open:
+  entry: 74577.2
+  sl: 74230.0
+  tp: 76000.0
+  contracts: 6
+  leverage: 5.9
+  risk_usd: 22.75
+  risk_pct: 3.0
+  algo_id: '3478843161559437312'
+  fill_datetime_utc0: 2026-04-14 16:58
+  entry_fee: -0.8949
+  note: LONG A score=40/62 RR=4.09 bias_4h=BULLISH session=US sl_dist=347.2pt
+close:
+  status: CLOSED
+  close_price: 74234.65
+  fill_datetime_utc0: 2026-04-14 17:35
+  exit_reason: SL
+  raw_pnl: -20.553
+  close_fee: -2.227
+  funding_fee: 0.0
+  pnl_usd: -23.67
+  pnl_pct: -3.03
+thesis: LONG A score=40/62 RR=4.09 bias_4h=BULLISH session=US sl_dist=347.2pt
+adjustments: []
+score_breakdown:
+  F1_sweep_trend: 0
+  F2_msb: 7
+  F3_entry_zone: 8
+  F4_rr: 7
+  F5_funding: 5
+  F6_oi: 3
+  F7_volume_delta: 0
+  F8_anti_chase: 5
+  F9_session: 5
+  max: 62
+structure_id: 1H_BEARISH_OB_74127_74407_at_2026-04-14T05:00
+structure_id_dict:
+  tf: 1H
+  bias_4h: BEARISH
+  type: OB
+  level1: 74127.2
+  level2: 74407.0
+  anchor_ts_ms: 1776142800000
+  anchor_iso: 2026-04-14T05:00

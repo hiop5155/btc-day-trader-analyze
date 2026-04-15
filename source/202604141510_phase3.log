@@ -1,0 +1,136 @@
+{
+  "time_utc0": "15:10 UTC+0",
+  "session": "US",
+  "weekday": "Tuesday",
+  "price": 74668.2,
+  "sod_utc0": 74385.4,
+  "daily_move_pct": 0.38,
+  "daily_move_dir": "UP",
+  "pre_checks": {
+    "dead_zone": false,
+    "saturday": false,
+    "rule16_long_blocked": false,
+    "rule16_short_blocked": false,
+    "rule17_zone": null,
+    "rule17_expires_utc0": null,
+    "rule12_min_sl": 280.0,
+    "bias_4h": "BULLISH",
+    "co4h": 313.6,
+    "0e_long_needs_aplus": false,
+    "0e_short_needs_aplus": true,
+    "0f_long_needs_aplus": false,
+    "0f_short_needs_aplus": false,
+    "0g_doji": false,
+    "0g_doji_dir": null,
+    "long_needs_aplus": false,
+    "short_needs_aplus": true,
+    "last_losing_setup": null,
+    "last_losing_active": false,
+    "last_losing_expired": false,
+    "cycle_dedup_blocked_long": false,
+    "cycle_dedup_blocked_short": false
+  },
+  "market": {
+    "funding_rate_pct": -0.00257,
+    "oi": 3589500.0,
+    "oi_delta": -10564.0,
+    "atr_5m": 280.4,
+    "atr_4h": 867.7
+  },
+  "scored_factors": {
+    "F5_long": 5,
+    "F5_short": 5,
+    "F6": 0,
+    "F6_note": "OI delta -10564 | price vs SOD +283pt \u2192 diverging/liquidation \u2192 F6=0",
+    "F7_long": 0,
+    "F7_short": 5,
+    "F7_cum_delta": -335836.67,
+    "F7_threshold": 21175.95,
+    "F7_candles_used": 10,
+    "F9": 5
+  },
+  "signal_factors": {
+    "LONG": {
+      "direction": "LONG",
+      "F1": 0,
+      "F2": 7,
+      "F2_blocked": false,
+      "F3": 8,
+      "F4": 0,
+      "F4_rr": 0.0,
+      "F8": 2,
+      "F8_blocked": true,
+      "structural_entry": 74575.5,
+      "structural_sl": 74230.0,
+      "structural_tp": 74574.0,
+      "sl_distance": 345.5,
+      "min_sl_distance": 280.4,
+      "sl_too_tight": false,
+      "atr_5m": 280.4,
+      "atr_15m": 313.4,
+      "atr_1h": 429.3,
+      "atr_4h": 867.7,
+      "is_counter_trend": false,
+      "structure_id": "1H_BEARISH_OB_74127_74407_at_2026-04-14T05:00",
+      "structure_id_dict": {
+        "tf": "1H",
+        "bias_4h": "BEARISH",
+        "type": "OB",
+        "level1": 74127.2,
+        "level2": 74407.0,
+        "anchor_ts_ms": 1776142800000,
+        "anchor_iso": "2026-04-14T05:00"
+      }
+    },
+    "SHORT": {
+      "direction": "SHORT",
+      "F1": 6,
+      "F2": 0,
+      "F2_blocked": false,
+      "F3": 5,
+      "F4": 0,
+      "F4_rr": 1.31,
+      "F8": 2,
+      "F8_blocked": true,
+      "structural_entry": 75696.1,
+      "structural_sl": 74594.0,
+      "structural_tp": 74250.0,
+      "sl_distance": 1102.1,
+      "min_sl_distance": 280.4,
+      "sl_too_tight": false,
+      "atr_5m": 280.4,
+      "atr_15m": 313.4,
+      "atr_1h": 429.3,
+      "atr_4h": 867.7,
+      "is_counter_trend": true,
+      "structure_id": "1H_BEARISH_OB_75166_75488_at_2026-04-14T13:00",
+      "structure_id_dict": {
+        "tf": "1H",
+        "bias_4h": "BEARISH",
+        "type": "OB",
+        "level1": 75166.0,
+        "level2": 75488.0,
+        "anchor_ts_ms": 1776171600000,
+        "anchor_iso": "2026-04-14T13:00"
+      }
+    }
+  },
+  "totals": {
+    "LONG": {
+      "total": 27,
+      "grade": "WAIT"
+    },
+    "SHORT": {
+      "total": 28,
+      "grade": "WAIT"
+    }
+  },
+  "risk": {
+    "equity": 758.46,
+    "sod_equity": 758.46,
+    "daily_pnl_pct": 0.0,
+    "tier": "normal",
+    "grade_a_pct": 3.0,
+    "grade_aplus_pct": 4.5
+  }
+}

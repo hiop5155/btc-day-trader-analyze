@@ -1,0 +1,18 @@
+{
+  "ts_utc": "2026-04-14 16:05:01",
+  "session": "US",
+  "price": 75419.4,
+  "bias_4h": "BULLISH",
+  "long_total": 54,
+  "short_total": 39,
+  "long_grade": "A+",
+  "short_grade": "WAIT",
+  "action": {
+    "type": "WAIT",
+    "reason": "PENDING_HEALTHY ord=3478843161591111680 px=74577.2 grade=A"
+  },
+  "exec_result": {
+    "executed": false,
+    "reason": "WAIT"
+  }
+}
