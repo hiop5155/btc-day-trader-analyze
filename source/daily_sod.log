@@ -17,3 +17,7 @@
 [2026-04-12 16:00:01Z] ERROR: okx balance call failed (rc=127)
 [2026-04-13 16:00:01Z] daily_sod start (date=20260413)
 [2026-04-13 16:00:01Z] ERROR: okx balance call failed (rc=127)
+[2026-04-14 16:00:01Z] daily_sod start (date=20260414)
+[2026-04-14 16:00:01Z] ERROR: okx balance call failed (rc=127)
+[2026-04-15 16:00:02Z] daily_sod start (date=20260415)
+[2026-04-15 16:00:02Z] ERROR: okx balance call failed (rc=127)

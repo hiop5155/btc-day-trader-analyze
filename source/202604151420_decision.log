@@ -1,0 +1,27 @@
+{
+  "ts_utc": "2026-04-15 14:20:02",
+  "session": "US",
+  "price": 74127.0,
+  "bias_4h": "NEUTRAL",
+  "long_total": 37,
+  "short_total": 41,
+  "long_grade": "WAIT",
+  "short_grade": "A",
+  "action": {
+    "type": "ADJUST_SL",
+    "reason": "TRAIL_SL sl=74464.0\u219274044.3 (atr_1h=416.8)",
+    "direction": "SHORT",
+    "entry": 74299.2,
+    "sl": 74464.0,
+    "tp": 73741.4,
+    "contracts": 13,
+    "new_sl": 74044.3,
+    "adjust_kind": "TRAIL_SL"
+  },
+  "exec_result": {
+    "executed": false,
+    "error": "okx returned error sCode | sCode=51278 | sMsg=SL trigger price cannot be lower than the last price  | rc=1 | cmd=okx swap algo amend --instId BTC-USDT-SWAP --algoId 3481615490874085376 --newSlTriggerPx=74044.3 --newSlOrdPx=-1 --json",
+    "sCode": "51278",
+    "sMsg": "SL trigger price cannot be lower than the last price "
+  }
+}

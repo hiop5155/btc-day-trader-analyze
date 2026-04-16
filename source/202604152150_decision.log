@@ -1,0 +1,28 @@
+{
+  "ts_utc": "2026-04-15 21:50:03",
+  "session": "DEAD",
+  "price": 74696.7,
+  "bias_4h": "BEARISH",
+  "long_total": 38,
+  "short_total": 35,
+  "long_grade": "WAIT",
+  "short_grade": "WAIT",
+  "action": {
+    "type": "CANCEL_PENDING",
+    "reason": "EXPIRED age=4.0h max=4h grade=A [BOUNDARY: age_h=4.0002 \u2248 threshold=4.0]",
+    "cancel_kind": "EXPIRED",
+    "cancel_age_h": 4.0
+  },
+  "exec_result": {
+    "executed": true,
+    "ord_id": "3482044192059777024",
+    "raw": {
+      "clOrdId": "",
+      "ordId": "3482044192059777024",
+      "sCode": "0",
+      "sMsg": "",
+      "ts": "1776289803275"
+    },
+    "algos": []
+  }
+}

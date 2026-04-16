@@ -15,3 +15,30 @@
 [2026-04-08 16:16:12Z] unhealthy [STATE_MISMATCH state_ts=202604080000 phase3_ts=202604081615] miss #1/2 — waiting for confirmation
 [2026-04-09 19:53:01Z] unhealthy [UNHEALTHY phase=complete errors={'exec': 'okx exited non-zero | rc=1 | cmd=okx swap place --instId BTC-USDT-SWAP --side buy --ordType limit --sz 12 --px 71842.0 --tdMode cross --posSide long --tpTriggerPx 72518.3 --tpOrdPx -1 --slTriggerPx 71646.7 --slOrdPx -1 --json'}] miss #1/2 — waiting for confirmation
 [2026-04-10 09:43:01Z] unhealthy [UNHEALTHY phase=complete errors={'exec': 'okx exited non-zero | rc=1 | cmd=okx swap place --instId BTC-USDT-SWAP --side buy --ordType limit --sz 14 --px 71527.0 --tdMode cross --posSide long --tpTriggerPx 72258.0 --tpOrdPx -1 --slTriggerPx 71368.9 --slOrdPx -1 --json'}] miss #1/2 — waiting for confirmation
+[2026-04-15 08:18:02Z] unhealthy [UNHEALTHY phase=complete errors={'exec': 'okx returned error sCode | sCode=51047 | sMsg=Your SL price should be lower than the primary order price. | rc=1 | cmd=okx swap place --instId BTC-USDT-SWAP --side buy --ordType limit --sz 10 --px 73602.7 --tdMode cross --clOrdId ed1095799e104501 --tpTriggerPx=74400.0 --tpOrdPx=-1 --slTriggerPx=73810.1 --slOrdPx=-1 --json'}] miss #1/2 — waiting for confirmation
+[2026-04-15 08:23:01Z] unhealthy [UNHEALTHY phase=complete errors={'exec': 'okx returned error sCode | sCode=51047 | sMsg=Your SL price should be lower than the primary order price. | rc=1 | cmd=okx swap place --instId BTC-USDT-SWAP --side buy --ordType limit --sz 10 --px 73602.7 --tdMode cross --clOrdId 71dba0c137ea4bcc --tpTriggerPx=74400.0 --tpOrdPx=-1 --slTriggerPx=73810.1 --slOrdPx=-1 --json'}] hit miss threshold (2/2) — escalating
+[2026-04-15 08:23:01Z] recovery 1/2: spawning run_cycle.sh directly
+[2026-04-15 08:23:05Z] recovery 1/2 failed — escalating to cron rebuild (install_cron.sh, which strips+reinstalls)
+Stripping any existing btc-trader-statemachine entries...
+✅ Installed btc-trader state-machine cron entries:
+
+# btc-trader-statemachine main loop (5min)
+*/5 * * * * /home/dami/btc-day-trader-agent/scripts/run_cycle.sh # btc-trader-statemachine
+# btc-trader-statemachine healthcheck (5min, +3min offset from main)
+3,8,13,18,23,28,33,38,43,48,53,58 * * * * /home/dami/btc-day-trader-agent/scripts/healthcheck.sh # btc-trader-statemachine
+# btc-trader-statemachine daily SOD reset (00:00 UTC)
+0 0 * * * /home/dami/btc-day-trader-agent/scripts/daily_sod.sh # btc-trader-statemachine
+
+Running one cycle immediately so healthcheck has a fresh phase3.log to check...
+  → wrote 202604150823_phase3.log
+
+Verify with: crontab -l
+Remove with: /home/dami/btc-day-trader-agent/scripts/remove_cron.sh
+[2026-04-15 08:23:10Z] ALERT: [UNHEALTHY phase=complete errors={'exec': 'okx returned error sCode | sCode=51047 | sMsg=Your SL price should be lower than the primary order price. | rc=1 | cmd=okx swap place --instId BTC-USDT-SWAP --side buy --ordType limit --sz 10 --px 73602.7 --tdMode cross --clOrdId 71dba0c137ea4bcc --tpTriggerPx=74400.0 --tpOrdPx=-1 --slTriggerPx=73810.1 --slOrdPx=-1 --json'}] both recoveries FAILED — sending notification
+[2026-04-15 08:23:13Z] alert sent + backoff stamped
+[2026-04-15 08:28:02Z] unhealthy [UNHEALTHY phase=complete errors={'exec': 'okx returned error sCode | sCode=51047 | sMsg=Your SL price should be lower than the primary order price. | rc=1 | cmd=okx swap place --instId BTC-USDT-SWAP --side buy --ordType limit --sz 10 --px 73602.7 --tdMode cross --clOrdId 709aa69620e74834 --tpTriggerPx=74400.0 --tpOrdPx=-1 --slTriggerPx=73810.1 --slOrdPx=-1 --json'}] hit miss threshold (3/2) — escalating
+[2026-04-15 08:28:02Z] already alerted 4min ago — backoff
+[2026-04-15 14:23:01Z] unhealthy [UNHEALTHY phase=complete errors={'exec': 'okx returned error sCode | sCode=51278 | sMsg=SL trigger price cannot be lower than the last price  | rc=1 | cmd=okx swap algo amend --instId BTC-USDT-SWAP --algoId 3481615490874085376 --newSlTriggerPx=74044.3 --newSlOrdPx=-1 --json'}] miss #1/2 — waiting for confirmation
+[2026-04-15 14:28:01Z] unhealthy [UNHEALTHY phase=complete errors={'exec': 'okx returned error sCode | sCode=51278 | sMsg=SL trigger price cannot be lower than the last price  | rc=1 | cmd=okx swap algo amend --instId BTC-USDT-SWAP --algoId 3481615490874085376 --newSlTriggerPx=74044.3 --newSlOrdPx=-1 --json'}] hit miss threshold (2/2) — escalating
+[2026-04-15 14:28:01Z] recovery 1/2: spawning run_cycle.sh directly
+[2026-04-15 14:28:08Z] recovery 1/2 successful — fresh phase3.log written, no alert

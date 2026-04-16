@@ -1,0 +1,50 @@
+id: 78
+datetime_utc0: 2026-04-15 14:05
+direction: SHORT
+grade: A
+score: 46
+order_id: '3481591287523532800'
+open:
+  entry: 74299.2
+  sl: 74464.0
+  tp: 73741.4
+  contracts: 13
+  leverage: 13.15
+  risk_usd: 22.04
+  risk_pct: 3.0
+  algo_id: '3481591287491858432'
+  fill_datetime_utc0: 2026-04-15 14:17
+  entry_fee: -1.9318
+  note: SHORT A score=46/62 RR=3.37 bias_4h=BEARISH session=US sl_dist=164.8pt
+close:
+  status: CLOSED
+  close_price: 74473.4
+  fill_datetime_utc0: 2026-04-15 14:25
+  exit_reason: SL
+  raw_pnl: -22.65033
+  close_fee: -6.772552365
+  funding_fee: 0.0
+  pnl_usd: -29.42
+  pnl_pct: -4.0
+thesis: SHORT A score=46/62 RR=3.37 bias_4h=BEARISH session=US sl_dist=164.8pt
+adjustments: []
+score_breakdown:
+  F1_sweep_trend: 6
+  F2_msb: 0
+  F3_entry_zone: 8
+  F4_rr: 7
+  F5_funding: 5
+  F6_oi: 5
+  F7_volume_delta: 5
+  F8_anti_chase: 5
+  F9_session: 5
+  max: 62
+structure_id: 1H_BULLISH_OB_74131_74444_at_2026-04-15T12:00
+structure_id_dict:
+  tf: 1H
+  bias_4h: BULLISH
+  type: OB
+  level1: 74131.4
+  level2: 74444.0
+  anchor_ts_ms: 1776254400000
+  anchor_iso: 2026-04-15T12:00

@@ -1,0 +1,26 @@
+{
+  "ts_utc": "2026-04-15 15:15:02",
+  "session": "US",
+  "price": 74236.8,
+  "bias_4h": "NEUTRAL",
+  "long_total": 32,
+  "short_total": 48,
+  "long_grade": "WAIT",
+  "short_grade": "A",
+  "action": {
+    "type": "WAIT",
+    "reason": "NO_VALID_DIRECTION",
+    "direction_blocks": {
+      "LONG": [
+        "0c-2_F4=0_rr=1.92"
+      ],
+      "SHORT": [
+        "0c-3_sl_too_tight(125.8<188.5)"
+      ]
+    }
+  },
+  "exec_result": {
+    "executed": false,
+    "reason": "WAIT"
+  }
+}

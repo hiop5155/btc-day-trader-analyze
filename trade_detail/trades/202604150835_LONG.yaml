@@ -1,0 +1,50 @@
+id: 77
+datetime_utc0: 2026-04-15 08:35
+direction: LONG
+grade: A
+score: 44
+order_id: '3480926824843665408'
+open:
+  entry: 73604.4
+  sl: 73423.0
+  tp: 74400.0
+  contracts: 12
+  leverage: 12.02
+  risk_usd: 22.04
+  risk_pct: 3.0
+  algo_id: '3480926824811991040'
+  fill_datetime_utc0: null
+  entry_fee: null
+  note: LONG A score=44/62 RR=4.39 bias_4h=BULLISH session=EU sl_dist=181.4pt
+close:
+  status: CANCELLED
+  close_price: null
+  fill_datetime_utc0: null
+  exit_reason: EXPIRED
+  raw_pnl: null
+  close_fee: null
+  funding_fee: null
+  pnl_usd: null
+  pnl_pct: null
+thesis: LONG A score=44/62 RR=4.39 bias_4h=BULLISH session=EU sl_dist=181.4pt
+adjustments: []
+score_breakdown:
+  F1_sweep_trend: 3
+  F2_msb: 0
+  F3_entry_zone: 8
+  F4_rr: 10
+  F5_funding: 5
+  F6_oi: 5
+  F7_volume_delta: 5
+  F8_anti_chase: 5
+  F9_session: 3
+  max: 62
+structure_id: 1H_BEARISH_OB_73743_74077_at_2026-04-14T22:00
+structure_id_dict:
+  tf: 1H
+  bias_4h: BEARISH
+  type: OB
+  level1: 73743.9
+  level2: 74077.1
+  anchor_ts_ms: 1776204000000
+  anchor_iso: 2026-04-14T22:00
